@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Residência Q22-L8 — Estudo Preliminar (Blueprint)</title>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4 portrait; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bp-blue: #0E3A6B; --bp-line: #DCEBFF; --bp-dim: #8FC1EE;
+    --bp-amber:#FFD166; --bp-green:#7FD4A6; --bp-cyan:#7FD4FF;
+  }
+  body { background:#05192f; font-family:'IBM Plex Mono',monospace; color:var(--bp-line); }
+  .sheet {
+    width:210mm; height:296mm; margin:0 auto;
+    background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.045), transparent 60%), var(--bp-blue);
+    position:relative; overflow:hidden; page-break-after:always;
+    display:flex; flex-direction:column; border:1px solid rgba(220,235,255,0.25);
+  }
+  .sheet:last-child { page-break-after:auto; }
+  .sheet::before {
+    content:""; position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(220,235,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(220,235,255,0.05) 1px, transparent 1px),
+      linear-gradient(rgba(220,235,255,0.09) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(220,235,255,0.09) 1px, transparent 1px);
+    background-size:5mm 5mm,5mm 5mm,25mm 25mm,25mm 25mm; pointer-events:none;
+  }
+  .frame { position:absolute; inset:8mm; border:1.2px solid var(--bp-line); pointer-events:none; }
+  .frame::after { content:""; position:absolute; inset:1.4mm; border:0.4px solid rgba(220,235,255,0.4); }
+  .head { position:relative; padding:14mm 16mm 4mm; display:flex; justify-content:space-between; align-items:baseline; }
+  .head .kicker { font-size:8.5pt; letter-spacing:3px; color:var(--bp-dim); text-transform:uppercase; }
+  .head h1 { font-family:'Saira Condensed',sans-serif; font-weight:700; font-size:24pt; letter-spacing:2.5px; text-transform:uppercase; line-height:1.05; }
+  .head .folha-tag { font-family:'Saira Condensed',sans-serif; font-size:30pt; font-weight:700; color:rgba(220,235,255,0.28); letter-spacing:2px; }
+  .drawing { position:relative; flex:1; display:flex; align-items:center; justify-content:center; padding:2mm 12mm; }
+  svg { max-width:100%; max-height:100%; }
+  svg text { font-family:'IBM Plex Mono',monospace; fill:var(--bp-line); }
+  svg .ttl { font-family:'Saira Condensed',sans-serif; letter-spacing:1.5px; }
+  .carimbo { position:relative; margin:0 8mm 8mm; border:1.2px solid var(--bp-line);
+    display:grid; grid-template-columns:2.2fr 1.2fr 1fr 1fr 1.1fr; font-size:6.6pt; background:rgba(9,41,71,0.6); }
+  .carimbo > div { padding:2.2mm 3mm; border-left:0.6px solid rgba(220,235,255,0.45); }
+  .carimbo > div:first-child { border-left:none; }
+  .carimbo .lbl { display:block; font-size:5.4pt; letter-spacing:1.5px; color:var(--bp-dim); text-transform:uppercase; margin-bottom:1mm; }
+  .carimbo .val { font-weight:600; font-size:7.4pt; letter-spacing:0.4px; }
+  .disclaimer { position:absolute; bottom:2.6mm; left:0; right:0; text-align:center; font-size:5.4pt; letter-spacing:1.8px; color:rgba(220,235,255,0.45); text-transform:uppercase; }
+  @media print { body{background:none;} .sheet{margin:0; border:none;} }
+</style>
+</head>
+<body>
+
+<!-- ===================== FOLHA 01 — IMPLANTAÇÃO ===================== -->
+<section class="sheet">
+  <div class="frame"></div>
+  <header class="head">
+    <div><div class="kicker">Residência Q22 · L8 — Estudo Preliminar</div><h1>Implantação</h1></div>
+    <div class="folha-tag">F·01</div>
+  </header>
+  <div class="drawing">
+    <svg viewBox="0 0 500 704" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <pattern id="hg" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="8" stroke="#7FD4A6" stroke-width="0.8" opacity="0.5"/></pattern>
+        <pattern id="hb" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="9" stroke="#DCEBFF" stroke-width="1" opacity="0.55"/></pattern>
+        <pattern id="hl" width="7" height="7" patternTransform="rotate(-45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="7" stroke="#8FC1EE" stroke-width="0.8" opacity="0.6"/></pattern>
+        <marker id="a1" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,1 L7,4 L0,7" fill="none" stroke="#8FC1EE" stroke-width="1"/></marker>
+      </defs>
+      <rect x="120" y="4" width="280" height="18" fill="rgba(220,235,255,0.06)"/>
+      <text x="260" y="16" font-size="9" letter-spacing="4" text-anchor="middle" opacity="0.8">RUA DO CONDOMÍNIO — SEM MURO / SEM PORTÃO</text>
+      <rect x="118" y="30" width="26" height="660" fill="url(#hg)"/>
+      <text x="131" y="360" font-size="9" letter-spacing="4" text-anchor="middle" transform="rotate(-90 131 360)" fill="#7FD4A6">VIELA DO CONDOMÍNIO (SEM VIZINHO) — OESTE</text>
+      <rect x="150" y="30" width="220" height="660" fill="rgba(9,41,71,0.55)" stroke="#DCEBFF" stroke-width="2"/>
+      <rect x="150" y="30" width="220" height="88" fill="url(#hg)"/>
+      <text x="260" y="70" font-size="9" text-anchor="middle" fill="#BFEBD2">JARDIM FRONTAL</text>
+      <text x="260" y="84" font-size="8" text-anchor="middle" fill="#BFEBD2" opacity="0.8">recuo 4,00 m · aberto p/ rua</text>
+      <rect x="150" y="118" width="33" height="121" fill="url(#hl)" stroke="#8FC1EE" stroke-width="1" stroke-dasharray="4 3"/>
+      <rect x="150" y="239" width="33" height="165" fill="rgba(220,235,255,0.05)" stroke="#8FC1EE" stroke-width="0.8" stroke-dasharray="3 3"/>
+      <text x="166.5" y="322" font-size="7" text-anchor="middle" transform="rotate(-90 166.5 322)" fill="#8FC1EE">ACESSO LATERAL 1,50</text>
+      <rect x="343.6" y="250" width="26.4" height="99" fill="url(#hg)" stroke="#8FC1EE" stroke-width="0.8" stroke-dasharray="3 3"/>
+      <text x="356.8" y="300" font-size="6.5" text-anchor="middle" transform="rotate(-90 356.8 300)" fill="#BFEBD2">ÁREA DE LUZ 4,50</text>
+      <rect x="343.6" y="349" width="26.4" height="55" fill="url(#hl)" stroke="#8FC1EE" stroke-width="0.8" stroke-dasharray="3 3"/>
+      <text x="356.8" y="377" font-size="6" text-anchor="middle" transform="rotate(-90 356.8 377)" fill="#8FC1EE">LAVAND.</text>
+      <rect x="343.6" y="118" width="26.4" height="132" fill="rgba(220,235,255,0.05)" stroke="#8FC1EE" stroke-width="0.8" stroke-dasharray="3 3"/>
+      <rect x="183" y="118" width="160.6" height="286" fill="url(#hb)" stroke="#DCEBFF" stroke-width="2.4"/>
+      <text x="263" y="300" class="ttl" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="3">CASA</text>
+      <text x="263" y="318" font-size="8.5" text-anchor="middle">7,30 × 13,00 m</text>
+      <text x="263" y="331" font-size="8.5" text-anchor="middle" opacity="0.85">térreo + sobrado</text>
+      <rect x="150" y="118" width="110" height="121" fill="none" stroke="#FFD166" stroke-width="1.4" stroke-dasharray="6 4"/>
+      <text x="205" y="165" font-size="8.5" text-anchor="middle" fill="#FFD166">GARAGEM COBERTA</text>
+      <text x="205" y="178" font-size="7.5" text-anchor="middle" fill="#FFD166" opacity="0.9">5,00 × 5,50 · laje até a divisa</text>
+      <text x="205" y="192" font-size="7" text-anchor="middle" fill="#FFD166">↳ entrada da casa (porta lateral)</text>
+      <line x1="152" y1="118" x2="258" y2="118" stroke="#FFD166" stroke-width="3"/>
+      <text x="205" y="110" font-size="7.5" text-anchor="middle" fill="#FFD166">VÃO DE ACESSO + VIGA (sem portão)</text>
+      <!-- VARANDA GOURMET / SACADA (balanço 2,50) -->
+      <rect x="183" y="404" width="160.6" height="55" fill="url(#hg)" opacity="0.65" stroke="#8FC1EE" stroke-width="1.2" stroke-dasharray="7 4"/>
+      <text x="255" y="426" font-size="7.5" text-anchor="middle" fill="#BFEBD2">VARANDA GOURMET (térreo)</text>
+      <text x="255" y="438" font-size="7" text-anchor="middle" fill="#8FC1EE">EXTENSÃO FECHADA DA SUÍTE acima — balanço 2,50 (vigas metálicas)</text>
+      <rect x="316" y="409" width="22" height="22" fill="none" stroke="#FFD166" stroke-width="1.2"/>
+      <text x="327" y="447" font-size="6" text-anchor="middle" fill="#FFD166">churrasq. + chaminé</text>
+      <rect x="150" y="459" width="220" height="231" fill="url(#hg)" opacity="0.7"/>
+      <text x="260" y="565" font-size="9" text-anchor="middle" fill="#BFEBD2">QUINTAL</text>
+      <text x="260" y="579" font-size="8" text-anchor="middle" fill="#BFEBD2" opacity="0.8">10,00 × 10,50 m ≈ 105 m²</text>
+      <!-- cotas -->
+      <line x1="150" y1="708" x2="150" y2="694" stroke="#8FC1EE" stroke-width="0.8"/>
+      <line x1="370" y1="708" x2="370" y2="694" stroke="#8FC1EE" stroke-width="0.8"/>
+      <line x1="150" y1="700" x2="370" y2="700" stroke="#8FC1EE" stroke-width="0.8" marker-start="url(#a1)" marker-end="url(#a1)"/>
+      <text x="260" y="696" font-size="8.5" text-anchor="middle" fill="#8FC1EE">10,00</text>
+      <line x1="400" y1="30" x2="400" y2="690" stroke="#8FC1EE" stroke-width="0.8" marker-start="url(#a1)" marker-end="url(#a1)"/>
+      <text x="410" y="364" font-size="8.5" fill="#8FC1EE" transform="rotate(-90 410 364)" text-anchor="middle">30,00</text>
+      <line x1="108" y1="30" x2="108" y2="118" stroke="#8FC1EE" stroke-width="0.8" marker-start="url(#a1)" marker-end="url(#a1)"/>
+      <text x="100" y="76" font-size="8" fill="#8FC1EE" transform="rotate(-90 100 76)" text-anchor="middle">4,00</text>
+      <line x1="108" y1="118" x2="108" y2="404" stroke="#8FC1EE" stroke-width="0.8" marker-start="url(#a1)" marker-end="url(#a1)"/>
+      <text x="100" y="261" font-size="8" fill="#8FC1EE" transform="rotate(-90 100 261)" text-anchor="middle">13,00</text>
+      <line x1="108" y1="404" x2="108" y2="459" stroke="#8FC1EE" stroke-width="0.8"/>
+      <text x="100" y="432" font-size="7" fill="#8FC1EE" transform="rotate(-90 100 432)" text-anchor="middle">2,50</text>
+      <line x1="108" y1="459" x2="108" y2="690" stroke="#8FC1EE" stroke-width="0.8" marker-start="url(#a1)" marker-end="url(#a1)"/>
+      <text x="100" y="575" font-size="8" fill="#8FC1EE" transform="rotate(-90 100 575)" text-anchor="middle">10,50</text>
+      <line x1="150" y1="612" x2="183" y2="612" stroke="#8FC1EE" stroke-width="0.8"/>
+      <line x1="183" y1="612" x2="343.6" y2="612" stroke="#8FC1EE" stroke-width="0.8" marker-start="url(#a1)" marker-end="url(#a1)"/>
+      <line x1="343.6" y1="612" x2="370" y2="612" stroke="#8FC1EE" stroke-width="0.8"/>
+      <text x="166.5" y="627" font-size="7" text-anchor="middle" fill="#8FC1EE">1,50</text>
+      <text x="263" y="627" font-size="8" text-anchor="middle" fill="#8FC1EE">7,30</text>
+      <text x="356.8" y="627" font-size="7" text-anchor="middle" fill="#8FC1EE">1,20</text>
+      <g transform="translate(452,60)">
+        <circle cx="0" cy="0" r="20" fill="none" stroke="#DCEBFF" stroke-width="1"/>
+        <path d="M0,-16 L5,8 L0,3 L-5,8 Z" fill="#DCEBFF"/>
+        <text x="0" y="-26" font-size="10" text-anchor="middle" font-weight="600">N</text>
+        <text x="0" y="40" font-size="6.5" text-anchor="middle" fill="#8FC1EE">FRENTE = NORTE</text>
+      </g>
+      <g transform="translate(422,430)">
+        <rect x="-14" y="-14" width="92" height="196" fill="rgba(9,41,71,0.8)" stroke="#8FC1EE" stroke-width="0.8"/>
+        <text x="32" y="2" font-size="7.5" text-anchor="middle" font-weight="600" letter-spacing="1">ÁREAS</text>
+        <text x="-8" y="20" font-size="6.6" fill="#8FC1EE">TERRENO</text><text x="-8" y="30" font-size="7.2">305,70 m²</text>
+        <text x="-8" y="46" font-size="6.6" fill="#8FC1EE">TÉRREO</text><text x="-8" y="56" font-size="7.2">≈ 75 m²</text>
+        <text x="-8" y="72" font-size="6.6" fill="#8FC1EE">GARAGEM</text><text x="-8" y="82" font-size="7.2">≈ 27,5 m²</text>
+        <text x="-8" y="98" font-size="6.6" fill="#8FC1EE">SUPERIOR</text><text x="-8" y="108" font-size="7.2">≈ 62 m²</text>
+        <text x="-8" y="124" font-size="6.6" fill="#8FC1EE">VARANDA/SACADA</text><text x="-8" y="134" font-size="7.2">≈ 18 m²</text>
+        <text x="-8" y="152" font-size="6.6" fill="#FFD166">TOTAL CONSTR.</text><text x="-8" y="163" font-size="7.6" fill="#FFD166" font-weight="600">≈ 183 m²</text>
+        <text x="-8" y="176" font-size="6" fill="#8FC1EE">T.O. ≈ 40%</text>
+      </g>
+    </svg>
+  </div>
+  <footer class="carimbo">
+    <div><span class="lbl">Projeto</span><span class="val">RESIDÊNCIA UNIFAMILIAR — QUADRA 22 · LOTE 8</span></div>
+    <div><span class="lbl">Conteúdo</span><span class="val">IMPLANTAÇÃO</span></div>
+    <div><span class="lbl">Escala</span><span class="val">1:150 (ref.)</span></div>
+    <div><span class="lbl">Data</span><span class="val">JUL/2026</span></div>
+    <div><span class="lbl">Folha</span><span class="val">F-01 / 06</span></div>
+  </footer>
+  <div class="disclaimer">Estudo preliminar de partido arquitetônico — sem valor executivo · sujeito a projeto legal e estrutural</div>
+</section>
+
+<!-- ===================== FOLHA 02 — PLANTA TÉRREO ===================== -->
+<section class="sheet">
+  <div class="frame"></div>
+  <header class="head">
+    <div><div class="kicker">Residência Q22 · L8 — Estudo Preliminar</div><h1>Planta Térreo</h1></div>
+    <div class="folha-tag">F·02</div>
+  </header>
+  <div class="drawing">
+    <svg viewBox="0 0 560 700" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <pattern id="hg2" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="8" stroke="#7FD4A6" stroke-width="0.8" opacity="0.45"/></pattern>
+        <pattern id="hl2" width="7" height="7" patternTransform="rotate(-45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="7" stroke="#8FC1EE" stroke-width="0.8" opacity="0.5"/></pattern>
+        <marker id="a2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,1 L7,4 L0,7" fill="none" stroke="#FFD166" stroke-width="1"/></marker>
+      </defs>
+      <text x="280" y="46" font-size="8" text-anchor="middle" fill="#7FD4A6" letter-spacing="3">JARDIM FRONTAL — RECUO 4,00 (NORTE / RUA)</text>
+      <line x1="110" y1="60" x2="450" y2="60" stroke="#7FD4A6" stroke-width="0.8" stroke-dasharray="6 4"/>
+      <line x1="110" y1="60" x2="110" y2="621" stroke="#DCEBFF" stroke-width="1.6"/>
+      <text x="100" y="300" font-size="8" transform="rotate(-90 100 300)" text-anchor="middle" fill="#7FD4A6">DIVISA — VIELA (OESTE)</text>
+      <line x1="450" y1="60" x2="450" y2="621" stroke="#DCEBFF" stroke-width="1.6"/>
+      <text x="462" y="270" font-size="8" transform="rotate(-90 462 270)" text-anchor="middle" fill="#8FC1EE">DIVISA — VIZINHO (LESTE)</text>
+
+      <!-- zona de serviço leste -->
+      <rect x="409.2" y="298" width="40.8" height="153" fill="url(#hg2)"/>
+      <text x="429.6" y="374" font-size="7" transform="rotate(-90 429.6 374)" text-anchor="middle" fill="#BFEBD2">ÁREA DE LUZ / VARAL — 1,20 × 4,50</text>
+      <rect x="409.2" y="451" width="40.8" height="85" fill="url(#hl2)"/>
+      <text x="429.6" y="496" font-size="7" transform="rotate(-90 429.6 496)" text-anchor="middle" fill="#8FC1EE">LAVANDERIA (LAJE)</text>
+      <line x1="450" y1="298" x2="450" y2="536" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="409.2" y1="298" x2="450" y2="298" stroke="#DCEBFF" stroke-width="3.5"/>
+      <line x1="409.2" y1="451" x2="450" y2="451" stroke="#DCEBFF" stroke-width="3.5"/>
+      <line x1="416" y1="451" x2="442" y2="451" stroke="#0E3A6B" stroke-width="7"/>
+      <text x="429" y="444" font-size="5.4" text-anchor="middle" fill="#8FC1EE">porta</text>
+      <line x1="409.2" y1="536" x2="450" y2="536" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="418" y1="536" x2="441" y2="536" stroke="#7FD4FF" stroke-width="3"/>
+      <text x="429" y="547" font-size="5" text-anchor="middle" fill="#7FD4FF">janela p/ quintal</text>
+
+      <!-- corredor oeste -->
+      <rect x="110" y="281" width="51" height="255" fill="rgba(220,235,255,0.05)"/>
+      <text x="135.5" y="410" font-size="7" transform="rotate(-90 135.5 410)" text-anchor="middle" fill="#8FC1EE">ACESSO LATERAL — 1,50</text>
+
+      <!-- PAREDES -->
+      <line x1="110" y1="94" x2="110" y2="281" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="110" y1="281" x2="280" y2="281" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="280" y1="94" x2="280" y2="281" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="110" y1="94" x2="280" y2="94" stroke="#FFD166" stroke-width="3" stroke-dasharray="8 5"/>
+      <text x="195" y="86" font-size="7.5" text-anchor="middle" fill="#FFD166">VIGA SOBRE O VÃO DE ACESSO (≈ 5,00 · sem portão)</text>
+      <line x1="280" y1="94" x2="409.2" y2="94" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="409.2" y1="94" x2="409.2" y2="536" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="161" y1="536" x2="409.2" y2="536" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="161" y1="281" x2="161" y2="536" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="161" y1="366" x2="409.2" y2="366" stroke="#8FC1EE" stroke-width="1.4" stroke-dasharray="7 5"/>
+      <text x="250" y="360" font-size="6" text-anchor="middle" fill="#8FC1EE">VIGA METÁLICA na testada da laje — vão livre 7,30, SEM pilar</text>
+
+      <!-- ESCADA na parede norte (aberta, dentro da sala) -->
+      <g stroke="#DCEBFF" stroke-width="1">
+        <line x1="290" y1="99" x2="290" y2="133"/><line x1="300" y1="99" x2="300" y2="133"/>
+        <line x1="310" y1="99" x2="310" y2="133"/><line x1="320" y1="99" x2="320" y2="133"/>
+        <line x1="330" y1="99" x2="330" y2="133"/><line x1="340" y1="99" x2="340" y2="133"/>
+        <line x1="350" y1="99" x2="350" y2="133"/><line x1="360" y1="99" x2="360" y2="133"/>
+        <line x1="370" y1="99" x2="370" y2="133"/><line x1="380" y1="99" x2="380" y2="133"/>
+        <line x1="390" y1="99" x2="390" y2="133"/><line x1="400" y1="99" x2="400" y2="133"/>
+      </g>
+      <line x1="400" y1="116" x2="296" y2="116" stroke="#FFD166" stroke-width="1.1" marker-end="url(#a2)"/>
+      <text x="348" y="146" font-size="6.4" text-anchor="middle" fill="#FFD166">ESCADA — lance aberto na fachada norte · sobe p/ mezanino</text>
+      <line x1="298" y1="94" x2="406" y2="94" stroke="#7FD4FF" stroke-width="4"/>
+      <text x="352" y="82" font-size="6" text-anchor="middle" fill="#7FD4FF">JANELÃO VERTICAL — vidro laminado + película espelhada (sobe o pé-direito duplo)</text>
+
+      <!-- AMBIENTES -->
+      <text x="195" y="175" class="ttl" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="2">GARAGEM</text>
+      <text x="195" y="191" font-size="8" text-anchor="middle" opacity="0.85">5,00 × 5,50 · 27,5 m²</text>
+      <text x="195" y="205" font-size="6.6" text-anchor="middle" fill="#8FC1EE">mezanino empilhado acima (1:1)</text>
+
+      <text x="330" y="240" class="ttl" font-size="12.5" font-weight="600" text-anchor="middle" letter-spacing="1.5">SALA DE ESTAR / JANTAR</text>
+      <text x="330" y="256" font-size="7.6" text-anchor="middle" opacity="0.85">planta aberta · sem laje</text>
+      <text x="330" y="269" font-size="7.5" text-anchor="middle" fill="#FFD166">PÉ-DIREITO DUPLO ≈ 6,00 m</text>
+      <line x1="212" y1="281" x2="212" y2="349" stroke="#DCEBFF" stroke-width="3.5"/>
+      <line x1="161" y1="349" x2="212" y2="349" stroke="#DCEBFF" stroke-width="3.5"/>
+      <line x1="161" y1="294" x2="161" y2="322" stroke="#7FD4FF" stroke-width="3"/>
+      <text x="171" y="292" font-size="5" fill="#7FD4FF">janela viela</text>
+      <line x1="212" y1="300" x2="212" y2="322" stroke="#0E3A6B" stroke-width="7"/>
+      <text x="186" y="310" class="ttl" font-size="8" font-weight="600" text-anchor="middle">BANHEIRO</text>
+      <text x="186" y="321" font-size="5.2" text-anchor="middle" opacity="0.8">completo · 1,5×2,0</text>
+      <text x="252" y="340" class="ttl" font-size="9" font-weight="600" text-anchor="middle" letter-spacing="1">ESTAR AMPLIADO / FLEX</text>
+
+      <text x="285" y="450" class="ttl" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="2">COZINHA</text>
+      <text x="285" y="466" font-size="8" text-anchor="middle" opacity="0.85">largura total 7,30 × 5,00 · 36 m²</text>
+      <text x="285" y="479" font-size="7" text-anchor="middle" fill="#8FC1EE">laje = piso da suíte master</text>
+      <rect x="167" y="474" width="60" height="54" fill="none" stroke="#8FC1EE" stroke-width="0.8" stroke-dasharray="3 2"/>
+      <text x="197" y="503" font-size="7.5" text-anchor="middle" fill="#8FC1EE">DESPENSA</text>
+      <text x="197" y="514" font-size="6" text-anchor="middle" fill="#8FC1EE" opacity="0.8">(nicho embutido)</text>
+
+      <!-- portas -->
+      <line x1="280" y1="170" x2="280" y2="205" stroke="#0E3A6B" stroke-width="7"/>
+      <path d="M280,170 A35,35 0 0 1 315,205" fill="none" stroke="#FFD166" stroke-width="1"/>
+      <text x="308" y="165" font-size="6.4" text-anchor="middle" fill="#FFD166">ENTRADA (parede lateral da sala)</text>
+      <line x1="120" y1="281" x2="146" y2="281" stroke="#0E3A6B" stroke-width="7"/>
+      <text x="99" y="273" font-size="6" fill="#8FC1EE">p/ corredor</text>
+      <line x1="409.2" y1="410" x2="409.2" y2="438" stroke="#0E3A6B" stroke-width="7"/>
+      <text x="417" y="404" font-size="6" fill="#8FC1EE">cozinha→área de luz</text>
+      <line x1="232" y1="536" x2="352" y2="536" stroke="#0E3A6B" stroke-width="7"/>
+      <line x1="232" y1="536" x2="352" y2="536" stroke="#7FD4FF" stroke-width="2.4" stroke-dasharray="9 5"/>
+      <text x="292" y="548" font-size="6.4" text-anchor="middle" fill="#7FD4FF">PORTA BALCÃO ~3,50 m — cozinha ↔ varanda gourmet</text>
+
+      <!-- VARANDA GOURMET (balanço 2,50) -->
+      <rect x="161" y="539" width="248.2" height="79" fill="url(#hg2)" opacity="0.6"/>
+      <line x1="161" y1="621" x2="409.2" y2="621" stroke="#8FC1EE" stroke-width="1.6" stroke-dasharray="8 5"/>
+      <line x1="161" y1="536" x2="161" y2="621" stroke="#8FC1EE" stroke-width="1.2" stroke-dasharray="8 5"/>
+      <line x1="409.2" y1="536" x2="409.2" y2="621" stroke="#8FC1EE" stroke-width="1.2" stroke-dasharray="8 5"/>
+      <g stroke="#7FD4FF" stroke-width="1" stroke-dasharray="3 4" opacity="0.8">
+        <line x1="205" y1="538" x2="205" y2="619"/><line x1="265" y1="538" x2="265" y2="619"/>
+        <line x1="325" y1="538" x2="325" y2="619"/><line x1="385" y1="538" x2="385" y2="619"/>
+      </g>
+      <text x="248" y="562" class="ttl" font-size="10" font-weight="600" text-anchor="middle" fill="#BFEBD2" letter-spacing="1.5">VARANDA GOURMET</text>
+      <text x="248" y="575" font-size="6.2" text-anchor="middle" fill="#8FC1EE">balanço 2,50 — vigas metálicas (sacada da suíte acima)</text>
+      <text x="215" y="600" font-size="6.2" fill="#8FC1EE">cooktop a gás + abrigo P13</text>
+      <rect x="366" y="546" width="38" height="42" fill="none" stroke="#FFD166" stroke-width="1.4"/>
+      <text x="385" y="566" font-size="6" text-anchor="middle" fill="#FFD166">CHURRASQ.</text>
+      <text x="385" y="578" font-size="5" text-anchor="middle" fill="#FFD166">chaminé ↑ acima da cobertura</text>
+      <!-- cotas -->
+      <line x1="110" y1="645" x2="110" y2="657" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="161" y1="645" x2="161" y2="657" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="409.2" y1="645" x2="409.2" y2="657" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="450" y1="645" x2="450" y2="657" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="110" y1="652" x2="450" y2="652" stroke="#8FC1EE" stroke-width="0.8"/>
+      <text x="135.5" y="667" font-size="7" text-anchor="middle" fill="#8FC1EE">1,50</text>
+      <text x="285" y="667" font-size="7" text-anchor="middle" fill="#8FC1EE">7,30</text>
+      <text x="429.6" y="667" font-size="7" text-anchor="middle" fill="#8FC1EE">1,20</text>
+      <line x1="480" y1="94" x2="494" y2="94" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="480" y1="366" x2="494" y2="366" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="480" y1="536" x2="494" y2="536" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="487" y1="94" x2="487" y2="366" stroke="#8FC1EE" stroke-width="0.8"/>
+      <text x="498" y="230" font-size="7" fill="#8FC1EE" transform="rotate(-90 498 230)" text-anchor="middle">8,00</text>
+      <line x1="487" y1="366" x2="487" y2="536" stroke="#8FC1EE" stroke-width="0.8"/>
+      <text x="498" y="451" font-size="7" fill="#8FC1EE" transform="rotate(-90 498 451)" text-anchor="middle">5,00</text>
+      <g transform="translate(56,84)"><circle cx="0" cy="0" r="15" fill="none" stroke="#DCEBFF" stroke-width="1"/><path d="M0,-12 L4,6 L0,2 L-4,6 Z" fill="#DCEBFF"/><text x="0" y="-20" font-size="9" text-anchor="middle" font-weight="600">N</text></g>
+    </svg>
+  </div>
+  <footer class="carimbo">
+    <div><span class="lbl">Projeto</span><span class="val">RESIDÊNCIA UNIFAMILIAR — QUADRA 22 · LOTE 8</span></div>
+    <div><span class="lbl">Conteúdo</span><span class="val">PLANTA TÉRREO ≈ 75 m² + GAR. 27,5 m²</span></div>
+    <div><span class="lbl">Escala</span><span class="val">1:75 (ref.)</span></div>
+    <div><span class="lbl">Data</span><span class="val">JUL/2026</span></div>
+    <div><span class="lbl">Folha</span><span class="val">F-02 / 06</span></div>
+  </footer>
+  <div class="disclaimer">Divisão interna simulada — layout de estudo · dimensões a validar em projeto arquitetônico</div>
+</section>
+
+<!-- ===================== FOLHA 03 — PLANTA SUPERIOR ===================== -->
+<section class="sheet">
+  <div class="frame"></div>
+  <header class="head">
+    <div><div class="kicker">Residência Q22 · L8 — Estudo Preliminar</div><h1>Planta Superior</h1></div>
+    <div class="folha-tag">F·03</div>
+  </header>
+  <div class="drawing">
+    <svg viewBox="0 0 560 700" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <pattern id="hv" width="12" height="12" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="12" stroke="#FFD166" stroke-width="1" opacity="0.5"/></pattern>
+        <pattern id="hm" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="10" stroke="#8FC1EE" stroke-width="0.8" opacity="0.35"/></pattern>
+        <pattern id="ht" width="7" height="7" patternTransform="rotate(-45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="7" stroke="#8FC1EE" stroke-width="0.8" opacity="0.5"/></pattern>
+        <marker id="a3" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,1 L7,4 L0,7" fill="none" stroke="#FFD166" stroke-width="1"/></marker>
+      </defs>
+      <text x="280" y="46" font-size="8" text-anchor="middle" fill="#8FC1EE" letter-spacing="3">FRENTE (NORTE / RUA)</text>
+      <line x1="110" y1="60" x2="110" y2="621" stroke="#8FC1EE" stroke-width="0.8" stroke-dasharray="4 4"/>
+      <line x1="450" y1="60" x2="450" y2="621" stroke="#8FC1EE" stroke-width="0.8" stroke-dasharray="4 4"/>
+      <text x="100" y="190" font-size="8" transform="rotate(-90 100 190)" text-anchor="middle" fill="#7FD4A6">DIVISA — VIELA (OESTE)</text>
+      <text x="462" y="210" font-size="8" transform="rotate(-90 462 210)" text-anchor="middle" fill="#8FC1EE">DIVISA — VIZINHO (LESTE)</text>
+
+      <!-- MEZANINO 3,5m sobre a frente da garagem -->
+      <rect x="113" y="97" width="164" height="113" fill="url(#hm)"/>
+      <text x="195" y="140" class="ttl" font-size="12.5" font-weight="600" text-anchor="middle" fill="#8FC1EE" letter-spacing="1.5">MEZANINO</text>
+      <text x="195" y="155" font-size="7" text-anchor="middle" fill="#8FC1EE">5,00 × 3,50 · ≈15,4 m²</text>
+      <text x="195" y="167" font-size="6.2" text-anchor="middle" fill="#8FC1EE">sobre a garagem · parede na divisa</text>
+      <line x1="110" y1="94" x2="110" y2="213" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="110" y1="94" x2="280" y2="94" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="110" y1="213" x2="161" y2="213" stroke="#DCEBFF" stroke-width="6"/>
+      <!-- LAVABO no canto do mezanino, encostado no banheiro -->
+      <line x1="110" y1="165.4" x2="161" y2="165.4" stroke="#DCEBFF" stroke-width="3.5"/>
+      <line x1="161" y1="165.4" x2="161" y2="213" stroke="#DCEBFF" stroke-width="3.5"/>
+      <line x1="161" y1="178" x2="161" y2="200" stroke="#0E3A6B" stroke-width="7"/>
+      <text x="128" y="190" class="ttl" font-size="7.5" font-weight="600" text-anchor="middle" transform="rotate(-90 128 190)">LAVABO</text>
+      <text x="140" y="190" font-size="4.8" text-anchor="middle" transform="rotate(-90 140 190)" opacity="0.8">1,5×1,4 · exaustão mec.</text>
+      <line x1="280" y1="140" x2="280" y2="213" stroke="#FFD166" stroke-width="2.5" stroke-dasharray="10 5"/>
+      <text x="284" y="118" font-size="5.4" fill="#FFD166" transform="rotate(-90 284 118)" text-anchor="middle">chegada</text>
+
+      <!-- BANHEIRO do quarto: encostado no muro, janela SUL, sobre a laje da garagem -->
+      <line x1="110" y1="213" x2="110" y2="281" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="110" y1="281" x2="161" y2="281" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="136" y1="281" x2="155" y2="281" stroke="#7FD4FF" stroke-width="3"/>
+      <text x="135" y="292" font-size="4.8" fill="#7FD4FF">jan. SUL (≥0,75 da divisa)</text>
+      <text x="128" y="247" class="ttl" font-size="7.5" font-weight="600" text-anchor="middle" transform="rotate(-90 128 247)">BANHEIRO</text>
+      <text x="140" y="247" font-size="4.8" text-anchor="middle" transform="rotate(-90 140 247)" opacity="0.8">do quarto · 1,5×2,0</text>
+      <line x1="161" y1="228" x2="161" y2="250" stroke="#0E3A6B" stroke-width="7"/>
+
+      <!-- ESCADA fachada norte -->
+      <g stroke="#DCEBFF" stroke-width="1">
+        <line x1="290" y1="99" x2="290" y2="133"/><line x1="300" y1="99" x2="300" y2="133"/>
+        <line x1="310" y1="99" x2="310" y2="133"/><line x1="320" y1="99" x2="320" y2="133"/>
+        <line x1="330" y1="99" x2="330" y2="133"/><line x1="340" y1="99" x2="340" y2="133"/>
+        <line x1="350" y1="99" x2="350" y2="133"/><line x1="360" y1="99" x2="360" y2="133"/>
+        <line x1="370" y1="99" x2="370" y2="133"/><line x1="380" y1="99" x2="380" y2="133"/>
+        <line x1="390" y1="99" x2="390" y2="133"/><line x1="400" y1="99" x2="400" y2="133"/>
+      </g>
+      <line x1="400" y1="116" x2="296" y2="116" stroke="#FFD166" stroke-width="1.1" marker-end="url(#a3)"/>
+      <text x="345" y="146" font-size="6" text-anchor="middle" fill="#FFD166">escada aberta — chega no mezanino</text>
+      <line x1="298" y1="94" x2="406" y2="94" stroke="#7FD4FF" stroke-width="4"/>
+      <text x="352" y="82" font-size="6" text-anchor="middle" fill="#7FD4FF">JANELÃO VERTICAL (continuação) — película espelhada</text>
+
+      <!-- VAZIO -->
+      <rect x="283" y="152" width="123.2" height="205" fill="url(#hv)"/>
+      <text x="344.6" y="250" class="ttl" font-size="11" font-weight="600" text-anchor="middle" fill="#FFD166" letter-spacing="1.5">VAZIO</text>
+      <text x="344.6" y="264" font-size="6.6" text-anchor="middle" fill="#FFD166">pé-direito duplo · lanternim acima</text>
+      <line x1="317" y1="152" x2="317" y2="357" stroke="#7FD4FF" stroke-width="1.1" stroke-dasharray="10 6"/>
+      <text x="327" y="300" font-size="5.8" fill="#7FD4FF" transform="rotate(-90 327 300)" text-anchor="middle">projeção do lanternim</text>
+
+      <!-- PAREDES -->
+      <line x1="280" y1="94" x2="409.2" y2="94" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="409.2" y1="94" x2="409.2" y2="298" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="161" y1="213" x2="161" y2="536" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="161" y1="536" x2="409.2" y2="536" stroke="#DCEBFF" stroke-width="6"/>
+      
+      <line x1="246" y1="213" x2="246" y2="338.8" stroke="#DCEBFF" stroke-width="3.5"/>
+      <line x1="161" y1="213" x2="246" y2="213" stroke="#DCEBFF" stroke-width="3.5"/>
+      <line x1="280" y1="213" x2="280" y2="383" stroke="#FFD166" stroke-width="2.5" stroke-dasharray="10 5"/>
+      <rect x="165" y="344" width="18" height="34" fill="none" stroke="#7FD4FF" stroke-width="1"/>
+      <text x="206" y="358" class="ttl" font-size="8.5" font-weight="600" text-anchor="middle">COPA</text>
+      <text x="206" y="369" font-size="5.2" text-anchor="middle" opacity="0.85">bebedouro + frigobar · 2,7×1,3 · aberta p/ corredor</text>
+      <text x="266" y="300" font-size="6" transform="rotate(-90 266 300)" text-anchor="middle" fill="#DCEBFF">CORREDOR</text>
+
+
+      <!-- QUARTO generoso -->
+      <text x="203" y="272" class="ttl" font-size="12.5" font-weight="600" text-anchor="middle" letter-spacing="1.5">QUARTO</text>
+      <text x="203" y="286" font-size="6.6" text-anchor="middle" opacity="0.82">2,70 × 3,70 · 10 m² · retângulo limpo</text>
+      <line x1="161" y1="338.8" x2="246" y2="338.8" stroke="#DCEBFF" stroke-width="3.5"/>
+      <line x1="161" y1="300" x2="161" y2="352" stroke="#7FD4FF" stroke-width="3"/>
+      <text x="171" y="298" font-size="5" fill="#7FD4FF">jan. viela</text>
+      <line x1="246" y1="248" x2="246" y2="272" stroke="#0E3A6B" stroke-width="7"/>
+
+      <!-- SUÍTE -->
+      <line x1="161" y1="383" x2="409.2" y2="383" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="293.6" y1="383" x2="293.6" y2="536" stroke="#DCEBFF" stroke-width="3.5"/>
+      <line x1="334.4" y1="383" x2="334.4" y2="536" stroke="#DCEBFF" stroke-width="3.5"/>
+      <text x="226" y="450" class="ttl" font-size="12.5" font-weight="700" text-anchor="middle" letter-spacing="1.5">SUÍTE — QUARTO</text>
+      <text x="226" y="465" font-size="7" text-anchor="middle" opacity="0.85">~3,90 × 4,50 m</text>
+      <line x1="161" y1="420" x2="161" y2="485" stroke="#7FD4FF" stroke-width="3"/>
+      <text x="171" y="430" font-size="5.8" fill="#7FD4FF">janela viela</text>
+      <line x1="168" y1="536" x2="290" y2="536" stroke="#0E3A6B" stroke-width="7"/>
+      <text x="229" y="528" font-size="5.8" text-anchor="middle" fill="#7FD4FF">ABERTO — integrado ao quarto (sem porta)</text>
+      <text x="314" y="448" class="ttl" font-size="9" font-weight="600" text-anchor="middle" transform="rotate(-90 314 448)">CLOSET</text>
+      <text x="325" y="448" font-size="5.8" text-anchor="middle" transform="rotate(-90 325 448)" opacity="0.8">passante 1,20</text>
+      <g stroke="#8FC1EE" stroke-width="0.9">
+        <line x1="296" y1="402" x2="306" y2="402"/><line x1="296" y1="418" x2="306" y2="418"/><line x1="296" y1="434" x2="306" y2="434"/>
+        <line x1="322" y1="474" x2="332" y2="474"/><line x1="322" y1="490" x2="332" y2="490"/><line x1="322" y1="506" x2="332" y2="506"/>
+      </g>
+      <text x="372" y="420" class="ttl" font-size="10.5" font-weight="600" text-anchor="middle" letter-spacing="1">BANHEIRO</text>
+      <text x="372" y="433" font-size="6.4" text-anchor="middle" opacity="0.82">~1,70 × 4,50 · sem box</text>
+      <rect x="344" y="492" width="24" height="18" rx="7" fill="none" stroke="#8FC1EE" stroke-width="1"/>
+      <text x="356" y="505" font-size="5.4" text-anchor="middle" fill="#8FC1EE">vaso</text>
+      <path d="M346,458 a11,8 0 1 0 22,0 a11,8 0 1 0 -22,0" fill="none" stroke="#8FC1EE" stroke-width="1"/>
+      <text x="357" y="461" font-size="5.4" text-anchor="middle" fill="#8FC1EE">cuba</text>
+      <line x1="372" y1="536" x2="402" y2="536" stroke="#7FD4FF" stroke-width="3"/>
+      <text x="387" y="528" font-size="5.4" text-anchor="middle" fill="#7FD4FF">janela S</text>
+      <line x1="293.6" y1="392" x2="293.6" y2="420" stroke="#0E3A6B" stroke-width="7"/>
+      <text x="293" y="389" font-size="5" text-anchor="middle" fill="#FFD166">portal</text>
+      <line x1="334.4" y1="392" x2="334.4" y2="420" stroke="#0E3A6B" stroke-width="7"/>
+      <text x="345" y="389" font-size="5" text-anchor="middle" fill="#8FC1EE">porta</text>
+      <line x1="250" y1="383" x2="278" y2="383" stroke="#0E3A6B" stroke-width="7"/>
+      <text x="264" y="377" font-size="5.4" text-anchor="middle" fill="#8FC1EE">entra na suíte</text>
+      <path d="M264,389 L264,406 L289,406" fill="none" stroke="#FFD166" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#a3)"/>
+      <path d="M300,406 L330,406" fill="none" stroke="#FFD166" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#a3)"/>
+      <path d="M340,406 L360,406" fill="none" stroke="#FFD166" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#a3)"/>
+
+      <!-- poço de luz + técnica -->
+      <line x1="409.2" y1="298" x2="450" y2="298" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="450" y1="298" x2="450" y2="536" stroke="#DCEBFF" stroke-width="6"/>
+      <line x1="409.2" y1="298" x2="409.2" y2="536" stroke="#DCEBFF" stroke-width="3.5"/>
+      <line x1="409.2" y1="451" x2="450" y2="451" stroke="#DCEBFF" stroke-width="3.5"/>
+      <rect x="411" y="300" width="37" height="149" fill="url(#hv)" opacity="0.5"/>
+      <rect x="411" y="453" width="37" height="81" fill="url(#ht)"/>
+      <text x="429.6" y="378" font-size="6.2" transform="rotate(-90 429.6 378)" text-anchor="middle" fill="#8FC1EE">POÇO DE LUZ</text>
+      <text x="429.6" y="496" font-size="7" transform="rotate(-90 429.6 496)" text-anchor="middle" fill="#8FC1EE" class="ttl" font-weight="600">TÉCNICA</text>
+      <line x1="416" y1="451" x2="442" y2="451" stroke="#0E3A6B" stroke-width="7"/>
+
+      <!-- SACADA (balanço 2,50) -->
+      <rect x="164" y="539" width="242.2" height="79" fill="url(#hm)" opacity="0.7"/>
+      <line x1="161" y1="621" x2="409.2" y2="621" stroke="#FFD166" stroke-width="2.5" stroke-dasharray="10 5"/>
+      <line x1="161" y1="536" x2="161" y2="621" stroke="#FFD166" stroke-width="2.5" stroke-dasharray="10 5"/>
+      <line x1="409.2" y1="536" x2="409.2" y2="621" stroke="#FFD166" stroke-width="2.5" stroke-dasharray="10 5"/>
+      <text x="285" y="568" class="ttl" font-size="10" font-weight="600" text-anchor="middle" fill="#8FC1EE" letter-spacing="1.5">EXTENSÃO DA SUÍTE (fechada)</text>
+      <text x="285" y="581" font-size="6.2" text-anchor="middle" fill="#8FC1EE">7,30 × 2,50 em balanço · mureta + vidro até o forro</text>
+      <text x="285" y="594" font-size="5.6" text-anchor="middle" fill="#FFD166">piso sobre varanda aberta: manter impermeabilização/isolamento · forro sob o telhado</text>
+      <!-- cotas -->
+      <line x1="480" y1="94" x2="494" y2="94" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="480" y1="213" x2="494" y2="213" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="480" y1="281" x2="494" y2="281" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="480" y1="383" x2="494" y2="383" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="480" y1="536" x2="494" y2="536" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="487" y1="94" x2="487" y2="536" stroke="#8FC1EE" stroke-width="0.8"/>
+      <text x="498" y="154" font-size="6.4" fill="#8FC1EE" transform="rotate(-90 498 154)" text-anchor="middle">3,50</text>
+      <text x="498" y="276" font-size="6.4" fill="#8FC1EE" transform="rotate(-90 498 276)" text-anchor="middle">3,70 quarto</text>
+      <text x="498" y="360" font-size="6.4" fill="#8FC1EE" transform="rotate(-90 498 360)" text-anchor="middle">1,30 copa</text>
+      <text x="498" y="460" font-size="6.4" fill="#8FC1EE" transform="rotate(-90 498 460)" text-anchor="middle">4,50</text>
+      <line x1="161" y1="640" x2="161" y2="652" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="293.6" y1="640" x2="293.6" y2="652" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="334.4" y1="640" x2="334.4" y2="652" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="409.2" y1="640" x2="409.2" y2="652" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="161" y1="646" x2="409.2" y2="646" stroke="#8FC1EE" stroke-width="0.8"/>
+      <text x="226" y="661" font-size="6.6" text-anchor="middle" fill="#8FC1EE">3,90 quarto</text>
+      <text x="314" y="661" font-size="6.2" text-anchor="middle" fill="#8FC1EE">1,20</text>
+      <text x="372" y="661" font-size="6.6" text-anchor="middle" fill="#8FC1EE">1,70 banh.</text>
+      <g transform="translate(56,84)"><circle cx="0" cy="0" r="15" fill="none" stroke="#DCEBFF" stroke-width="1"/><path d="M0,-12 L4,6 L0,2 L-4,6 Z" fill="#DCEBFF"/><text x="0" y="-20" font-size="9" text-anchor="middle" font-weight="600">N</text></g>
+    </svg>
+  </div>
+  <footer class="carimbo">
+    <div><span class="lbl">Projeto</span><span class="val">RESIDÊNCIA UNIFAMILIAR — QUADRA 22 · LOTE 8</span></div>
+    <div><span class="lbl">Conteúdo</span><span class="val">PLANTA SUPERIOR ≈ 62 m²</span></div>
+    <div><span class="lbl">Escala</span><span class="val">1:75 (ref.)</span></div>
+    <div><span class="lbl">Data</span><span class="val">JUL/2026</span></div>
+    <div><span class="lbl">Folha</span><span class="val">F-03 / 06</span></div>
+  </footer>
+  <div class="disclaimer">Divisão interna simulada — layout de estudo · dimensões a validar em projeto arquitetônico</div>
+</section>
+
+<!-- ===================== FOLHA 04 — CORTE AA ===================== -->
+<section class="sheet">
+  <div class="frame"></div>
+  <header class="head">
+    <div><div class="kicker">Residência Q22 · L8 — Estudo Preliminar</div><h1>Corte AA + Lanternim</h1></div>
+    <div class="folha-tag">F·04</div>
+  </header>
+  <div class="drawing">
+    <svg viewBox="0 0 560 560" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <pattern id="hs" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="10" stroke="#8FC1EE" stroke-width="1" opacity="0.4"/></pattern>
+        <marker id="a4" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,1 L7,4 L0,7" fill="none" stroke="#FFD166" stroke-width="1.2"/></marker>
+        <marker id="a5" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,1 L7,4 L0,7" fill="none" stroke="#8FC1EE" stroke-width="1"/></marker>
+      </defs>
+      <text x="280" y="30" font-size="8.5" text-anchor="middle" letter-spacing="3" fill="#8FC1EE">CORTE TRANSVERSAL AA — VISTO DA RUA · GARAGEM (OESTE) À DIREITA</text>
+
+      <!-- solo -->
+      <rect x="20" y="400" width="520" height="16" fill="url(#hs)"/>
+      <line x1="20" y1="400" x2="540" y2="400" stroke="#DCEBFF" stroke-width="2"/>
+      <text x="30" y="428" font-size="7" fill="#8FC1EE">RADIER (fundação leve — sistema EPS)</text>
+
+      <!-- divisa oeste (direita) -->
+      <rect x="456" y="280" width="8" height="120" fill="#DCEBFF"/>
+      <text x="474" y="340" font-size="6.5" transform="rotate(-90 474 340)" text-anchor="middle" fill="#7FD4A6">PAREDE PRÓPRIA NA DIVISA</text>
+      <!-- laje garagem (direita): x0..x5 -> px460..260 -->
+      <rect x="256" y="274" width="208" height="8" fill="#DCEBFF"/>
+      <text x="360" y="268" font-size="6.5" text-anchor="middle" fill="#8FC1EE">LAJE VIGOTAS + EPS (vão ≈ 5,00)</text>
+      <!-- parede central x5 -> px260 -->
+      <rect x="256" y="166" width="8" height="234" fill="#DCEBFF"/>
+      <!-- parede leste da casa x8.8 -> px108 -->
+      <rect x="104" y="166" width="8" height="234" fill="#DCEBFF"/>
+      <!-- upper room sits on garage laje px260..456 -->
+
+      <!-- ambientes -->
+      <text x="184" y="330" class="ttl" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2">ESTAR / JANTAR</text>
+      <text x="184" y="346" font-size="7" text-anchor="middle" fill="#FFD166">pé-direito duplo ≈ 6,00</text>
+      <text x="360" y="352" class="ttl" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2">GARAGEM</text>
+      <text x="360" y="230" class="ttl" font-size="9.5" font-weight="600" text-anchor="middle" letter-spacing="1.5">QUARTO 4 / MEZANINO</text>
+
+      <!-- TELHADO (espelhado: oeste alta à direita) -->
+      <line x1="460" y1="144" x2="276" y2="108" stroke="#DCEBFF" stroke-width="5"/>
+      <line x1="276" y1="144" x2="128" y2="170" stroke="#DCEBFF" stroke-width="5"/>
+      <line x1="276" y1="108" x2="276" y2="144" stroke="#7FD4FF" stroke-width="4"/>
+      <text x="276" y="96" font-size="7.5" text-anchor="middle" fill="#7FD4FF" font-weight="600">LANTERNIM 0,90 — VIDRO LAMINADO / POLICARB. + BÁSCULAS</text>
+      <g fill="#8FC1EE"><circle cx="410" cy="137" r="2.5"/><circle cx="340" cy="123" r="2.5"/><circle cx="230" cy="152" r="2.5"/><circle cx="165" cy="163" r="2.5"/></g>
+      <text x="410" y="120" font-size="6.5" fill="#8FC1EE" text-anchor="end">estrutura metálica · pintura eletrostática</text>
+      <text x="185" y="140" font-size="6.5" fill="#8FC1EE">telha sanduíche EPS</text>
+
+      <!-- sol da manhã (leste = esquerda) -->
+      <g stroke="#FFD166" stroke-width="1.4">
+        <line x1="60" y1="60" x2="260" y2="118" marker-end="url(#a4)"/>
+        <line x1="44" y1="90" x2="244" y2="148" marker-end="url(#a4)"/>
+      </g>
+      <circle cx="48" cy="56" r="12" fill="none" stroke="#FFD166" stroke-width="1.5"/>
+      <g stroke="#FFD166" stroke-width="1"><line x1="48" y1="38" x2="48" y2="30"/><line x1="48" y1="74" x2="48" y2="82"/><line x1="66" y1="56" x2="74" y2="56"/><line x1="30" y1="56" x2="22" y2="56"/></g>
+      <text x="60" y="106" font-size="7" fill="#FFD166" text-anchor="middle">SOL DA MANHÃ (LESTE)</text>
+
+      <!-- efeito chaminé sobre estar (esquerda) -->
+      <path d="M184,380 C184,320 200,240 264,150" fill="none" stroke="#7FD4FF" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#a5)"/>
+      <text x="205" y="270" font-size="6.5" fill="#7FD4FF" transform="rotate(78 205 270)" text-anchor="middle">efeito chaminé — exaustão do ar quente</text>
+      <text x="410" y="160" font-size="6.5" fill="#8FC1EE" text-anchor="end">água OESTE mais alta = anteparo do sol da tarde</text>
+
+      <!-- cotas altura (esquerda) -->
+      <line x1="114" y1="400" x2="100" y2="400" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="114" y1="282" x2="100" y2="282" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="114" y1="166" x2="100" y2="166" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="107" y1="400" x2="107" y2="282" stroke="#8FC1EE" stroke-width="0.8" marker-start="url(#a5)" marker-end="url(#a5)"/>
+      <text x="96" y="344" font-size="7" fill="#8FC1EE" transform="rotate(-90 96 344)" text-anchor="middle">3,00</text>
+      <line x1="107" y1="282" x2="107" y2="166" stroke="#8FC1EE" stroke-width="0.8" marker-start="url(#a5)" marker-end="url(#a5)"/>
+      <text x="96" y="226" font-size="7" fill="#8FC1EE" transform="rotate(-90 96 226)" text-anchor="middle">2,70</text>
+      <line x1="70" y1="108" x2="70" y2="144" stroke="#7FD4FF" stroke-width="0.8" marker-start="url(#a5)" marker-end="url(#a5)"/>
+      <text x="59" y="128" font-size="7" fill="#7FD4FF" transform="rotate(-90 59 128)" text-anchor="middle">0,90</text>
+
+      <!-- cotas horizontais -->
+      <line x1="108" y1="440" x2="108" y2="454" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="260" y1="440" x2="260" y2="454" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="460" y1="440" x2="460" y2="454" stroke="#8FC1EE" stroke-width="0.6"/>
+      <line x1="108" y1="447" x2="460" y2="447" stroke="#8FC1EE" stroke-width="0.8"/>
+      <text x="184" y="466" font-size="7" text-anchor="middle" fill="#8FC1EE">3,80 (estar)</text>
+      <text x="360" y="466" font-size="7" text-anchor="middle" fill="#8FC1EE">5,00 (garagem)</text>
+
+      <g transform="translate(60,494)">
+        <text x="0" y="0" font-size="7" fill="#8FC1EE" letter-spacing="1">PREMISSAS · painéis Monolev autoportantes · vigas METÁLICAS: vão da garagem, testada da laje (7,30 livre, sem pilar) e balanço da sacada 2,50 · laje vigotas+EPS</text>
+        <text x="0" y="14" font-size="7" fill="#8FC1EE" letter-spacing="1">PONTOS DE ATENÇÃO · rufo/calha do lanternim · junção laje ↔ vão duplo · convenção (aberturas p/ viela) · escada aberta (guarda-corpo NBR) · balanço da sacada: contrapeso/engaste das vigas sob a suíte</text>
+      </g>
+    </svg>
+  </div>
+  <footer class="carimbo">
+    <div><span class="lbl">Projeto</span><span class="val">RESIDÊNCIA UNIFAMILIAR — QUADRA 22 · LOTE 8</span></div>
+    <div><span class="lbl">Conteúdo</span><span class="val">CORTE AA · COBERTURA E LANTERNIM</span></div>
+    <div><span class="lbl">Escala</span><span class="val">1:60 (ref.)</span></div>
+    <div><span class="lbl">Data</span><span class="val">JUL/2026</span></div>
+    <div><span class="lbl">Folha</span><span class="val">F-04 / 06</span></div>
+  </footer>
+  <div class="disclaimer">Estudo preliminar de partido arquitetônico — sem valor executivo · sujeito a projeto legal e estrutural</div>
+</section>
+
+
+<!-- ===================== FOLHA 05 — ELEVAÇÃO NORTE ===================== -->
+<section class="sheet">
+  <div class="frame"></div>
+  <header class="head">
+    <div><div class="kicker">Residência Q22 · L8 — Estudo Preliminar</div><h1>Elevação Norte</h1></div>
+    <div class="folha-tag">F·05</div>
+  </header>
+  <div class="drawing">
+    <svg viewBox="0 0 560 520" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <pattern id="hs5" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="10" stroke="#8FC1EE" stroke-width="1" opacity="0.4"/></pattern>
+        <pattern id="hgl" width="14" height="14" patternTransform="rotate(-55)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="14" stroke="#7FD4FF" stroke-width="1" opacity="0.45"/></pattern>
+        <marker id="a5f" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,1 L7,4 L0,7" fill="none" stroke="#8FC1EE" stroke-width="1"/></marker>
+      </defs>
+      <text x="280" y="28" font-size="8.5" text-anchor="middle" letter-spacing="3" fill="#8FC1EE">ELEVAÇÃO NORTE — VISTA DA RUA · OESTE (VIELA) À DIREITA</text>
+
+      <!-- solo / jardim frontal -->
+      <rect x="40" y="400" width="480" height="14" fill="url(#hs5)"/>
+      <line x1="40" y1="400" x2="520" y2="400" stroke="#DCEBFF" stroke-width="2"/>
+      <text x="70" y="426" font-size="6.5" fill="#7FD4A6">JARDIM FRONTAL (sem muro)</text>
+
+      <!-- fachada: contorno -->
+      <line x1="128" y1="166" x2="128" y2="400" stroke="#DCEBFF" stroke-width="4"/>
+      <line x1="480" y1="142" x2="480" y2="400" stroke="#DCEBFF" stroke-width="4"/>
+      <text x="452" y="156" font-size="5.4" fill="#8FC1EE">oitão até o telhado</text>
+      <line x1="280" y1="296" x2="280" y2="400" stroke="#DCEBFF" stroke-width="2" opacity="0.6"/>
+
+      <!-- portão + viga -->
+      <rect x="288" y="308" width="184" height="90" fill="rgba(5,20,40,0.55)" stroke="#8FC1EE" stroke-width="1" stroke-dasharray="5 4"/>
+      <text x="380" y="350" font-size="7.5" text-anchor="middle" fill="#8FC1EE">GARAGEM — VÃO ABERTO 5,00</text>
+      <text x="380" y="364" font-size="5.8" text-anchor="middle" fill="#8FC1EE" opacity="0.85">condomínio fechado: sem portão</text>
+      <line x1="284" y1="302" x2="476" y2="302" stroke="#FFD166" stroke-width="5"/>
+      <text x="380" y="292" font-size="6.2" text-anchor="middle" fill="#FFD166">VIGA METÁLICA DO VÃO</text>
+
+      <!-- mezanino (faixa acima da garagem) -->
+      <text x="380" y="240" font-size="7" text-anchor="middle" fill="#8FC1EE" opacity="0.85">MEZANINO (atrás da fachada)</text>
+      <text x="470" y="230" font-size="5.6" fill="#7FD4A6" transform="rotate(-90 470 230)" text-anchor="middle">parede cega no prumo da divisa</text>
+
+      <!-- JANELÃO vertical com película espelhada -->
+      <rect x="150" y="176" width="96" height="220" fill="url(#hgl)" stroke="#7FD4FF" stroke-width="2.5"/>
+      <line x1="150" y1="250" x2="246" y2="250" stroke="#7FD4FF" stroke-width="1"/>
+      <line x1="150" y1="324" x2="246" y2="324" stroke="#7FD4FF" stroke-width="1"/>
+      <!-- silhueta da escada atrás do vidro -->
+      <g stroke="#DCEBFF" stroke-width="1" stroke-dasharray="4 3" opacity="0.55">
+        <path d="M156,388 L176,388 L176,368 L196,368 L196,348 L216,348 L216,328 L236,328 L236,308"/>
+      </g>
+      <text x="198" y="164" font-size="6.4" text-anchor="middle" fill="#7FD4FF">JANELÃO VERTICAL — laminado + PELÍCULA ESPELHADA</text>
+      <text x="198" y="410" font-size="5.6" text-anchor="middle" fill="#8FC1EE">escada aparece iluminada à noite (efeito lanterna)</text>
+
+      <!-- telhado: água oeste (dir.) alta + lanternim + água leste (esq.) -->
+      <line x1="500" y1="144" x2="256" y2="108" stroke="#DCEBFF" stroke-width="5"/>
+      <line x1="256" y1="108" x2="256" y2="144" stroke="#7FD4FF" stroke-width="4"/>
+      <line x1="256" y1="144" x2="68" y2="177" stroke="#DCEBFF" stroke-width="5"/>
+      <text x="150" y="192" font-size="5.4" fill="#8FC1EE">cobre a faixa leste/técnica (recorte aberto só no poço de luz)</text>
+      <text x="256" y="96" font-size="6.6" text-anchor="middle" fill="#7FD4FF">LANTERNIM 0,90 (perfil) — abre p/ LESTE</text>
+      <text x="420" y="118" font-size="6" fill="#8FC1EE" text-anchor="middle">água OESTE mais alta · telha sanduíche EPS</text>
+
+      <!-- cotas -->
+      <line x1="60" y1="400" x2="60" y2="166" stroke="#8FC1EE" stroke-width="0.8" marker-start="url(#a5f)" marker-end="url(#a5f)"/>
+      <text x="50" y="286" font-size="7" fill="#8FC1EE" transform="rotate(-90 50 286)" text-anchor="middle">≈ 6,00</text>
+      <line x1="530" y1="400" x2="530" y2="108" stroke="#8FC1EE" stroke-width="0.8" marker-start="url(#a5f)" marker-end="url(#a5f)"/>
+      <text x="540" y="258" font-size="7" fill="#8FC1EE" transform="rotate(-90 540 258)" text-anchor="middle">≈ 7,30 (cumeeira)</text>
+      <text x="80" y="452" font-size="6.2" fill="#8FC1EE">ELEMENTOS · portão + viga · mezanino sobre a garagem · janelão espelhado (parede da escada) · lanternim de perfil · fachada norte sem sol direto</text>
+    </svg>
+  </div>
+  <footer class="carimbo">
+    <div><span class="lbl">Projeto</span><span class="val">RESIDÊNCIA UNIFAMILIAR — QUADRA 22 · LOTE 8</span></div>
+    <div><span class="lbl">Conteúdo</span><span class="val">ELEVAÇÃO NORTE (FACHADA)</span></div>
+    <div><span class="lbl">Escala</span><span class="val">1:60 (ref.)</span></div>
+    <div><span class="lbl">Data</span><span class="val">JUL/2026</span></div>
+    <div><span class="lbl">Folha</span><span class="val">F-05 / 06</span></div>
+  </footer>
+  <div class="disclaimer">Estudo preliminar de partido arquitetônico — sem valor executivo · sujeito a projeto legal e estrutural</div>
+</section>
+
+<!-- ===================== FOLHA 06 — ELEVAÇÃO SUL ===================== -->
+<section class="sheet">
+  <div class="frame"></div>
+  <header class="head">
+    <div><div class="kicker">Residência Q22 · L8 — Estudo Preliminar</div><h1>Elevação Sul</h1></div>
+    <div class="folha-tag">F·06</div>
+  </header>
+  <div class="drawing">
+    <svg viewBox="0 0 560 520" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <pattern id="hs6" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="10" stroke="#8FC1EE" stroke-width="1" opacity="0.4"/></pattern>
+        <pattern id="hgl6" width="14" height="14" patternTransform="rotate(-55)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="14" stroke="#7FD4FF" stroke-width="1" opacity="0.4"/></pattern>
+        <marker id="a6f" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,1 L7,4 L0,7" fill="none" stroke="#8FC1EE" stroke-width="1"/></marker>
+      </defs>
+      <text x="280" y="28" font-size="8.5" text-anchor="middle" letter-spacing="3" fill="#8FC1EE">ELEVAÇÃO SUL — VISTA DO QUINTAL · OESTE À ESQUERDA</text>
+
+      <rect x="40" y="400" width="480" height="14" fill="url(#hs6)"/>
+      <line x1="40" y1="400" x2="520" y2="400" stroke="#DCEBFF" stroke-width="2"/>
+
+      <!-- fachada da casa (plano recuado) -->
+      <line x1="140" y1="140" x2="140" y2="400" stroke="#DCEBFF" stroke-width="3"/>
+      <text x="168" y="152" font-size="5.4" fill="#8FC1EE">oitão até o telhado</text>
+      <!-- porta balcão da cozinha (atrás da varanda) -->
+      <rect x="224" y="312" width="120" height="86" fill="url(#hgl6)" stroke="#7FD4FF" stroke-width="1.6" opacity="0.8"/>
+      <line x1="254" y1="312" x2="254" y2="398" stroke="#7FD4FF" stroke-width="0.8"/>
+      <line x1="284" y1="312" x2="284" y2="398" stroke="#7FD4FF" stroke-width="0.8"/>
+      <line x1="314" y1="312" x2="314" y2="398" stroke="#7FD4FF" stroke-width="0.8"/>
+      <text x="284" y="306" font-size="5.8" text-anchor="middle" fill="#7FD4FF">PORTA BALCÃO COZINHA 3,50</text>
+
+      <!-- faixa leste: lavanderia + técnica -->
+      <line x1="432" y1="166" x2="432" y2="400" stroke="#DCEBFF" stroke-width="3"/>
+      <line x1="480" y1="175" x2="480" y2="400" stroke="#DCEBFF" stroke-width="4"/>
+      <line x1="432" y1="167" x2="480" y2="175" stroke="#DCEBFF" stroke-width="2"/>
+      <rect x="442" y="330" width="30" height="30" fill="none" stroke="#7FD4FF" stroke-width="2"/>
+      <text x="457" y="374" font-size="5.4" text-anchor="middle" fill="#7FD4FF">jan. lavand.</text>
+      <rect x="442" y="210" width="30" height="18" fill="none" stroke="#8FC1EE" stroke-width="1.4"/>
+      <text x="457" y="240" font-size="5.2" text-anchor="middle" fill="#8FC1EE">venez. técnica</text>
+
+      <!-- SACADA em balanço: laje + viga metálica -->
+      <rect x="136" y="276" width="300" height="18" fill="#DCEBFF"/>
+      <text x="286" y="270" font-size="6.2" text-anchor="middle" fill="#FFD166">LAJE DA SACADA — VIGAS METÁLICAS EM BALANÇO 2,50 (sem pilares)</text>
+      <g fill="#8FC1EE"><rect x="178" y="294" width="10" height="8"/><rect x="248" y="294" width="10" height="8"/><rect x="318" y="294" width="10" height="8"/><rect x="388" y="294" width="10" height="8"/></g>
+      <!-- EXTENSÃO FECHADA DA SUÍTE: mureta + vidro até o forro -->
+      <rect x="136" y="240" width="300" height="36" fill="rgba(220,235,255,0.18)" stroke="#DCEBFF" stroke-width="2"/>
+      <text x="286" y="264" font-size="5.8" text-anchor="middle" fill="#DCEBFF">MURETA h≈1,00 (guarda-corpo)</text>
+      <rect x="140" y="180" width="292" height="60" fill="url(#hgl6)" stroke="#7FD4FF" stroke-width="2"/>
+      <line x1="213" y1="180" x2="213" y2="240" stroke="#7FD4FF" stroke-width="0.8"/>
+      <line x1="286" y1="180" x2="286" y2="240" stroke="#7FD4FF" stroke-width="0.8"/>
+      <line x1="359" y1="180" x2="359" y2="240" stroke="#7FD4FF" stroke-width="0.8"/>
+      <text x="286" y="173" font-size="6" text-anchor="middle" fill="#7FD4FF">VIDRO DA MURETA ATÉ O FORRO — de fora a fora</text>
+      <line x1="140" y1="180" x2="432" y2="180" stroke="#8FC1EE" stroke-width="1.4" stroke-dasharray="6 4"/>
+      <text x="392" y="192" font-size="5" fill="#8FC1EE">forro (esconde o V do telhado)</text>
+
+      <!-- varanda gourmet + churrasqueira + chaminé -->
+      <text x="230" y="340" class="ttl" font-size="10" font-weight="600" text-anchor="middle" fill="#BFEBD2" letter-spacing="1.5">VARANDA GOURMET</text>
+      <rect x="160" y="370" width="60" height="28" fill="none" stroke="#8FC1EE" stroke-width="1.2"/>
+      <text x="190" y="392" font-size="5.2" text-anchor="middle" fill="#8FC1EE">bancada + cooktop gás</text>
+      <rect x="382" y="310" width="46" height="88" fill="none" stroke="#FFD166" stroke-width="1.8"/>
+      <text x="405" y="358" font-size="5.8" text-anchor="middle" fill="#FFD166">CHURRASQ.</text>
+      <rect x="396" y="96" width="18" height="214" fill="none" stroke="#FFD166" stroke-width="1.8"/>
+      <rect x="390" y="88" width="30" height="8" fill="#FFD166"/>
+      <text x="426" y="140" font-size="5.6" fill="#FFD166" transform="rotate(-90 426 140)" text-anchor="middle">CHAMINÉ acima da cobertura</text>
+
+      <!-- telhado sul: oeste (esq.) alta -->
+      <line x1="120" y1="144" x2="304" y2="108" stroke="#DCEBFF" stroke-width="5"/>
+      <line x1="304" y1="108" x2="304" y2="144" stroke="#7FD4FF" stroke-width="4"/>
+      <line x1="304" y1="144" x2="492" y2="177" stroke="#DCEBFF" stroke-width="5"/>
+      <text x="304" y="80" font-size="6.4" text-anchor="middle" fill="#7FD4FF">LANTERNIM 0,90 (perfil)</text>
+
+      <!-- cotas -->
+      <line x1="70" y1="400" x2="70" y2="276" stroke="#8FC1EE" stroke-width="0.8" marker-start="url(#a6f)" marker-end="url(#a6f)"/>
+      <text x="60" y="340" font-size="6.6" fill="#8FC1EE" transform="rotate(-90 60 340)" text-anchor="middle">3,00</text>
+      <line x1="530" y1="400" x2="530" y2="108" stroke="#8FC1EE" stroke-width="0.8" marker-start="url(#a6f)" marker-end="url(#a6f)"/>
+      <text x="540" y="258" font-size="7" fill="#8FC1EE" transform="rotate(-90 540 258)" text-anchor="middle">≈ 7,30</text>
+      <text x="80" y="452" font-size="6.2" fill="#8FC1EE">ELEMENTOS · extensão fechada da suíte 7,30 × 2,50 em balanço (mureta + vidro até o forro) · varanda gourmet sombreada · churrasqueira c/ chaminé no canto leste · telhado cobrindo a faixa leste/técnica</text>
+    </svg>
+  </div>
+  <footer class="carimbo">
+    <div><span class="lbl">Projeto</span><span class="val">RESIDÊNCIA UNIFAMILIAR — QUADRA 22 · LOTE 8</span></div>
+    <div><span class="lbl">Conteúdo</span><span class="val">ELEVAÇÃO SUL (FUNDOS)</span></div>
+    <div><span class="lbl">Escala</span><span class="val">1:60 (ref.)</span></div>
+    <div><span class="lbl">Data</span><span class="val">JUL/2026</span></div>
+    <div><span class="lbl">Folha</span><span class="val">F-06 / 06</span></div>
+  </footer>
+  <div class="disclaimer">Estudo preliminar de partido arquitetônico — sem valor executivo · sujeito a projeto legal e estrutural</div>
+</section>
+
+</body>
+</html>

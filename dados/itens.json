@@ -1,0 +1,1048 @@
+{
+  "itens": [
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Painéis EPS (Monolev) — parede líquida",
+      "especificacao": null,
+      "unidade": "m²",
+      "quantidade": 421.27,
+      "obs": "cotar espessura/densidade c/ ISOCIL",
+      "id": "IT001"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Argamassa projetada estrutural (2 faces)",
+      "especificacao": null,
+      "unidade": "m²",
+      "quantidade": 842.54,
+      "obs": "~35 mm por face, com equipe",
+      "id": "IT002"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Telas/acessórios de reforço (cantos, vãos)",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "verba — cotar no pacote do painel",
+      "id": "IT003"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Laje vigotas + EPS (piso superior + técnica)",
+      "especificacao": null,
+      "unidade": "m²",
+      "quantidade": 68,
+      "obs": "inclui capa de concreto",
+      "id": "IT004"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Radier (fundação)",
+      "especificacao": null,
+      "unidade": "m²",
+      "quantidade": 103,
+      "obs": "casa 95 + extensão garagem 8",
+      "id": "IT005"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Vigas metálicas: testada da laje (7,30 livre, SEM pilar) + balanço da sacada 2,50",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "perfis I + engaste sob a suíte — projeto estrutural",
+      "id": "IT006"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Estrutura metálica da cobertura (pint. eletrostática)",
+      "especificacao": null,
+      "unidade": "m²",
+      "quantidade": 100,
+      "obs": "projeção horizontal",
+      "id": "IT007"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Telha sanduíche EPS",
+      "especificacao": null,
+      "unidade": "m²",
+      "quantidade": 105,
+      "obs": "inclui inclinação",
+      "id": "IT008"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Lanternim — vidro laminado/policarbonato + básculas",
+      "especificacao": null,
+      "unidade": "m²",
+      "quantidade": 12,
+      "obs": "13 m × 0,90",
+      "id": "IT009"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Rufos, calhas e arremates do lanternim",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "ponto crítico de estanqueidade",
+      "id": "IT010"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Guarda-corpos (mezanino, corredor, escada)",
+      "especificacao": null,
+      "unidade": "m",
+      "quantidade": 14,
+      "obs": "metálico/vidro — definir",
+      "id": "IT011"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Escada metálica aberta (fachada norte)",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "estrutura + degraus",
+      "id": "IT012"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Esquadrias (janelas, porta balcão, portas)",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "detalhar por vão",
+      "id": "IT013"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Elétrica + automação — ver aba Elétrica",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "quantitativo detalhado na aba própria",
+      "id": "IT014"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Impermeabilizações (banheiros, laje técnica)",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "CRÍTICO: banheiros sem box drenam pela camada de pedra — impermeabilizar TODO o piso c/ caimento ao ralo oculto",
+      "id": "IT015"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Hidráulica completa + preparação PV",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "ver aba Hidráulica",
+      "id": "IT016"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Sondagem SPT (2–3 furos) + projetos complementares",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "fazer ANTES do projeto de fundação",
+      "id": "IT017"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Climatização — ver aba Climatização",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "infra elétrica dos 5 pontos já na aba Elétrica",
+      "id": "IT018"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Laje da sacada/varanda (vigotas + EPS + capa)",
+      "especificacao": null,
+      "unidade": "m²",
+      "quantidade": 18,
+      "obs": "sobre vigas metálicas em balanço",
+      "id": "IT019"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Impermeabilização do piso da extensão (sobre varanda aberta)",
+      "especificacao": null,
+      "unidade": "m²",
+      "quantidade": 18,
+      "obs": "varanda gourmet abaixo",
+      "id": "IT020"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Mureta + envidraçamento da extensão da suíte (vidro até o forro)",
+      "especificacao": null,
+      "unidade": "m²",
+      "quantidade": 21,
+      "obs": "perímetro 12,3 m × ~1,7 m de vidro sobre mureta",
+      "id": "IT021"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Forro da extensão da suíte (esconde o V do telhado)",
+      "especificacao": null,
+      "unidade": "m²",
+      "quantidade": 18,
+      "obs": "gesso/PVC sobre a extensão · suíte integrada, sem porta",
+      "id": "IT022"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Churrasqueira + chaminé acima da cobertura",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "canto leste da varanda",
+      "id": "IT023"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Cooktop a gás externo + abrigo P13 + kit instalação",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "redundância — gás só na varanda",
+      "id": "IT024"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Bancada ilha: porcelanato sinterizado 12 mm + rebaixo italiano",
+      "especificacao": null,
+      "unidade": "m²",
+      "quantidade": 5,
+      "obs": "quartzo/resina NÃO compatível c/ Invisacook",
+      "id": "IT025"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Invisacook 4 zonas + acessórios (mantas, indicadores)",
+      "especificacao": null,
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "circuito 40 A na aba Elétrica",
+      "id": "IT026"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Janelão vertical fachada norte (vidro laminado) + película espelhada",
+      "especificacao": null,
+      "unidade": "m²",
+      "quantidade": 12,
+      "obs": "parede da escada · ~2,2 × 5,5 m · caixilho estruturado",
+      "id": "IT027"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Tubo PEX 20 mm (água quente)",
+      "especificacao": "PEX-A c/ barreira anti-O₂",
+      "unidade": "m",
+      "quantidade": 75,
+      "obs": "ramais quentes + anel de recirculação",
+      "id": "IT028"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Isolamento térmico p/ PEX 20 mm",
+      "especificacao": "polietileno exp. 10 mm parede",
+      "unidade": "m",
+      "quantidade": 75,
+      "obs": "obrigatório em 100% da linha quente",
+      "id": "IT029"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Tubo PEX 16/20 mm (água fria)",
+      "especificacao": "PEX-A",
+      "unidade": "m",
+      "quantidade": 100,
+      "obs": "ramais frios ponto a ponto (manifold)",
+      "id": "IT030"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Tubo PPR PN25 32 mm",
+      "especificacao": "barrilete caixa→pressurizador→manifolds/boiler",
+      "unidade": "m",
+      "quantidade": 18,
+      "obs": null,
+      "id": "IT031"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Tubo PPR PN25 28 mm",
+      "especificacao": "circuito bomba de calor ↔ boiler",
+      "unidade": "m",
+      "quantidade": 8,
+      "obs": "isolar também",
+      "id": "IT032"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Isolamento p/ PPR 28/32 mm",
+      "especificacao": "polietileno exp.",
+      "unidade": "m",
+      "quantidade": 26,
+      "obs": null,
+      "id": "IT033"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Tubo PVC soldável 25 mm",
+      "especificacao": "alimentação da caixa + torneiras jardim/garagem",
+      "unidade": "m",
+      "quantidade": 20,
+      "obs": null,
+      "id": "IT034"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Tubo PVC esgoto 100 mm",
+      "especificacao": "prumadas de vasos + ventilação",
+      "unidade": "m",
+      "quantidade": 22,
+      "obs": "2 prumadas + coletor",
+      "id": "IT035"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Tubo PVC esgoto 50 mm",
+      "especificacao": "chuveiros, ralos, tanque, máquina",
+      "unidade": "m",
+      "quantidade": 25,
+      "obs": null,
+      "id": "IT036"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Tubo PVC esgoto 40 mm",
+      "especificacao": "lavatórios, pias, dreno boiler/copa",
+      "unidade": "m",
+      "quantidade": 15,
+      "obs": null,
+      "id": "IT037"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Tubo PVC pluvial 88 mm",
+      "especificacao": "condutores das calhas",
+      "unidade": "m",
+      "quantidade": 12,
+      "obs": "2 descidas",
+      "id": "IT038"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Conexões esgoto/pluvial (kit)",
+      "especificacao": "joelhos, tês, junções, terminais vent.",
+      "unidade": "un",
+      "quantidade": 45,
+      "obs": null,
+      "id": "IT039"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Caixa sifonada 150 mm",
+      "especificacao": null,
+      "unidade": "un",
+      "quantidade": 5,
+      "obs": "banheiros, lavanderia, copa",
+      "id": "IT040"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Ralo linear oculto (inox)",
+      "especificacao": "banheiros sem box — sob carpete de pedra drenante",
+      "unidade": "un",
+      "quantidade": 3,
+      "obs": "suíte, banheiro do quarto e banheiro térreo · caimento 2% na impermeabilização",
+      "id": "IT041"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Caixa de gordura",
+      "especificacao": "cozinha",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": null,
+      "id": "IT042"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Caixa de inspeção esgoto",
+      "especificacao": null,
+      "unidade": "un",
+      "quantidade": 2,
+      "obs": "quintal → rede do condomínio",
+      "id": "IT043"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Manifold água fria c/ registros",
+      "especificacao": "12 saídas, latão/inox",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "na área técnica",
+      "id": "IT044"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Manifold água quente c/ registros",
+      "especificacao": "8 saídas",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": null,
+      "id": "IT045"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Conexões PEX",
+      "especificacao": "joelhos, tês, adaptadores de engate",
+      "unidade": "un",
+      "quantidade": 60,
+      "obs": null,
+      "id": "IT046"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Conexões PPR diversas",
+      "especificacao": "joelhos, tês, luvas, uniões",
+      "unidade": "un",
+      "quantidade": 35,
+      "obs": null,
+      "id": "IT047"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Registro de esfera metálico 3/4\"",
+      "especificacao": null,
+      "unidade": "un",
+      "quantidade": 12,
+      "obs": "setorização por ambiente",
+      "id": "IT048"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Válvula de retenção",
+      "especificacao": null,
+      "unidade": "un",
+      "quantidade": 3,
+      "obs": "entrada caixa, fria, quente",
+      "id": "IT049"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Misturadora termostática central",
+      "especificacao": "saída do boiler, limite ~50 °C",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "anti-escaldo",
+      "id": "IT050"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Válvula de alívio P&T + dreno conduzido",
+      "especificacao": null,
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "obrigatória no boiler",
+      "id": "IT051"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Vaso de expansão água quente 18–24 L",
+      "especificacao": null,
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": null,
+      "id": "IT052"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Filtro de entrada (cavalete)",
+      "especificacao": null,
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": null,
+      "id": "IT053"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Bomba de calor AQS",
+      "especificacao": "~5 kW térmico, COP ≥ 3,5, Wi-Fi",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "unidade externa no poço de luz",
+      "id": "IT054"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Boiler inox alta pressão 400 L",
+      "especificacao": "c/ resistência de apoio e anodo",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "na área técnica, c/ 60 cm livres",
+      "id": "IT055"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Sistema de pressurização",
+      "especificacao": "bomba + vaso de expansão (ou pressurizador de linha)",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "antes da bifurcação fria/quente",
+      "id": "IT056"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Bomba de recirculação c/ acionamento por demanda",
+      "especificacao": "+ timer/relé p/ automação",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "retorno da suíte",
+      "id": "IT057"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Caixa d'água 1.000 L",
+      "especificacao": "c/ bóia, extravasor e limpeza",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": null,
+      "id": "IT058"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Purificador cozinha + ponto bebedouro copa",
+      "especificacao": null,
+      "unidade": "un",
+      "quantidade": 2,
+      "obs": "copa: prever dreno",
+      "id": "IT059"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Eletroduto 32 mm telhado → área técnica",
+      "especificacao": "c/ caixas de passagem e arame-guia",
+      "unidade": "m",
+      "quantidade": 10,
+      "obs": "desce pelo shaft da técnica",
+      "id": "IT060"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "QDC c/ reserva p/ inversor",
+      "especificacao": "espaço + disjuntor bidirecional futuro",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": null,
+      "id": "IT061"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Aterramento reforçado / SPDA prep.",
+      "especificacao": "hastes + cabo de descida",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "estrutura metálica do telhado exige",
+      "id": "IT062"
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Reforço de fixação na água oeste",
+      "especificacao": "pontos de ancoragem previstos na estrutura",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "painéis futuros na água alta",
+      "id": "IT063"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Padrão de entrada trifásico",
+      "especificacao": "poste/caixa padrão Enel SP, 3F+N, disjuntor geral 40–50 A",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "dá 220 V fase-fase e 127 V fase-neutro",
+      "id": "IT064"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Alimentador medidor → QDC",
+      "especificacao": "cabo 16 mm² (4 vias) + eletroduto 40 mm",
+      "unidade": "m",
+      "quantidade": 18,
+      "obs": null,
+      "id": "IT065"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "QDC 32 circuitos c/ barramento trifásico",
+      "especificacao": "embutir na área técnica",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "reserva p/ inversor PV já prevista",
+      "id": "IT066"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Disjuntores DIN (mono e bifásicos)",
+      "especificacao": "curvas B/C conforme circuito",
+      "unidade": "un",
+      "quantidade": 26,
+      "obs": null,
+      "id": "IT067"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "IDR / DR 30 mA",
+      "especificacao": "banheiros, áreas molhadas, externas, cozinha",
+      "unidade": "un",
+      "quantidade": 4,
+      "obs": "obrigatório NBR 5410",
+      "id": "IT068"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "DPS classe II (F+F+F+N)",
+      "especificacao": "no QDC",
+      "unidade": "un",
+      "quantidade": 4,
+      "obs": "telhado metálico: essencial",
+      "id": "IT069"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Aterramento",
+      "especificacao": "3 hastes + cabo cobre nu 16 mm² + caixa inspeção",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "integra c/ SPDA da cobertura",
+      "id": "IT070"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Eletroduto corrugado reforçado 25 mm",
+      "especificacao": "sulcos no EPS c/ soprador térmico",
+      "unidade": "m",
+      "quantidade": 260,
+      "obs": null,
+      "id": "IT071"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Eletroduto corrugado 32 mm",
+      "especificacao": "circuitos 220 V, AC e troncos",
+      "unidade": "m",
+      "quantidade": 50,
+      "obs": null,
+      "id": "IT072"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Caixa 4×2 (tomadas/interruptores)",
+      "especificacao": null,
+      "unidade": "un",
+      "quantidade": 75,
+      "obs": null,
+      "id": "IT073"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Caixa 4×4",
+      "especificacao": "pontos duplos, automação, rede",
+      "unidade": "un",
+      "quantidade": 18,
+      "obs": "interruptores smart pedem folga",
+      "id": "IT074"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Caixa octogonal/teto",
+      "especificacao": "pontos de luz",
+      "unidade": "un",
+      "quantidade": 26,
+      "obs": null,
+      "id": "IT075"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Quadro de passagem / shaft técnica",
+      "especificacao": "organização das descidas",
+      "unidade": "un",
+      "quantidade": 2,
+      "obs": null,
+      "id": "IT076"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Cabo flexível 1,5 mm²",
+      "especificacao": "iluminação",
+      "unidade": "m",
+      "quantidade": 280,
+      "obs": null,
+      "id": "IT077"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Cabo flexível 2,5 mm²",
+      "especificacao": "tomadas de uso geral 127 V",
+      "unidade": "m",
+      "quantidade": 420,
+      "obs": null,
+      "id": "IT078"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Cabo flexível 4,0 mm²",
+      "especificacao": "tomadas 220 V + circuitos AC",
+      "unidade": "m",
+      "quantidade": 140,
+      "obs": null,
+      "id": "IT079"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Cabo flexível 6,0 mm²",
+      "especificacao": "cooktop indução, bomba de calor, forno",
+      "unidade": "m",
+      "quantidade": 60,
+      "obs": "todos 220 V dedicados",
+      "id": "IT080"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Cabo PP / bitolas especiais",
+      "especificacao": "pressurizador, recirculadora, portão",
+      "unidade": "m",
+      "quantidade": 30,
+      "obs": null,
+      "id": "IT081"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Tomadas 2P+T 10 A — 127 V",
+      "especificacao": "linha a definir",
+      "unidade": "un",
+      "quantidade": 42,
+      "obs": null,
+      "id": "IT082"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Tomadas 2P+T 20 A — 220 V",
+      "especificacao": "identificadas (cor/etiqueta vermelha)",
+      "unidade": "un",
+      "quantidade": 16,
+      "obs": "2 por cômodo em média",
+      "id": "IT083"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Pontos de luz (teto/arandela/pendente)",
+      "especificacao": null,
+      "unidade": "un",
+      "quantidade": 26,
+      "obs": "inclui pendentes do pé-direito duplo",
+      "id": "IT084"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Fita LED + perfil alumínio",
+      "especificacao": "sancas, closet, copa, escada",
+      "unidade": "m",
+      "quantidade": 22,
+      "obs": null,
+      "id": "IT085"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Interruptores (bases p/ smart)",
+      "especificacao": "ver seção 6",
+      "unidade": "un",
+      "quantidade": 18,
+      "obs": null,
+      "id": "IT086"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Circuitos dedicados 220 V p/ AC",
+      "especificacao": "ponto + dreno + tomada",
+      "unidade": "un",
+      "quantidade": 5,
+      "obs": "infra pronta; aparelhos em outra sessão",
+      "id": "IT087"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Tomadas externas IP55",
+      "especificacao": "quintal, jardim, área de luz, garagem",
+      "unidade": "un",
+      "quantidade": 5,
+      "obs": "em circuito c/ DR",
+      "id": "IT088"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Cabo CAT6",
+      "especificacao": "pontos fixos + câmeras + APs",
+      "unidade": "m",
+      "quantidade": 300,
+      "obs": null,
+      "id": "IT089"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Pontos de rede (RJ45 duplos)",
+      "especificacao": "TVs, escritório/mezanino, copa, técnica",
+      "unidade": "un",
+      "quantidade": 10,
+      "obs": null,
+      "id": "IT090"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Rack 6U + patch panel + organizador",
+      "especificacao": "na área técnica",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": null,
+      "id": "IT091"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Switch PoE 16 portas",
+      "especificacao": null,
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "alimenta câmeras e APs",
+      "id": "IT092"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Access points Wi-Fi 6",
+      "especificacao": "térreo + superior",
+      "unidade": "un",
+      "quantidade": 2,
+      "obs": "EPS atenua pouco, 2 bastam",
+      "id": "IT093"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Câmeras IP PoE externas",
+      "especificacao": "frente, viela, quintal, garagem",
+      "unidade": "un",
+      "quantidade": 4,
+      "obs": null,
+      "id": "IT094"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Videoporteiro IP",
+      "especificacao": "sem muro: módulo na fachada/jardim",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": null,
+      "id": "IT095"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Fechadura eletrônica",
+      "especificacao": "porta de entrada (garagem→sala)",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": null,
+      "id": "IT096"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Hub central (Home Assistant + coordenador Zigbee)",
+      "especificacao": "mini PC ou appliance no rack",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "controle local, sem dependência de nuvem",
+      "id": "IT097"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Interruptores inteligentes Zigbee/Matter",
+      "especificacao": "c/ neutro, nas caixas 4×4",
+      "unidade": "un",
+      "quantidade": 18,
+      "obs": null,
+      "id": "IT098"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Módulos relé/dimmer",
+      "especificacao": "fitas LED, pendentes, cenas",
+      "unidade": "un",
+      "quantidade": 8,
+      "obs": null,
+      "id": "IT099"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Sensores de presença/abertura",
+      "especificacao": "circulações, escada, entrada",
+      "unidade": "un",
+      "quantidade": 8,
+      "obs": "escada aberta: luz automática",
+      "id": "IT100"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Termostatos/controle IR p/ AC",
+      "especificacao": "integração dos 5 ambientes",
+      "unidade": "un",
+      "quantidade": 5,
+      "obs": null,
+      "id": "IT101"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Integrações técnicas",
+      "especificacao": "bomba de calor Wi-Fi, recirculação, pressurizador, básculas do lanternim",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "relés no QDC/técnica",
+      "id": "IT102"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Estação meteo + sensor chuva",
+      "especificacao": "automatiza básculas e irrigação futura",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": null,
+      "id": "IT103"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Cabo 10 mm² — circuito Invisacook 40 A",
+      "especificacao": "ilha da cozinha, 220 V bifásico",
+      "unidade": "m",
+      "quantidade": 14,
+      "obs": "dedicado",
+      "id": "IT104"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Eletroduto 32 mm embutido no RADIER → ilha",
+      "especificacao": "posicionar ANTES da concretagem",
+      "unidade": "m",
+      "quantidade": 6,
+      "obs": "ponto sem retorno",
+      "id": "IT105"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Disjuntor bifásico 40 A + conexão na ilha",
+      "especificacao": null,
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": null,
+      "id": "IT106"
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Circuitos varanda gourmet (luz + tomadas IP55 + 220 V)",
+      "especificacao": "em circuito c/ DR",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "inclui ponto p/ equipamentos",
+      "id": "IT107"
+    },
+    {
+      "categoria": "Climatização",
+      "item": "Condensadora multi-split tri inverter R-32",
+      "especificacao": "~27.000 BTU, Wi-Fi/Matter",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "suíte + quarto + reserva mezanino · alto do poço de luz c/ defletores",
+      "id": "IT108"
+    },
+    {
+      "categoria": "Climatização",
+      "item": "Evaporadora hi-wall 9.000 BTU (multi)",
+      "especificacao": "quente/frio",
+      "unidade": "un",
+      "quantidade": 2,
+      "obs": "suíte e quarto — fluxo fora da cama",
+      "id": "IT109"
+    },
+    {
+      "categoria": "Climatização",
+      "item": "Split independente da sala 18–22.000 BTU",
+      "especificacao": "piso-teto ou hi-wall a ~2,5 m",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "parede da cozinha, quente/frio",
+      "id": "IT110"
+    },
+    {
+      "categoria": "Climatização",
+      "item": "Ventilador de teto destratificador c/ reversão",
+      "especificacao": "no vão duplo",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "inverno: devolve o ar quente p/ baixo",
+      "id": "IT111"
+    },
+    {
+      "categoria": "Climatização",
+      "item": "Linha frigorígena 1/4\"+3/8\" isolada",
+      "especificacao": "pares suíte/quarto/mezanino (seca)",
+      "unidade": "m",
+      "quantidade": 34,
+      "obs": "embutir no EPS ANTES do reboco",
+      "id": "IT112"
+    },
+    {
+      "categoria": "Climatização",
+      "item": "Linha frigorígena 1/4\"+1/2\" isolada",
+      "especificacao": "sala",
+      "unidade": "m",
+      "quantidade": 8,
+      "obs": null,
+      "id": "IT113"
+    },
+    {
+      "categoria": "Climatização",
+      "item": "Suportes, calços antivibração e defletores",
+      "especificacao": null,
+      "unidade": "cj",
+      "quantidade": 3,
+      "obs": null,
+      "id": "IT114"
+    },
+    {
+      "categoria": "Climatização",
+      "item": "Drenos PVC 25 mm c/ sifão",
+      "especificacao": "conduzidos ao esgoto/área de luz",
+      "unidade": "m",
+      "quantidade": 20,
+      "obs": "nunca pingar na fachada",
+      "id": "IT115"
+    },
+    {
+      "categoria": "Climatização",
+      "item": "Vácuo, carga R-32 e mão de obra de instalação",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "conferir limite de linha do multi (~15 m suíte)",
+      "id": "IT116"
+    }
+  ]
+}
