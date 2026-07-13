@@ -54,7 +54,14 @@
     border:none; padding:12px 22px; cursor:pointer; box-shadow:0 2px 12px rgba(0,0,0,.45); }
   @media print {
     .btn-print { display:none !important; }
-    .sheet { height:295mm; }
+    .sheet { width:190mm; height:272mm; margin:0 auto;
+             page-break-inside:avoid; break-inside:avoid; }
+    .head { padding:9mm 11mm 3mm; }
+    .head h1 { font-size:20pt; }
+    .head .folha-tag { font-size:24pt; }
+    .frame { inset:5mm; }
+    .carimbo { margin:0 5mm 5mm; }
+    .disclaimer { bottom:1.6mm; }
     :root { --bp-blue:#FFFFFF; --bp-line:#0E3A6B; --bp-dim:#2E5E96;
             --bp-amber:#0E3A6B; --bp-green:#0E3A6B; --bp-cyan:#0E3A6B; }
     body { background:#fff; }
