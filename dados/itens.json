@@ -236,11 +236,11 @@
     },
     {
       "categoria": "Geral / Estrutura",
-      "item": "Janelão vertical fachada norte (vidro laminado) + película espelhada",
+      "item": "Janelão vertical fachada noroeste (vidro laminado) + película espelhada",
       "especificacao": null,
       "unidade": "m²",
-      "quantidade": 12,
-      "obs": "parede da escada · ~2,2 × 5,5 m · caixilho estruturado",
+      "quantidade": 10.5,
+      "obs": "parede da escada · ~2,2 × 4,70 m · peitoril 1,00 · caixilho estruturado",
       "id": "IT027"
     },
     {
