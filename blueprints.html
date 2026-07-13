@@ -86,6 +86,33 @@
     svg [fill^="rgba"] { fill:transparent !important; }
   }
 
+
+  /* ===== MODO PDF (aplicado via JS durante a geração) ===== */
+  body.pdfmode { background:#fff; }
+  body.pdfmode .sheet { width:210mm; height:296mm; margin:0; border:none;
+    background:#fff !important; }
+  body.pdfmode .sheet::before { background-image:
+    linear-gradient(rgba(14,58,107,0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14,58,107,0.10) 1px, transparent 1px),
+    linear-gradient(rgba(14,58,107,0.20) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14,58,107,0.20) 1px, transparent 1px); }
+  body.pdfmode { --bp-blue:#FFFFFF; --bp-line:#0E3A6B; --bp-dim:#2E5E96;
+    --bp-amber:#0E3A6B; --bp-green:#0E3A6B; --bp-cyan:#0E3A6B; }
+  body.pdfmode .head .folha-tag { color:rgba(14,58,107,0.35); }
+  body.pdfmode .carimbo { background:#fff; }
+  body.pdfmode .carimbo > div { border-left-color:rgba(14,58,107,0.6); }
+  body.pdfmode .disclaimer { color:rgba(14,58,107,0.6); }
+  body.pdfmode .frame::after { border-color:rgba(14,58,107,0.5); }
+  body.pdfmode svg text { fill:#0E3A6B !important; }
+  body.pdfmode svg [stroke="#DCEBFF"], body.pdfmode svg [stroke="#8FC1EE"],
+  body.pdfmode svg [stroke="#FFD166"], body.pdfmode svg [stroke="#7FD4A6"],
+  body.pdfmode svg [stroke="#7FD4FF"], body.pdfmode svg [stroke="#BFEBD2"] { stroke:#0E3A6B !important; }
+  body.pdfmode svg [fill="#DCEBFF"], body.pdfmode svg [fill="#8FC1EE"],
+  body.pdfmode svg [fill="#FFD166"], body.pdfmode svg [fill="#7FD4A6"],
+  body.pdfmode svg [fill="#7FD4FF"], body.pdfmode svg [fill="#BFEBD2"] { fill:#0E3A6B !important; }
+  body.pdfmode svg [stroke="#0E3A6B"] { stroke:#FFFFFF !important; }
+  body.pdfmode svg [fill^="rgba"] { fill:transparent !important; }
+
 </style>
 </head>
 <body>
@@ -774,6 +801,31 @@
   <div class="disclaimer">Estudo preliminar de partido arquitetônico — sem valor executivo · sujeito a projeto legal e estrutural</div>
 </section>
 
-<button class="btn-print" onclick="window.print()" title="Gera PDF A4 com linhas azul-escuro em fundo branco">⎙ Imprimir / PDF</button>
+<button class="btn-print" id="btn-pdf" title="Gera um PDF A4 (6 páginas) direto no navegador">⎙ Baixar PDF (A4)</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+document.getElementById('btn-pdf').addEventListener('click', async function () {
+  const btn = this;
+  btn.disabled = true; btn.textContent = 'Gerando… 0/6';
+  document.body.classList.add('pdfmode');
+  await new Promise(r => setTimeout(r, 300));            // aplica o tema claro
+  try {
+    const pdf = new jspdf.jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait' });
+    const folhas = document.querySelectorAll('.sheet');
+    for (let i = 0; i < folhas.length; i++) {
+      const canvas = await html2canvas(folhas[i], { scale: 2, backgroundColor: '#ffffff', logging: false });
+      if (i > 0) pdf.addPage();
+      pdf.addImage(canvas.toDataURL('image/jpeg', 0.92), 'JPEG', 0, 0, 210, 297);
+      btn.textContent = 'Gerando… ' + (i + 1) + '/6';
+    }
+    pdf.save('residencia-q22-l8-blueprints.pdf');
+  } catch (e) {
+    alert('Falha ao gerar o PDF: ' + e.message);
+  }
+  document.body.classList.remove('pdfmode');
+  btn.disabled = false; btn.textContent = '⎙ Baixar PDF (A4)';
+});
+</script>
 </body>
 </html>
