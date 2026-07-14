@@ -1046,12 +1046,21 @@
     },
     {
       "categoria": "Geral / Estrutura",
-      "item": "Forro nivelado gesso acartonado + EPS — pav. superior (quartos, copa, banheiros, mezanino, corredor)",
+      "item": "Forro nivelado gesso acartonado + EPS — pav. superior (quartos, copa, banheiros, corredor)",
       "especificacao": "não acompanha a água do telhado · placas EPS sobre perfilado + gesso",
       "unidade": "m²",
-      "quantidade": 62,
-      "obs": "embutir iluminação e sensores antes do fechamento · prever alçapões de inspeção",
+      "quantidade": 47,
+      "obs": "SEM o mezanino (forro de madeira) · embutir iluminação e sensores antes do fechamento · alçapões de inspeção",
       "id": "IT117"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Forro de madeira acompanhando o telhado — mezanino + vão livre do pé-direito duplo",
+      "especificacao": "lambril (cedrinho/pinus autoclavado) fixado sob as terças, acompanhando as duas águas",
+      "unidade": "m²",
+      "quantidade": 45,
+      "obs": "item de conforto/estética premium · tratamento autoclave + verniz · recorte no lanternim · iluminação/ventilador destratificador fixados antes do fechamento",
+      "id": "IT118"
     }
   ]
 }
