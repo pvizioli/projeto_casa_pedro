@@ -29,11 +29,11 @@
     },
     {
       "categoria": "Geral / Estrutura",
-      "item": "Laje vigotas + EPS (piso superior + técnica)",
+      "item": "Laje vigotas + EPS — PISO do superior + técnica (estrutural)",
       "especificacao": null,
       "unidade": "m²",
       "quantidade": 68,
-      "obs": "inclui capa de concreto",
+      "obs": "inclui capa de concreto · é o piso, não forro",
       "id": "IT004"
     },
     {
@@ -1043,6 +1043,15 @@
       "quantidade": 1,
       "obs": "conferir limite de linha do multi (~15 m suíte)",
       "id": "IT116"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Forro nivelado gesso acartonado + EPS — pav. superior (quartos, copa, banheiros, mezanino, corredor)",
+      "especificacao": "não acompanha a água do telhado · placas EPS sobre perfilado + gesso",
+      "unidade": "m²",
+      "quantidade": 62,
+      "obs": "embutir iluminação e sensores antes do fechamento · prever alçapões de inspeção",
+      "id": "IT117"
     }
   ]
 }
