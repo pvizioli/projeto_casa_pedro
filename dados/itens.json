@@ -59,8 +59,8 @@
       "item": "Estrutura metálica da cobertura — perfis galvanizados Z275 formados a frio",
       "especificacao": "pórticos 2×Ue200×75×25×3,00 @2,60 · terças Ue150×60×20×2,00 @1,25 · lanternim Ue100 · contrav. Ø12 · ~1,5-1,7 t",
       "unidade": "m²",
-      "quantidade": 100,
-      "obs": "ligações parafusadas (preserva zinco) · peças soldadas galvanizadas a fogo · chumbação em cinta de coroamento · ver F-07",
+      "quantidade": 95,
+      "obs": "ligações parafusadas (preserva zinco) · peças soldadas galvanizadas a fogo · chumbação em cinta de coroamento · ver F-07 · recorte da faixa NE: telhado cobre até a divisa SÓ sobre lavanderia/técnica",
       "id": "IT007"
     },
     {
@@ -68,8 +68,8 @@
       "item": "Telha sanduíche EPS",
       "especificacao": null,
       "unidade": "m²",
-      "quantidade": 105,
-      "obs": "inclui inclinação",
+      "quantidade": 98,
+      "obs": "não cobre a faixa de luz (9,70 × 1,20 descoberta)",
       "id": "IT008"
     },
     {
@@ -1070,6 +1070,15 @@
       "quantidade": 80,
       "obs": "todas as internas do superior (mezanino, lavabo, banheiros, quarto, copa, corredor, closet, transversal da suíte) · hidráulica pesada em shaft (cava ≤ 50%) · juntas dissimilares Monolev↔Lightwall c/ tela 10 cm cada lado · içamento: painéis içados pelo vazio antes do fechamento",
       "id": "IT119"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Portinha metálica de acesso à faixa de luz (jardim frontal → corredor NE)",
+      "especificacao": "vão 1,20 × ~2,10 · recuada 0,80 da fachada · gradil/chapa perfurada c/ fechadura",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "acesso de manutenção · divisória interna com passagem separa Luz 1 / Luz 2",
+      "id": "IT120"
     }
   ]
 }
