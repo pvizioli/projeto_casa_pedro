@@ -1077,8 +1077,26 @@
       "especificacao": "vão 1,20 × ~2,10 · recuada 0,80 da fachada · gradil/chapa perfurada c/ fechadura",
       "unidade": "un",
       "quantidade": 1,
-      "obs": "acesso de manutenção · divisória interna com passagem separa Luz 1 / Luz 2",
+      "obs": "ÚNICO acesso à Luz 1 (jardim de inverno) — parede cega separa da Luz 2 · manutenção da parede verde e limpeza",
       "id": "IT120"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Janelão da sala p/ jardim de inverno (parede NE) — vidro laminado",
+      "especificacao": "~3,50 m de largura · sobe o pé-direito duplo · caixilho c/ folhas de ventilação",
+      "unidade": "m²",
+      "quantidade": 12,
+      "obs": "face NE = sol da manhã filtrado · exposto à chuva (faixa descoberta): prever pingadeira e caimento",
+      "id": "IT121"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Parede verde / jardim vertical na divisa NE (Luz 1)",
+      "especificacao": "~1,20 × 4,85 × h ~3 m ≈ 14 m² · painéis modulares ou treliça c/ trepadeiras",
+      "unidade": "m²",
+      "quantidade": 14,
+      "obs": "CRÍTICO: impermeabilizar a divisa antes (umidade permanente) + barreira anti-raiz · irrigação automática c/ ponto de água e dreno próprio · manutenção pela portinha",
+      "id": "IT122"
     }
   ]
 }
