@@ -33,10 +33,10 @@
     },
     {
       "id": 4,
-      "nome": "Paredes Monolev",
-      "estimativa_baixa": 120000,
-      "estimativa_alta": 170000,
-      "obs": "421 m² painel + 843 m² argamassa projetada + equipe",
+      "nome": "Paredes: Monolev (estrutural) + divisórias Lightwall",
+      "estimativa_baixa": 110000,
+      "estimativa_alta": 156000,
+      "obs": "Monolev ~340 m² líq. (perímetro/estruturais + térreo) · divisórias internas do superior ~80 m² em Lightwall 2P 90 mm (conceito mezanino: só o perímetro segura o telhado) · juntas dissimilares Monolev↔Lightwall c/ tela + basecoat",
       "status": "nao_iniciada",
       "progresso": 0,
       "custo_real": 0

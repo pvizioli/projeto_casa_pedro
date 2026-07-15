@@ -2,11 +2,11 @@
   "itens": [
     {
       "categoria": "Geral / Estrutura",
-      "item": "Painéis EPS (Monolev) — parede líquida",
+      "item": "Painéis EPS (Monolev) — parede líquida ESTRUTURAL (perímetro + térreo)",
       "especificacao": null,
       "unidade": "m²",
-      "quantidade": 421.27,
-      "obs": "cotar espessura/densidade c/ ISOCIL",
+      "quantidade": 340,
+      "obs": "divisórias do superior migradas p/ Lightwall (conceito mezanino)",
       "id": "IT001"
     },
     {
@@ -14,8 +14,8 @@
       "item": "Argamassa projetada estrutural (2 faces)",
       "especificacao": null,
       "unidade": "m²",
-      "quantidade": 842.54,
-      "obs": "~35 mm por face, com equipe",
+      "quantidade": 680,
+      "obs": "2 faces × 340 m²",
       "id": "IT002"
     },
     {
@@ -1061,6 +1061,15 @@
       "quantidade": 45,
       "obs": "item de conforto/estética premium · tratamento autoclave + verniz · recorte no lanternim · iluminação/ventilador destratificador fixados antes do fechamento",
       "id": "IT118"
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Divisórias internas Lightwall 2P 90 mm — pavimento superior completo",
+      "especificacao": "painéis 2500/3000×610×90 · juntas c/ tela de fibra + basecoat · fixação à laje e à estrutura conforme manual (§8) · uso SVVIE homologado",
+      "unidade": "m²",
+      "quantidade": 80,
+      "obs": "todas as internas do superior (mezanino, lavabo, banheiros, quarto, copa, corredor, closet, transversal da suíte) · hidráulica pesada em shaft (cava ≤ 50%) · juntas dissimilares Monolev↔Lightwall c/ tela 10 cm cada lado · içamento: painéis içados pelo vazio antes do fechamento",
+      "id": "IT119"
     }
   ]
 }
