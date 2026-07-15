@@ -903,13 +903,13 @@
   <div class="disclaimer">Pré-dimensionamento indicativo — sem valor executivo · sujeito a projeto estrutural (NBR 14762 / 8800 / 6123)</div>
 </section>
 
-<button class="btn-print" id="btn-pdf" title="Gera um PDF A4 (6 páginas) direto no navegador">⎙ Baixar PDF (A4)</button>
+<button class="btn-print" id="btn-pdf" title="Gera um PDF A4 (1 página por folha) direto no navegador">⎙ Baixar PDF (A4)</button>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
 document.getElementById('btn-pdf').addEventListener('click', async function () {
   const btn = this;
-  btn.disabled = true; btn.textContent = 'Gerando… 0/6';
+  btn.disabled = true; btn.textContent = 'Gerando…';
   document.body.classList.add('pdfmode');
   await new Promise(r => setTimeout(r, 300));            // aplica o tema claro
   try {
@@ -919,7 +919,7 @@ document.getElementById('btn-pdf').addEventListener('click', async function () {
       const canvas = await html2canvas(folhas[i], { scale: 2, backgroundColor: '#ffffff', logging: false });
       if (i > 0) pdf.addPage();
       pdf.addImage(canvas.toDataURL('image/jpeg', 0.92), 'JPEG', 0, 0, 210, 297);
-      btn.textContent = 'Gerando… ' + (i + 1) + '/6';
+      btn.textContent = 'Gerando… ' + (i + 1) + '/' + folhas.length;
     }
     pdf.save('residencia-q22-l8-blueprints.pdf');
   } catch (e) {
