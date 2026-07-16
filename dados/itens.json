@@ -56,11 +56,11 @@
     },
     {
       "categoria": "Geral / Estrutura",
-      "item": "Estrutura metálica da cobertura — perfis galvanizados Z275 formados a frio",
-      "especificacao": "pórticos 2×Ue200×75×25×3,00 @2,60 · terças Ue100×50×17×2,00 — 4 linhas (1,33 SO / 0,98 NE) + 1 parcial sobre serviço · lanternim Ue100 · contrav. Ø12 · ~1,35-1,55 t",
+      "item": "Estrutura metálica da cobertura — 3 treliças galvanizadas a fogo + terças/contrav. Z275",
+      "especificacao": "3 treliças banzos paralelos h=0,40 @3,25 (vão 7,30, degrau triangulado no lanternim): banzos tubo 50×50×2,00 · diagonais 30×30×2,00 · ~72 kg/un · terças Ue100×50×17×2,00 4 linhas @1,33/0,98 · contrav. Ø12 + esticador · vigotas Ue150 @1,25 sobre serviço · ~0,95-1,15 t",
       "unidade": "m²",
       "quantidade": 95,
-      "obs": "ligações parafusadas (preserva zinco) · peças soldadas galvanizadas a fogo · chumbação em cinta de coroamento · ver F-07 · recorte da faixa NE: telhado cobre até a divisa SÓ sobre lavanderia/técnica · terça Ue100 verificada: σ≈39 MPa, flecha L/943",
+      "obs": "treliças soldadas em fábrica e galvanizadas a fogo INTEIRAS, parafusadas em obra (tubos c/ furo de dreno) · oitões NO/SE apoiam direto na parede · plenum de 0,40 entre banzos p/ ventilador, luminárias e linhas do split · ver F-07/F-08/F-09",
       "id": "IT007"
     },
     {
