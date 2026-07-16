@@ -60,6 +60,22 @@ O site fica em `https://SEU_USUARIO.github.io/projeto_casa_pedro/`.
   item, a mais barata fica verde.
 - **Comparativo**: faixa estimada por etapa vs. custo real/cotado.
 
+## Planilha automática
+
+`planilha-q22-l8.xlsx` é **gerada pelo GitHub Actions**, nunca à mão.
+
+Fluxo: você lança uma cotação no site → o site commita `dados/cotacoes.json` →
+o workflow `.github/workflows/planilha.yml` dispara → `scripts/build_planilha.py`
+lê os JSONs, monta o .xlsx (Resumo, Etapas, Itens, Cotações, Comparativo, Revisões),
+o LibreOffice recalcula as fórmulas e o bot commita o arquivo → o link
+**⤓ Planilha .xlsx** no painel passa a servir a versão nova (~1 min).
+
+Editar o .xlsx à mão é inútil: a próxima geração sobrescreve. A fonte é o site.
+
+Se o workflow não aparecer em Actions, confira que o arquivo
+`.github/workflows/planilha.yml` está no repositório (um token sem permissão de
+*Workflows* não consegue enviá-lo — nesse caso, suba-o pela interface do GitHub).
+
 ## Observações
 - Os dados continuam legíveis no repo (JSON) — dá para versionar, reverter e
   auditar qualquer cotação pelo histórico de commits.

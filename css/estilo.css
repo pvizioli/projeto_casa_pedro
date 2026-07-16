@@ -40,6 +40,7 @@ nav button {
 }
 nav button.ativo { color:var(--bp-blue); background:var(--bp-line); border-color:var(--bp-line); font-weight:600; }
 nav a.btn-blueprints { font-size:12px; letter-spacing:1px; text-transform:uppercase; border:1px dashed var(--bp-cyan); padding:8px 14px; text-decoration:none; }
+nav a#link-planilha { border-style:solid; border-color:var(--bp-green); color:var(--bp-green); }
 
 /* painéis */
 .painel { border:1.2px solid var(--bp-line); background:var(--bp-panel); padding:16px 18px; margin-bottom:18px; }

@@ -115,7 +115,7 @@ async function salvarEtapas() {
     const r = await GH.gravar('dados/etapas.json', ETAPAS, ETAPAS_SHA, 'Atualiza avanço das etapas');
     ETAPAS_SHA = r.content.sha;
     b.classList.add('oculto');
-    msg('Avanço salvo no repositório ✓');
+    msg('Avanço salvo ✓ — a planilha .xlsx é regerada em ~1 min');
   } catch (err) { msg(err.message, false); }
   b.disabled = false;
 }
@@ -164,7 +164,7 @@ async function salvarCotacao(ev) {
     COTS_SHA = r.content.sha;
     ev.target.reset(); preencheQtde();
     renderCotacoes(); renderResumo();
-    msg('Cotação commitada no repositório ✓');
+    msg('Cotação commitada ✓ — a planilha .xlsx é regerada em ~1 min');
   } catch (err) {
     COTS.cotacoes.pop();
     msg(err.message, false);
