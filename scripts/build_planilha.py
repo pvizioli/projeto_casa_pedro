@@ -102,6 +102,7 @@ sist = [
     ('Cobertura', '3 treliças galvanizadas a fogo @3,25 m (banzos paralelos h=0,40, degrau triangulado) + terças Ue 100 · ~1,0 t'),
     ('Faixa NE', 'Área de luz descoberta até a fachada, dividida em 2 por parede cega: Luz 1 = jardim de inverno c/ parede verde e janelão 3,50; Luz 2 = varal/serve a lavanderia'),
     ('Fundação', 'Radier ~103 m²'),
+    ('Térreo — faixa SO', 'Despensa + banheiro completo (1,50 × 2,20) + lavabo (1,50 × 1,50) no fundo da cozinha · janelas p/ o acesso lateral · porta do lavabo direto p/ a varanda gourmet'),
 ]
 for i, (a, b) in enumerate(sist, start=20):
     ws.cell(row=i, column=1, value=a).font = Font(name='Arial', size=9, bold=True, color=AZUL2)
@@ -222,6 +223,7 @@ revs = [
     ('16/07/2026', 'Terças: 6 → 4 linhas e Ue 150 → Ue 100', '−170 kg · σ 61 MPa (24% de fy), flecha L/483'),
     ('16/07/2026', 'Custo de projeto/engenheiro/arquiteto detalhado (8 itens)', 'Etapa 1: R$ 20–35k → R$ 34–78k · total R$ 502–793k'),
     ('16/07/2026', 'Mão de obra cotável por etapa (13 itens) + aba Fornecedores', 'Material e mão de obra separados por etapa e por fornecedor'),
+    ('16/07/2026', 'Térreo: banheiro sai da parede da garagem → banheiro + lavabo no fundo da cozinha (faixa SO)', 'Cozinha 36 → 29 m² · +1 lavabo · janelas p/ o acesso lateral · porta do lavabo p/ a varanda'),
 ]
 for i, (d, a, imp) in enumerate(revs):
     corpo(ws, 3 + i, [d, a, imp])
