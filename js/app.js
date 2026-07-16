@@ -116,6 +116,7 @@ async function salvarEtapas() {
     ETAPAS_SHA = r.content.sha;
     b.classList.add('oculto');
     msg('Avanço salvo ✓ — a planilha .xlsx é regerada em ~1 min');
+    setTimeout(configurarLinkPlanilha, 75000);
   } catch (err) { msg(err.message, false); }
   b.disabled = false;
 }
@@ -165,6 +166,7 @@ async function salvarCotacao(ev) {
     ev.target.reset(); preencheQtde();
     renderCotacoes(); renderResumo();
     msg('Cotação commitada ✓ — a planilha .xlsx é regerada em ~1 min');
+    setTimeout(configurarLinkPlanilha, 75000);
   } catch (err) {
     COTS.cotacoes.pop();
     msg(err.message, false);
@@ -221,6 +223,41 @@ function renderComparativo() {
   }).join('');
 }
 
+
+/* ---------- link da planilha: nome do arquivo datado pela última atualização ---------- */
+function partesBRT(iso) {
+  return new Intl.DateTimeFormat('pt-BR', {
+    timeZone: 'America/Sao_Paulo', year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', hour12: false
+  }).formatToParts(new Date(iso)).reduce((o, p) => (o[p.type] = p.value, o), {});
+}
+
+async function configurarLinkPlanilha() {
+  const a = el('link-planilha');
+  if (!a) return;
+  try {
+    // último commit que tocou a planilha = data real da última atualização
+    const r = await fetch(
+      `https://api.github.com/repos/${GH.owner}/${GH.repo}/commits?path=planilha-q22-l8.xlsx&per_page=1`,
+      { headers: GH.cabecalhos(), cache: 'no-store' });
+    if (!r.ok) return;
+    const j = await r.json();
+    if (!Array.isArray(j) || !j.length) return;
+
+    const iso = j[0].commit.committer.date;
+    const p = partesBRT(iso);
+    const sha = j[0].sha.slice(0, 7);
+
+    a.setAttribute('download', `planilha-q22-l8-${p.year}-${p.month}-${p.day}-${p.hour}${p.minute}.xlsx`);
+    a.href = `planilha-q22-l8.xlsx?v=${sha}`;          // evita cache de versão antiga
+    a.textContent = `⤓ Planilha ${p.day}/${p.month}`;
+    a.title = `Última atualização: ${p.day}/${p.month}/${p.year} às ${p.hour}:${p.minute} (BRT)\n` +
+              `Baixa como planilha-q22-l8-${p.year}-${p.month}-${p.day}-${p.hour}${p.minute}.xlsx`;
+  } catch (e) {
+    /* offline ou sem API: mantém o link padrão */
+  }
+}
+
 /* ---------- token ---------- */
 function configurarToken() {
   const t = prompt('Cole seu Personal Access Token (fine-grained) do GitHub.\nEle fica salvo só neste navegador.');
@@ -242,4 +279,5 @@ document.addEventListener('DOMContentLoaded', () => {
   el('cot-categoria').addEventListener('change', atualizaItens);
   el('cot-item').addEventListener('change', preencheQtde);
   carregar();
+  configurarLinkPlanilha();
 });
