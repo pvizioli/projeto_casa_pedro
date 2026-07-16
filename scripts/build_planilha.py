@@ -229,6 +229,7 @@ revs = [
     ('16/07/2026', 'Banheiro e lavabo do térreo unificados em um só (1,50 × 2,50)', 'Cozinha recupera ~1,9 m² · porta única p/ a área gourmet'),
     ('16/07/2026', 'Lavabo 1,50 × 1,50 no canto da garagem c/ o corredor (janela p/ o corredor)', 'Térreo volta a ter banheiro acessível por dentro'),
     ('16/07/2026', 'Divisórias do térreo (lavabo e banheiro) em Lightwall, não Monolev', 'Monolev 340 → 320 m² · Lightwall 80 → 100 m² · esgoto de 100 mm obrigatoriamente pelo radier'),
+    ('16/07/2026', 'Superior: copa desce 1 m; corredor avança 1 m na suíte; porta da suíte na lateral (closet recuado)', 'Quarto 3,70 → 4,70 m (10 → 11,8 m²) · suíte 4,50 → 3,50 m · closet passante 1,20 × 2,50 · suíte sem janela na viela (luz pelo vidro da extensão)'),
 ]
 for i, (d, a, imp) in enumerate(revs):
     corpo(ws, 3 + i, [d, a, imp])
