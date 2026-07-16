@@ -2,11 +2,11 @@
   "itens": [
     {
       "categoria": "Geral / Estrutura",
-      "item": "Painéis EPS (Monolev) — parede líquida ESTRUTURAL (perímetro + térreo)",
+      "item": "Painéis EPS (Monolev) — parede líquida ESTRUTURAL (perímetro + estruturais do térreo)",
       "especificacao": null,
       "unidade": "m²",
-      "quantidade": 340,
-      "obs": "divisórias do superior migradas p/ Lightwall (conceito mezanino)",
+      "quantidade": 320,
+      "obs": "divisórias não estruturais (lavabo e banheiro do térreo + todo o superior) migradas p/ Lightwall",
       "id": "IT001",
       "tipo": "material",
       "etapa": 4
@@ -16,8 +16,8 @@
       "item": "Argamassa projetada estrutural (2 faces)",
       "especificacao": null,
       "unidade": "m²",
-      "quantidade": 680,
-      "obs": "2 faces × 340 m²",
+      "quantidade": 640,
+      "obs": "2 faces × 320 m²",
       "id": "IT002",
       "tipo": "material",
       "etapa": 4
@@ -446,7 +446,7 @@
       "especificacao": "banheiros sem box — sob carpete de pedra drenante",
       "unidade": "un",
       "quantidade": 3,
-      "obs": "suíte, banheiro do quarto e banheiro do térreo (canto SO/SE, porta p/ a área gourmet)",
+      "obs": "suíte, banheiro do quarto e banheiro do térreo · o lavabo do térreo não leva ralo linear",
       "id": "IT041",
       "tipo": "material",
       "etapa": 8
@@ -1300,11 +1300,11 @@
     },
     {
       "categoria": "Geral / Estrutura",
-      "item": "Divisórias internas Lightwall 2P 90 mm — pavimento superior completo",
+      "item": "Divisórias Lightwall 2P 90 mm — pav. superior completo + lavabo e banheiro do térreo",
       "especificacao": "painéis 2500/3000×610×90 · juntas c/ tela de fibra + basecoat · fixação à laje e à estrutura conforme manual (§8) · uso SVVIE homologado",
       "unidade": "m²",
-      "quantidade": 80,
-      "obs": "todas as internas do superior (mezanino, lavabo, banheiros, quarto, copa, corredor, closet, transversal da suíte) · hidráulica pesada em shaft (cava ≤ 50%) · juntas dissimilares Monolev↔Lightwall c/ tela 10 cm cada lado · içamento: painéis içados pelo vazio antes do fechamento",
+      "quantidade": 100,
+      "obs": "superior: todas as internas · térreo: caixa do lavabo (canto garagem/corredor) e do banheiro do fundo · hidráulica pesada em shaft ou no radier (cava ≤ 50% = 45 mm: NÃO passa esgoto de 100 mm) · juntas dissimilares Monolev↔Lightwall c/ tela 10 cm cada lado",
       "id": "IT119",
       "tipo": "material",
       "etapa": 4
@@ -1572,6 +1572,39 @@
       "id": "IT143",
       "tipo": "mao_obra",
       "etapa": 13
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Lavabo do térreo — vaso + cuba + torneira + sifão",
+      "especificacao": "lavabo 1,50 × 1,50 no canto da garagem c/ o corredor lateral · janela p/ o corredor",
+      "unidade": "cj",
+      "quantidade": 1,
+      "obs": "CRÍTICO: esgoto de 100 mm do vaso NÃO cabe em painel Lightwall de 90 mm — sai pelo RADIER, posição congelada antes da concretagem (etapa 2)",
+      "id": "IT144",
+      "tipo": "material",
+      "etapa": 8
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Ramal hidráulico do lavabo do térreo (água fria + esgoto + ventilação)",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "ramal embutido no radier · prumada de ventilação pela parede Monolev do corredor",
+      "id": "IT145",
+      "tipo": "material",
+      "etapa": 8
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Acabamento do lavabo do térreo — microcimento + piso resinado",
+      "especificacao": "paredes + piso · lavabo seco, sem carpete de pedra",
+      "unidade": "m²",
+      "quantidade": 9,
+      "obs": "base cimentícia do Lightwall recebe microcimento direto · DIY viável",
+      "id": "IT146",
+      "tipo": "material",
+      "etapa": 11
     }
   ]
 }

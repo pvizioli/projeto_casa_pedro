@@ -95,14 +95,14 @@ ws['B16'].number_format = PCT
 ws['A19'] = 'SISTEMA CONSTRUTIVO (revisão atual)'
 ws['A19'].font = Font(name='Arial', size=11, bold=True, color=AZUL)
 sist = [
-    ('Paredes estruturais', 'Monolev ~340 m² líquidos — perímetro + térreo'),
-    ('Divisórias do superior', 'Lightwall 2P 90 mm ~80 m² (conceito mezanino: telhado apoia só no perímetro)'),
+    ('Paredes estruturais', 'Monolev ~320 m² líquidos — perímetro + estruturais do térreo (divisa da garagem, testada)'),
+    ('Divisórias em Lightwall', 'Lightwall 2P 90 mm ~100 m²: todo o pav. superior (conceito mezanino) + caixas do lavabo e do banheiro do térreo — nenhuma delas é estrutural'),
     ('Lajes', 'Vigotas + EPS ~86 m² — SÓ pisos (superior, extensão, técnica). Não há laje de forro.'),
     ('Forro', 'Madeira acompanhando o telhado ~45 m² (mezanino + vão duplo) · gesso+EPS nivelado ~47 m² (demais)'),
     ('Cobertura', '3 treliças galvanizadas a fogo @3,25 m (banzos paralelos h=0,40, degrau triangulado) + terças Ue 100 · ~1,0 t'),
     ('Faixa NE (1,20)', 'Da fachada ao fundo: portinha (0,80) · Luz 1 = jardim de inverno c/ parede verde e janelão 3,50 (4,10) · PAREDE CEGA · Luz 2 = varal (4,10) · lavanderia + área técnica acima (4,00, único trecho coberto até a divisa)'),
     ('Fundação', 'Radier ~103 m²'),
-    ('Térreo — faixa SO', 'Despensa (1,50 × 1,10) + bancada + banheiro completo único (1,50 × 2,50, sem box) no canto do fundo · janela p/ o acesso lateral · porta ÚNICA abrindo para a área gourmet'),
+    ('Térreo — faixa SO', 'Lavabo 1,50 × 1,50 no canto da garagem c/ o corredor (janela p/ o corredor) · despensa (1,50 × 1,10) + bancada + banheiro completo (1,50 × 2,50, sem box) no fundo, porta ÚNICA p/ a área gourmet'),
 ]
 for i, (a, b) in enumerate(sist, start=20):
     ws.cell(row=i, column=1, value=a).font = Font(name='Arial', size=9, bold=True, color=AZUL2)
@@ -226,7 +226,9 @@ revs = [
     ('16/07/2026', 'Térreo: banheiro sai da parede da garagem → banheiro + lavabo no fundo da cozinha (faixa SO)', 'Cozinha 36 → 29 m² · +1 lavabo · janelas p/ o acesso lateral · porta do lavabo p/ a varanda'),
     ('16/07/2026', 'Porta da lavanderia a 0,90 da parede do fundo', 'Máquina sob a janela do fundo + nicho de geladeira no canto da cozinha'),
     ('16/07/2026', 'Lavanderia/técnica 2,50 → 4,00 m; Luz 1 e Luz 2 4,85 → 4,10 m cada', 'Faixa de luz 9,70 → 8,20 m · laje 68 → 70 m² · telha 98 → 100 m² · parede verde 14 → 12 m²'),
-    ('16/07/2026', 'Banheiro e lavabo do térreo unificados em um só (1,50 × 2,50)', 'Cozinha recupera ~1,9 m² · porta única p/ a área gourmet · −3 itens de lavabo'),
+    ('16/07/2026', 'Banheiro e lavabo do térreo unificados em um só (1,50 × 2,50)', 'Cozinha recupera ~1,9 m² · porta única p/ a área gourmet'),
+    ('16/07/2026', 'Lavabo 1,50 × 1,50 no canto da garagem c/ o corredor (janela p/ o corredor)', 'Térreo volta a ter banheiro acessível por dentro'),
+    ('16/07/2026', 'Divisórias do térreo (lavabo e banheiro) em Lightwall, não Monolev', 'Monolev 340 → 320 m² · Lightwall 80 → 100 m² · esgoto de 100 mm obrigatoriamente pelo radier'),
 ]
 for i, (d, a, imp) in enumerate(revs):
     corpo(ws, 3 + i, [d, a, imp])
