@@ -102,7 +102,7 @@ sist = [
     ('Cobertura', '3 treliças galvanizadas a fogo @3,25 m (banzos paralelos h=0,40, degrau triangulado) + terças Ue 100 · ~1,0 t'),
     ('Faixa NE (1,20)', 'Da fachada ao fundo: portinha (0,80) · Luz 1 = jardim de inverno c/ parede verde e janelão 3,50 (4,10) · PAREDE CEGA · Luz 2 = varal (4,10) · lavanderia + área técnica acima (4,00, único trecho coberto até a divisa)'),
     ('Fundação', 'Radier ~103 m²'),
-    ('Térreo — faixa SO', 'Despensa + banheiro completo (1,50 × 2,20) + lavabo (1,50 × 1,50) no fundo da cozinha · janelas p/ o acesso lateral · porta do lavabo direto p/ a varanda gourmet'),
+    ('Térreo — faixa SO', 'Despensa (1,50 × 1,10) + bancada + banheiro completo único (1,50 × 2,50, sem box) no canto do fundo · janela p/ o acesso lateral · porta ÚNICA abrindo para a área gourmet'),
 ]
 for i, (a, b) in enumerate(sist, start=20):
     ws.cell(row=i, column=1, value=a).font = Font(name='Arial', size=9, bold=True, color=AZUL2)
@@ -226,6 +226,7 @@ revs = [
     ('16/07/2026', 'Térreo: banheiro sai da parede da garagem → banheiro + lavabo no fundo da cozinha (faixa SO)', 'Cozinha 36 → 29 m² · +1 lavabo · janelas p/ o acesso lateral · porta do lavabo p/ a varanda'),
     ('16/07/2026', 'Porta da lavanderia a 0,90 da parede do fundo', 'Máquina sob a janela do fundo + nicho de geladeira no canto da cozinha'),
     ('16/07/2026', 'Lavanderia/técnica 2,50 → 4,00 m; Luz 1 e Luz 2 4,85 → 4,10 m cada', 'Faixa de luz 9,70 → 8,20 m · laje 68 → 70 m² · telha 98 → 100 m² · parede verde 14 → 12 m²'),
+    ('16/07/2026', 'Banheiro e lavabo do térreo unificados em um só (1,50 × 2,50)', 'Cozinha recupera ~1,9 m² · porta única p/ a área gourmet · −3 itens de lavabo'),
 ]
 for i, (d, a, imp) in enumerate(revs):
     corpo(ws, 3 + i, [d, a, imp])

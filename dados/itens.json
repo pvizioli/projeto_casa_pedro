@@ -446,7 +446,7 @@
       "especificacao": "banheiros sem box — sob carpete de pedra drenante",
       "unidade": "un",
       "quantidade": 3,
-      "obs": "suíte, banheiro do quarto e banheiro do térreo (agora no fundo da cozinha, faixa SO)",
+      "obs": "suíte, banheiro do quarto e banheiro do térreo (canto SO/SE, porta p/ a área gourmet)",
       "id": "IT041",
       "tipo": "material",
       "etapa": 8
@@ -1572,39 +1572,6 @@
       "id": "IT143",
       "tipo": "mao_obra",
       "etapa": 13
-    },
-    {
-      "categoria": "Hidráulica",
-      "item": "Lavabo do térreo — vaso + cuba + torneira + sifão",
-      "especificacao": "lavabo 1,50 × 1,50 no canto SO/SE, porta p/ a varanda",
-      "unidade": "cj",
-      "quantidade": 1,
-      "obs": "ponto novo: ramal de esgoto e água aproveita a prumada do banheiro vizinho (paredes coladas)",
-      "id": "IT144",
-      "tipo": "material",
-      "etapa": 8
-    },
-    {
-      "categoria": "Hidráulica",
-      "item": "Ramal hidráulico do lavabo (água fria + esgoto + ventilação)",
-      "especificacao": null,
-      "unidade": "vb",
-      "quantidade": 1,
-      "obs": "economia: banheiro e lavabo compartilham a mesma parede hidráulica",
-      "id": "IT145",
-      "tipo": "material",
-      "etapa": 8
-    },
-    {
-      "categoria": "Geral / Estrutura",
-      "item": "Acabamento do lavabo do térreo — microcimento + piso resinado",
-      "especificacao": "paredes + piso · sem carpete de pedra (lavabo seco)",
-      "unidade": "m²",
-      "quantidade": 9,
-      "obs": "DIY viável — ambiente pequeno e sem área molhada",
-      "id": "IT146",
-      "tipo": "material",
-      "etapa": 11
     }
   ]
 }
