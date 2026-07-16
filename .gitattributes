@@ -1,0 +1,3 @@
+# A planilha é gerada pelo GitHub Actions — em conflito, vence a versão do robô,
+# que sempre remonta o arquivo a partir de dados/*.json.
+planilha-q22-l8.xlsx binary merge=ours
