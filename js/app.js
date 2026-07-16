@@ -3,6 +3,7 @@ let ETAPAS = null, ETAPAS_SHA = null;
 let COTS = null, COTS_SHA = null;
 let ITENS = null;
 
+const TIPO = { material: 'material', mao_obra: 'mão de obra', servico: 'serviço' };
 const R$ = v => 'R$ ' + Number(v || 0).toLocaleString('pt-BR', { maximumFractionDigits: 0 });
 const el = id => document.getElementById(id);
 
@@ -134,12 +135,23 @@ function atualizaItens() {
   const cat = el('cot-categoria').value;
   el('cot-item').innerHTML = ITENS.itens.filter(i => i.categoria === cat)
     .map(i => `<option value="${i.id}">${i.item}${i.quantidade ? ` (${i.quantidade} ${i.unidade || ''})` : ''}</option>`).join('');
-  preencheQtde();
+  aoTrocarItem();
 }
 
-function preencheQtde() {
+// preenche quantidade, marca o tipo e já seleciona a etapa vinculada ao item
+function aoTrocarItem() {
   const it = ITENS.itens.find(i => i.id === el('cot-item').value);
-  if (it && it.quantidade) el('cot-qtde').value = it.quantidade;
+  if (!it) return;
+  if (it.quantidade) el('cot-qtde').value = it.quantidade;
+  if (it.etapa) el('cot-etapa').value = it.etapa;
+  const t = el('cot-tipo');
+  if (t) {
+    t.textContent = TIPO[it.tipo] || 'material';
+    t.className = 'badge ' + (it.tipo === 'mao_obra' ? 'em_andamento' : it.tipo === 'servico' ? 'concluida' : 'nao_iniciada');
+  }
+  const f = el('cot-fornecedor');
+  if (f) f.placeholder = it.tipo === 'mao_obra' ? 'nome do empreiteiro / equipe (obrigatório)'
+       : it.tipo === 'servico' ? 'nome do escritório / profissional' : 'ex.: ISOCIL';
 }
 
 async function salvarCotacao(ev) {
@@ -151,7 +163,7 @@ async function salvarCotacao(ev) {
     const qtde = parseFloat(el('cot-qtde').value) || 1;
     const c = {
       id: 'C' + String(COTS.cotacoes.length + 1).padStart(3, '0'),
-      item_id: it.id, item: it.item, categoria: it.categoria,
+      item_id: it.id, item: it.item, categoria: it.categoria, tipo: it.tipo || 'material',
       etapa: +el('cot-etapa').value,
       fornecedor: el('cot-fornecedor').value.trim(),
       preco_unit: preco, quantidade: qtde,
@@ -163,7 +175,7 @@ async function salvarCotacao(ev) {
     const r = await GH.gravar('dados/cotacoes.json', COTS, COTS_SHA,
       `Cotação: ${c.item} — ${c.fornecedor} (${R$(c.total)})`);
     COTS_SHA = r.content.sha;
-    ev.target.reset(); preencheQtde();
+    ev.target.reset(); atualizaItens();
     renderCotacoes(); renderResumo();
     msg('Cotação commitada ✓ — a planilha .xlsx é regerada em ~1 min');
     setTimeout(configurarLinkPlanilha, 75000);
@@ -277,7 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
   el('salvar-etapas').addEventListener('click', salvarEtapas);
   el('form-cotacao').addEventListener('submit', salvarCotacao);
   el('cot-categoria').addEventListener('change', atualizaItens);
-  el('cot-item').addEventListener('change', preencheQtde);
+  el('cot-item').addEventListener('change', aoTrocarItem);
   carregar();
   configurarLinkPlanilha();
 });

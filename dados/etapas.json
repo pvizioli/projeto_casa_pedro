@@ -4,9 +4,9 @@
     {
       "id": 1,
       "nome": "Projetos, sondagem e aprovações",
-      "estimativa_baixa": 20000,
-      "estimativa_alta": 35000,
-      "obs": "arq., estrutural, complementares, SPT, ART, condomínio",
+      "estimativa_baixa": 34000,
+      "estimativa_alta": 78000,
+      "obs": "arquitetônico (legal+executivo) 12–27k · estrutural 5–12k · complementares 5–10k · AVAC 1,5–3k · SPT 2–4k · ART/RRT 1–2k · aprovações 1,5–4k · RT de execução 8–25k (10 meses) — detalhado na categoria Projetos e Serviços Técnicos",
       "status": "nao_iniciada",
       "progresso": 0,
       "custo_real": 0

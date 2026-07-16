@@ -16,6 +16,7 @@ DADOS = RAIZ / 'dados'
 SAIDA = RAIZ / 'planilha-q22-l8.xlsx'
 
 AZUL = '0E3A6B'; AZUL2 = '2E5E96'; CINZA = 'EEF4FB'; AMBAR = 'B8860B'; VERDE = '1E7A46'
+TIPO = {'material': 'material', 'mao_obra': 'mão de obra', 'servico': 'serviço'}
 RS = '"R$" #,##0'; RS2 = '"R$" #,##0.00'; PCT = '0.0%'
 
 def J(nome):
@@ -69,7 +70,9 @@ linhas = [
     ('Estimativa — faixa alta', f'=SUM(Etapas!D3:D{n + 1})', '', 'soma das 13 etapas'),
     ('Custo/m² — baixo', '=B7/B6', '', 'referência CUB-SP R8-N: R$ 2.129,86'),
     ('Custo/m² — alto', '=B8/B6', '', 'diferença = sistemas premium (bomba de calor, automação, resinados)'),
-    ('Total cotado/contratado', f'=SUM(Cotações!J2:J{max(len(cots) + 1, 2)})', '', 'soma de tudo lançado no site'),
+    ('Total cotado/contratado', f'=SUM(Cotações!K2:K{max(len(cots) + 1, 2)})', '', 'soma de tudo lançado no site'),
+    ('  ├ material', f'=SUMIF(Cotações!C2:C{max(len(cots) + 1, 2)},"<>mão de obra",Cotações!K2:K{max(len(cots) + 1, 2)})', '', ''),
+    ('  └ mão de obra', f'=SUMIF(Cotações!C2:C{max(len(cots) + 1, 2)},"mão de obra",Cotações!K2:K{max(len(cots) + 1, 2)})', '', 'empreiteiros/equipes cotados por etapa'),
     ('Custo real informado', f'=SUM(Etapas!I3:I{n + 1})', '', 'digitado na aba Etapas do site'),
     ('Cotações registradas', f'=COUNTA(Cotações!A2:A{max(len(cots) + 1, 2)})', '', 'cada lançamento = 1 commit no repositório'),
     ('Avanço geral (ponderado por custo)', f'=IFERROR(SUMPRODUCT(Etapas!H3:H{n + 1},Etapas!E3:E{n + 1})/SUM(Etapas!E3:E{n + 1}),0)', '', 'ponderado pela média da faixa de cada etapa'),
@@ -85,13 +88,12 @@ for i, ln in enumerate(linhas, start=5):
             c.font = Font(name='Arial', size=10, bold=(j == 2), color=(AZUL if j == 2 else '1B2A3A'))
             c.border = BORDA
             c.alignment = Alignment(wrap_text=(j == 4), vertical='center')
-ws['B7'].number_format = RS; ws['B8'].number_format = RS
-ws['B9'].number_format = RS; ws['B10'].number_format = RS
-ws['B11'].number_format = RS; ws['B12'].number_format = RS
-ws['B14'].number_format = PCT
+for _c in ('B7','B8','B9','B10','B11','B12','B13','B14'):
+    ws[_c].number_format = RS
+ws['B16'].number_format = PCT
 
-ws['A17'] = 'SISTEMA CONSTRUTIVO (revisão atual)'
-ws['A17'].font = Font(name='Arial', size=11, bold=True, color=AZUL)
+ws['A19'] = 'SISTEMA CONSTRUTIVO (revisão atual)'
+ws['A19'].font = Font(name='Arial', size=11, bold=True, color=AZUL)
 sist = [
     ('Paredes estruturais', 'Monolev ~340 m² líquidos — perímetro + térreo'),
     ('Divisórias do superior', 'Lightwall 2P 90 mm ~80 m² (conceito mezanino: telhado apoia só no perímetro)'),
@@ -101,28 +103,29 @@ sist = [
     ('Faixa NE', 'Área de luz descoberta até a fachada, dividida em 2 por parede cega: Luz 1 = jardim de inverno c/ parede verde e janelão 3,50; Luz 2 = varal/serve a lavanderia'),
     ('Fundação', 'Radier ~103 m²'),
 ]
-for i, (a, b) in enumerate(sist, start=18):
+for i, (a, b) in enumerate(sist, start=20):
     ws.cell(row=i, column=1, value=a).font = Font(name='Arial', size=9, bold=True, color=AZUL2)
     c = ws.cell(row=i, column=2, value=b); c.font = Font(name='Arial', size=9)
     ws.merge_cells(start_row=i, start_column=2, end_row=i, end_column=4)
     c.alignment = Alignment(wrap_text=True, vertical='top')
     ws.row_dimensions[i].height = 24
 
-ws['A27'] = 'COMO USAR'
-ws['A27'].font = Font(name='Arial', size=11, bold=True, color=AZUL)
-ws['A28'] = ('Esta planilha é um EXPORT do painel de obra e é regerada a cada cotação lançada no site. '
+ws['A29'] = 'COMO USAR'
+ws['A29'].font = Font(name='Arial', size=11, bold=True, color=AZUL)
+ws['A30'] = ('Esta planilha é um EXPORT do painel de obra e é regerada a cada cotação lançada no site. '
              'Edições feitas aqui serão perdidas na próxima geração — lance tudo pelo site '
              '(pvizioli.github.io/projeto_casa_pedro) para que vire commit e volte para cá.')
-ws['A28'].font = Font(name='Arial', size=9, italic=True, color=AMBAR)
-ws.merge_cells('A28:D30'); ws['A28'].alignment = Alignment(wrap_text=True, vertical='top')
+ws['A30'].font = Font(name='Arial', size=9, italic=True, color=AMBAR)
+ws.merge_cells('A30:D32'); ws['A30'].alignment = Alignment(wrap_text=True, vertical='top')
 
 # ============================ 2 · ETAPAS ============================
 ws = wb.create_sheet('Etapas')
 ws['A1'] = 'ETAPAS DA OBRA — 13 FASES'
 ws['A1'].font = Font(name='Arial', size=13, bold=True, color=AZUL)
 cabecalho(ws, 2, ['#', 'Etapa', 'Estim. baixa', 'Estim. alta', 'Média', '% do total',
-                  'Status', 'Avanço', 'Custo real', 'Cotado', 'Δ vs. alta', 'Observação'],
-          [5, 34, 13, 13, 13, 9, 13, 9, 13, 13, 13, 52])
+                  'Status', 'Avanço', 'Custo real', 'Cotado material', 'Cotado mão de obra',
+                  'Cotado total', 'Δ vs. alta', 'Observação'],
+          [5, 32, 12, 12, 12, 8, 12, 8, 12, 14, 15, 13, 12, 50])
 nc = max(len(cots) + 1, 2)
 STATUS = {'nao_iniciada': 'não iniciada', 'em_andamento': 'em andamento', 'concluida': 'concluída'}
 for i, e in enumerate(etapas):
@@ -130,13 +133,16 @@ for i, e in enumerate(etapas):
     corpo(ws, r, [e['id'], e['nome'], e['estimativa_baixa'], e['estimativa_alta'],
                   f'=(C{r}+D{r})/2', f'=IFERROR(E{r}/$E${n + 2},0)', STATUS[e['status']],
                   e['progresso'] / 100, e['custo_real'],
-                  f'=SUMIFS(Cotações!$J$2:$J${nc},Cotações!$F$2:$F${nc},$A{r})',
-                  f'=IF(J{r}=0,"",D{r}-J{r})', e['obs']],
-          fmt={3: RS, 4: RS, 5: RS, 6: PCT, 8: PCT, 9: RS, 10: RS, 11: RS})
+                  f'=SUMIFS(Cotações!$K$2:$K${nc},Cotações!$G$2:$G${nc},$A{r},Cotações!$C$2:$C${nc},"<>mão de obra")',
+                  f'=SUMIFS(Cotações!$K$2:$K${nc},Cotações!$G$2:$G${nc},$A{r},Cotações!$C$2:$C${nc},"mão de obra")',
+                  f'=J{r}+K{r}',
+                  f'=IF(L{r}=0,"",D{r}-L{r})', e['obs']],
+          fmt={3: RS, 4: RS, 5: RS, 6: PCT, 8: PCT, 9: RS, 10: RS, 11: RS, 12: RS, 13: RS})
 r = n + 2
 ws.cell(row=r, column=2, value='TOTAL').font = Font(name='Arial', size=10, bold=True, color=AZUL)
 for col, f in ((3, f'=SUM(C3:C{r - 1})'), (4, f'=SUM(D3:D{r - 1})'), (5, f'=SUM(E3:E{r - 1})'),
-               (9, f'=SUM(I3:I{r - 1})'), (10, f'=SUM(J3:J{r - 1})')):
+               (9, f'=SUM(I3:I{r - 1})'), (10, f'=SUM(J3:J{r - 1})'), (11, f'=SUM(K3:K{r - 1})'),
+               (12, f'=SUM(L3:L{r - 1})')):
     c = ws.cell(row=r, column=col, value=f)
     c.font = Font(name='Arial', size=10, bold=True, color=AZUL); c.number_format = RS
     c.border = Border(top=Side(style='thin', color=AZUL))
@@ -148,37 +154,40 @@ ws['A1'] = 'CATÁLOGO DE ITENS COTÁVEIS'
 ws['A1'].font = Font(name='Arial', size=13, bold=True, color=AZUL)
 ws['A2'] = 'Base do formulário de cotação do site. Quantidades = memória de cálculo do projeto.'
 ws['A2'].font = Font(name='Arial', size=8, italic=True, color='5A6B7D')
-cabecalho(ws, 3, ['ID', 'Categoria', 'Item', 'Especificação', 'Un', 'Qtde',
-                  'Nº cotações', 'Melhor preço unit.', 'Melhor total', 'Observação'],
-          [7, 17, 42, 46, 6, 9, 10, 14, 14, 52])
+cabecalho(ws, 3, ['ID', 'Categoria', 'Tipo', 'Etapa', 'Item', 'Especificação', 'Un', 'Qtde',
+                  'Nº cotações', 'Melhor preço unit.', 'Melhor fornecedor', 'Melhor total', 'Observação'],
+          [7, 17, 12, 6, 40, 42, 6, 9, 10, 14, 22, 13, 46])
 for i, it in enumerate(itens):
     r = 4 + i
-    corpo(ws, r, [it['id'], it['categoria'], it['item'], it.get('especificacao') or '',
+    corpo(ws, r, [it['id'], it['categoria'], TIPO.get(it.get('tipo'), 'material'), it.get('etapa'),
+                  it['item'], it.get('especificacao') or '',
                   it.get('unidade') or '', it.get('quantidade'),
-                  f'=COUNTIFS(Cotações!$D$2:$D${nc},$A{r})',
-                  f'=IF(G{r}=0,"—",_xlfn.MINIFS(Cotações!$I$2:$I${nc},Cotações!$D$2:$D${nc},$A{r}))',
-                  f'=IF(G{r}=0,"—",IFERROR(H{r}*F{r},""))',
+                  f'=COUNTIFS(Cotações!$E$2:$E${nc},$A{r})',
+                  f'=IF(I{r}=0,"—",_xlfn.MINIFS(Cotações!$J$2:$J${nc},Cotações!$E$2:$E${nc},$A{r}))',
+                  f'=IF(I{r}=0,"—",IFERROR(INDEX(Cotações!$H$2:$H${nc},MATCH(1,INDEX((Cotações!$E$2:$E${nc}=$A{r})*(Cotações!$J$2:$J${nc}=J{r}),0),0)),""))',
+                  f'=IF(I{r}=0,"—",IFERROR(J{r}*H{r},""))',
                   it.get('obs') or ''],
-          fmt={6: '#,##0.00', 8: RS2, 9: RS})
+          fmt={8: '#,##0.00', 10: RS2, 12: RS})
 
 # ============================ 4 · COTAÇÕES ============================
 ws = wb.create_sheet('Cotações')
-cabecalho(ws, 1, ['ID', 'Data', 'Categoria', 'Item ID', 'Item', 'Etapa', 'Fornecedor',
-                  'Qtde', 'Preço unit.', 'Total', 'Melhor?', 'Observação'],
-          [7, 11, 17, 8, 40, 7, 22, 9, 13, 13, 9, 44])
+cabecalho(ws, 1, ['ID', 'Data', 'Tipo', 'Categoria', 'Item ID', 'Item', 'Etapa',
+                  'Fornecedor / empreiteiro', 'Qtde', 'Preço unit.', 'Total', 'Melhor?', 'Observação'],
+          [7, 11, 12, 17, 8, 38, 7, 26, 9, 13, 13, 9, 42])
 if cots:
     for i, c_ in enumerate(cots):
         r = 2 + i
-        corpo(ws, r, [c_['id'], c_.get('data'), c_.get('categoria'), c_.get('item_id'), c_.get('item'),
-                      c_.get('etapa'), c_.get('fornecedor'), c_.get('quantidade'), c_.get('preco_unit'),
-                      f'=H{r}*I{r}',
-                      f'=IF(I{r}=_xlfn.MINIFS($I$2:$I${nc},$D$2:$D${nc},$D{r}),"SIM","")',
+        corpo(ws, r, [c_['id'], c_.get('data'), TIPO.get(c_.get('tipo'), 'material'), c_.get('categoria'),
+                      c_.get('item_id'), c_.get('item'), c_.get('etapa'), c_.get('fornecedor'),
+                      c_.get('quantidade'), c_.get('preco_unit'),
+                      f'=I{r}*J{r}',
+                      f'=IF(J{r}=_xlfn.MINIFS($J$2:$J${nc},$E$2:$E${nc},$E{r}),"SIM","")',
                       c_.get('obs') or ''],
-              fmt={8: '#,##0.00', 9: RS2, 10: RS})
+              fmt={9: '#,##0.00', 10: RS2, 11: RS})
 else:
     ws['A3'] = 'Nenhuma cotação lançada ainda — use o formulário do site.'
     ws['A3'].font = Font(name='Arial', size=9, italic=True, color=AMBAR)
-    ws.merge_cells('A3:L3')
+    ws.merge_cells('A3:M3')
 
 # ============================ 5 · COMPARATIVO ============================
 ws = wb.create_sheet('Comparativo')
@@ -189,7 +198,7 @@ cabecalho(ws, 2, ['#', 'Etapa', 'Estim. baixa', 'Estim. alta', 'Real / cotado', 
 for i, e in enumerate(etapas):
     r = 3 + i; er = 3 + i
     corpo(ws, r, [e['id'], e['nome'], f'=Etapas!C{er}', f'=Etapas!D{er}',
-                  f'=IF(Etapas!I{er}>0,Etapas!I{er},Etapas!J{er})',
+                  f'=IF(Etapas!I{er}>0,Etapas!I{er},Etapas!L{er})',
                   f'=IF(E{r}=0,"",D{r}-E{r})',
                   f'=IF(E{r}=0,"sem cotação",IF(E{r}>D{r},"ACIMA da faixa",IF(E{r}<C{r},"abaixo da faixa","dentro da faixa")))'],
           fmt={3: RS, 4: RS, 5: RS, 6: RS})
@@ -211,9 +220,46 @@ revs = [
     ('16/07/2026', 'Parede cega entre Luz 1 e Luz 2 · Luz 1 = jardim de inverno', '+14 m² parede verde · +12 m² janelão · impermeabilizar divisa'),
     ('16/07/2026', 'Cobertura: pórticos de viga cheia → 3 TRELIÇAS @3,25 m', 'Aço 1,4 t → ~1,0 t · degrau do lanternim triangulado'),
     ('16/07/2026', 'Terças: 6 → 4 linhas e Ue 150 → Ue 100', '−170 kg · σ 61 MPa (24% de fy), flecha L/483'),
+    ('16/07/2026', 'Custo de projeto/engenheiro/arquiteto detalhado (8 itens)', 'Etapa 1: R$ 20–35k → R$ 34–78k · total R$ 502–793k'),
+    ('16/07/2026', 'Mão de obra cotável por etapa (13 itens) + aba Fornecedores', 'Material e mão de obra separados por etapa e por fornecedor'),
 ]
 for i, (d, a, imp) in enumerate(revs):
     corpo(ws, 3 + i, [d, a, imp])
+
+# ============================ 7 · FORNECEDORES ============================
+ws = wb.create_sheet('Fornecedores')
+ws['A1'] = 'CONSOLIDADO POR FORNECEDOR / EMPREITEIRO'
+ws['A1'].font = Font(name='Arial', size=13, bold=True, color=AZUL)
+ws['A2'] = 'Uma linha por fornecedor cotado no site — quem fornece o quê, em qual etapa e por quanto.'
+ws['A2'].font = Font(name='Arial', size=8, italic=True, color='5A6B7D')
+cabecalho(ws, 3, ['Fornecedor / empreiteiro', 'Tipo', 'Nº de cotações', 'Total cotado',
+                  'Etapas envolvidas', 'Itens'], [30, 14, 12, 15, 20, 74])
+forns = {}
+for c_ in cots:
+    f = (c_.get('fornecedor') or '—').strip()
+    d_ = forns.setdefault(f, {'n': 0, 'total': 0.0, 'etapas': set(), 'itens': [], 'tipos': set()})
+    d_['n'] += 1
+    d_['total'] += (c_.get('quantidade') or 0) * (c_.get('preco_unit') or 0)
+    if c_.get('etapa'): d_['etapas'].add(c_['etapa'])
+    d_['itens'].append(c_.get('item') or '')
+    d_['tipos'].add(TIPO.get(c_.get('tipo'), 'material'))
+if forns:
+    for i, (f, v) in enumerate(sorted(forns.items(), key=lambda x: -x[1]['total'])):
+        r = 4 + i
+        corpo(ws, r, [f, ' + '.join(sorted(v['tipos'])), v['n'],
+                      f'=SUMIF(Cotações!$H$2:$H${nc},$A{r},Cotações!$K$2:$K${nc})',
+                      ', '.join(str(x) for x in sorted(v['etapas'])),
+                      ' · '.join(dict.fromkeys(v['itens']))],
+              fmt={4: RS})
+    r = 4 + len(forns)
+    ws.cell(row=r, column=1, value='TOTAL').font = Font(name='Arial', size=10, bold=True, color=AZUL)
+    c = ws.cell(row=r, column=4, value=f'=SUM(D4:D{r - 1})')
+    c.font = Font(name='Arial', size=10, bold=True, color=AZUL); c.number_format = RS
+    c.border = Border(top=Side(style='thin', color=AZUL))
+else:
+    ws['A4'] = 'Nenhum fornecedor cotado ainda. Cada cotação lançada no site cria/alimenta uma linha aqui.'
+    ws['A4'].font = Font(name='Arial', size=9, italic=True, color=AMBAR)
+    ws.merge_cells('A4:F4')
 
 wb.save(SAIDA)
 print(f'OK · {SAIDA.name} · {len(etapas)} etapas · {len(itens)} itens · {len(cots)} cotações')

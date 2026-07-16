@@ -7,7 +7,9 @@
       "unidade": "m²",
       "quantidade": 340,
       "obs": "divisórias do superior migradas p/ Lightwall (conceito mezanino)",
-      "id": "IT001"
+      "id": "IT001",
+      "tipo": "material",
+      "etapa": 4
     },
     {
       "categoria": "Geral / Estrutura",
@@ -16,7 +18,9 @@
       "unidade": "m²",
       "quantidade": 680,
       "obs": "2 faces × 340 m²",
-      "id": "IT002"
+      "id": "IT002",
+      "tipo": "material",
+      "etapa": 4
     },
     {
       "categoria": "Geral / Estrutura",
@@ -25,7 +29,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "verba — cotar no pacote do painel",
-      "id": "IT003"
+      "id": "IT003",
+      "tipo": "material",
+      "etapa": 4
     },
     {
       "categoria": "Geral / Estrutura",
@@ -34,7 +40,9 @@
       "unidade": "m²",
       "quantidade": 68,
       "obs": "inclui capa de concreto · é o piso, não forro",
-      "id": "IT004"
+      "id": "IT004",
+      "tipo": "material",
+      "etapa": 5
     },
     {
       "categoria": "Geral / Estrutura",
@@ -43,7 +51,9 @@
       "unidade": "m²",
       "quantidade": 103,
       "obs": "casa 95 + extensão garagem 8",
-      "id": "IT005"
+      "id": "IT005",
+      "tipo": "material",
+      "etapa": 2
     },
     {
       "categoria": "Geral / Estrutura",
@@ -52,7 +62,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "perfis I + engaste sob a suíte — projeto estrutural",
-      "id": "IT006"
+      "id": "IT006",
+      "tipo": "material",
+      "etapa": 3
     },
     {
       "categoria": "Geral / Estrutura",
@@ -61,7 +73,9 @@
       "unidade": "m²",
       "quantidade": 95,
       "obs": "treliças soldadas em fábrica e galvanizadas a fogo INTEIRAS, parafusadas em obra (tubos c/ furo de dreno) · oitões NO/SE apoiam direto na parede · plenum de 0,40 entre banzos p/ ventilador, luminárias e linhas do split · ver F-07/F-08/F-09",
-      "id": "IT007"
+      "id": "IT007",
+      "tipo": "material",
+      "etapa": 6
     },
     {
       "categoria": "Geral / Estrutura",
@@ -70,7 +84,9 @@
       "unidade": "m²",
       "quantidade": 98,
       "obs": "não cobre a faixa de luz (9,70 × 1,20 descoberta)",
-      "id": "IT008"
+      "id": "IT008",
+      "tipo": "material",
+      "etapa": 6
     },
     {
       "categoria": "Geral / Estrutura",
@@ -79,7 +95,9 @@
       "unidade": "m²",
       "quantidade": 12,
       "obs": "13 m × 0,90",
-      "id": "IT009"
+      "id": "IT009",
+      "tipo": "material",
+      "etapa": 6
     },
     {
       "categoria": "Geral / Estrutura",
@@ -88,7 +106,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "ponto crítico de estanqueidade",
-      "id": "IT010"
+      "id": "IT010",
+      "tipo": "material",
+      "etapa": 6
     },
     {
       "categoria": "Geral / Estrutura",
@@ -97,7 +117,9 @@
       "unidade": "m",
       "quantidade": 14,
       "obs": "metálico/vidro — definir",
-      "id": "IT011"
+      "id": "IT011",
+      "tipo": "material",
+      "etapa": 3
     },
     {
       "categoria": "Geral / Estrutura",
@@ -106,7 +128,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "estrutura + degraus",
-      "id": "IT012"
+      "id": "IT012",
+      "tipo": "material",
+      "etapa": 3
     },
     {
       "categoria": "Geral / Estrutura",
@@ -115,7 +139,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "detalhar por vão",
-      "id": "IT013"
+      "id": "IT013",
+      "tipo": "material",
+      "etapa": 7
     },
     {
       "categoria": "Geral / Estrutura",
@@ -124,7 +150,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "quantitativo detalhado na aba própria",
-      "id": "IT014"
+      "id": "IT014",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Geral / Estrutura",
@@ -133,7 +161,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "CRÍTICO: banheiros sem box drenam pela camada de pedra — impermeabilizar TODO o piso c/ caimento ao ralo oculto",
-      "id": "IT015"
+      "id": "IT015",
+      "tipo": "material",
+      "etapa": 11
     },
     {
       "categoria": "Geral / Estrutura",
@@ -142,16 +172,20 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "ver aba Hidráulica",
-      "id": "IT016"
+      "id": "IT016",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Geral / Estrutura",
-      "item": "Sondagem SPT (2–3 furos) + projetos complementares",
-      "especificacao": null,
+      "item": "Sondagem SPT (2–3 furos)",
+      "especificacao": "insumo do projeto de fundação (radier)",
       "unidade": "vb",
       "quantidade": 1,
       "obs": "fazer ANTES do projeto de fundação",
-      "id": "IT017"
+      "id": "IT017",
+      "tipo": "servico",
+      "etapa": 1
     },
     {
       "categoria": "Geral / Estrutura",
@@ -160,7 +194,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "infra elétrica dos 5 pontos já na aba Elétrica",
-      "id": "IT018"
+      "id": "IT018",
+      "tipo": "material",
+      "etapa": 10
     },
     {
       "categoria": "Geral / Estrutura",
@@ -169,7 +205,9 @@
       "unidade": "m²",
       "quantidade": 18,
       "obs": "sobre vigas metálicas em balanço",
-      "id": "IT019"
+      "id": "IT019",
+      "tipo": "material",
+      "etapa": 5
     },
     {
       "categoria": "Geral / Estrutura",
@@ -178,7 +216,9 @@
       "unidade": "m²",
       "quantidade": 18,
       "obs": "varanda gourmet abaixo",
-      "id": "IT020"
+      "id": "IT020",
+      "tipo": "material",
+      "etapa": 11
     },
     {
       "categoria": "Geral / Estrutura",
@@ -187,7 +227,9 @@
       "unidade": "m²",
       "quantidade": 21,
       "obs": "perímetro 12,3 m × ~1,7 m de vidro sobre mureta",
-      "id": "IT021"
+      "id": "IT021",
+      "tipo": "material",
+      "etapa": 7
     },
     {
       "categoria": "Geral / Estrutura",
@@ -196,7 +238,9 @@
       "unidade": "m²",
       "quantidade": 18,
       "obs": "gesso/PVC sobre a extensão · suíte integrada, sem porta",
-      "id": "IT022"
+      "id": "IT022",
+      "tipo": "material",
+      "etapa": 11
     },
     {
       "categoria": "Geral / Estrutura",
@@ -205,7 +249,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "canto leste da varanda",
-      "id": "IT023"
+      "id": "IT023",
+      "tipo": "material",
+      "etapa": 12
     },
     {
       "categoria": "Geral / Estrutura",
@@ -214,7 +260,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "redundância — gás só na varanda",
-      "id": "IT024"
+      "id": "IT024",
+      "tipo": "material",
+      "etapa": 12
     },
     {
       "categoria": "Geral / Estrutura",
@@ -223,7 +271,9 @@
       "unidade": "m²",
       "quantidade": 5,
       "obs": "quartzo/resina NÃO compatível c/ Invisacook",
-      "id": "IT025"
+      "id": "IT025",
+      "tipo": "material",
+      "etapa": 12
     },
     {
       "categoria": "Geral / Estrutura",
@@ -232,7 +282,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": "circuito 40 A na aba Elétrica",
-      "id": "IT026"
+      "id": "IT026",
+      "tipo": "material",
+      "etapa": 12
     },
     {
       "categoria": "Geral / Estrutura",
@@ -241,7 +293,9 @@
       "unidade": "m²",
       "quantidade": 10.5,
       "obs": "parede da escada · ~2,2 × 4,70 m · peitoril 1,00 · caixilho estruturado",
-      "id": "IT027"
+      "id": "IT027",
+      "tipo": "material",
+      "etapa": 7
     },
     {
       "categoria": "Hidráulica",
@@ -250,7 +304,9 @@
       "unidade": "m",
       "quantidade": 75,
       "obs": "ramais quentes + anel de recirculação",
-      "id": "IT028"
+      "id": "IT028",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -259,7 +315,9 @@
       "unidade": "m",
       "quantidade": 75,
       "obs": "obrigatório em 100% da linha quente",
-      "id": "IT029"
+      "id": "IT029",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -268,7 +326,9 @@
       "unidade": "m",
       "quantidade": 100,
       "obs": "ramais frios ponto a ponto (manifold)",
-      "id": "IT030"
+      "id": "IT030",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -277,7 +337,9 @@
       "unidade": "m",
       "quantidade": 18,
       "obs": null,
-      "id": "IT031"
+      "id": "IT031",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -286,7 +348,9 @@
       "unidade": "m",
       "quantidade": 8,
       "obs": "isolar também",
-      "id": "IT032"
+      "id": "IT032",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -295,7 +359,9 @@
       "unidade": "m",
       "quantidade": 26,
       "obs": null,
-      "id": "IT033"
+      "id": "IT033",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -304,7 +370,9 @@
       "unidade": "m",
       "quantidade": 20,
       "obs": null,
-      "id": "IT034"
+      "id": "IT034",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -313,7 +381,9 @@
       "unidade": "m",
       "quantidade": 22,
       "obs": "2 prumadas + coletor",
-      "id": "IT035"
+      "id": "IT035",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -322,7 +392,9 @@
       "unidade": "m",
       "quantidade": 25,
       "obs": null,
-      "id": "IT036"
+      "id": "IT036",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -331,7 +403,9 @@
       "unidade": "m",
       "quantidade": 15,
       "obs": null,
-      "id": "IT037"
+      "id": "IT037",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -340,7 +414,9 @@
       "unidade": "m",
       "quantidade": 12,
       "obs": "2 descidas",
-      "id": "IT038"
+      "id": "IT038",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -349,7 +425,9 @@
       "unidade": "un",
       "quantidade": 45,
       "obs": null,
-      "id": "IT039"
+      "id": "IT039",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -358,7 +436,9 @@
       "unidade": "un",
       "quantidade": 5,
       "obs": "banheiros, lavanderia, copa",
-      "id": "IT040"
+      "id": "IT040",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -367,7 +447,9 @@
       "unidade": "un",
       "quantidade": 3,
       "obs": "suíte, banheiro do quarto e banheiro térreo · caimento 2% na impermeabilização",
-      "id": "IT041"
+      "id": "IT041",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -376,7 +458,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": null,
-      "id": "IT042"
+      "id": "IT042",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -385,7 +469,9 @@
       "unidade": "un",
       "quantidade": 2,
       "obs": "quintal → rede do condomínio",
-      "id": "IT043"
+      "id": "IT043",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -394,7 +480,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": "na área técnica",
-      "id": "IT044"
+      "id": "IT044",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -403,7 +491,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": null,
-      "id": "IT045"
+      "id": "IT045",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -412,7 +502,9 @@
       "unidade": "un",
       "quantidade": 60,
       "obs": null,
-      "id": "IT046"
+      "id": "IT046",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -421,7 +513,9 @@
       "unidade": "un",
       "quantidade": 35,
       "obs": null,
-      "id": "IT047"
+      "id": "IT047",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -430,7 +524,9 @@
       "unidade": "un",
       "quantidade": 12,
       "obs": "setorização por ambiente",
-      "id": "IT048"
+      "id": "IT048",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -439,7 +535,9 @@
       "unidade": "un",
       "quantidade": 3,
       "obs": "entrada caixa, fria, quente",
-      "id": "IT049"
+      "id": "IT049",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -448,7 +546,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": "anti-escaldo",
-      "id": "IT050"
+      "id": "IT050",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -457,7 +557,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": "obrigatória no boiler",
-      "id": "IT051"
+      "id": "IT051",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -466,7 +568,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": null,
-      "id": "IT052"
+      "id": "IT052",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -475,7 +579,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": null,
-      "id": "IT053"
+      "id": "IT053",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -484,7 +590,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": "unidade externa no poço de luz",
-      "id": "IT054"
+      "id": "IT054",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -493,7 +601,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": "na área técnica, c/ 60 cm livres",
-      "id": "IT055"
+      "id": "IT055",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -502,7 +612,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": "antes da bifurcação fria/quente",
-      "id": "IT056"
+      "id": "IT056",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -511,7 +623,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": "retorno da suíte",
-      "id": "IT057"
+      "id": "IT057",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -520,7 +634,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": null,
-      "id": "IT058"
+      "id": "IT058",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -529,7 +645,9 @@
       "unidade": "un",
       "quantidade": 2,
       "obs": "copa: prever dreno",
-      "id": "IT059"
+      "id": "IT059",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -538,7 +656,9 @@
       "unidade": "m",
       "quantidade": 10,
       "obs": "desce pelo shaft da técnica",
-      "id": "IT060"
+      "id": "IT060",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -547,7 +667,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": null,
-      "id": "IT061"
+      "id": "IT061",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -556,7 +678,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "estrutura metálica do telhado exige",
-      "id": "IT062"
+      "id": "IT062",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Hidráulica",
@@ -565,7 +689,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "painéis futuros na água alta",
-      "id": "IT063"
+      "id": "IT063",
+      "tipo": "material",
+      "etapa": 8
     },
     {
       "categoria": "Elétrica + Automação",
@@ -574,7 +700,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "dá 220 V fase-fase e 127 V fase-neutro",
-      "id": "IT064"
+      "id": "IT064",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -583,7 +711,9 @@
       "unidade": "m",
       "quantidade": 18,
       "obs": null,
-      "id": "IT065"
+      "id": "IT065",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -592,7 +722,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": "reserva p/ inversor PV já prevista",
-      "id": "IT066"
+      "id": "IT066",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -601,7 +733,9 @@
       "unidade": "un",
       "quantidade": 26,
       "obs": null,
-      "id": "IT067"
+      "id": "IT067",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -610,7 +744,9 @@
       "unidade": "un",
       "quantidade": 4,
       "obs": "obrigatório NBR 5410",
-      "id": "IT068"
+      "id": "IT068",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -619,7 +755,9 @@
       "unidade": "un",
       "quantidade": 4,
       "obs": "telhado metálico: essencial",
-      "id": "IT069"
+      "id": "IT069",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -628,7 +766,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "integra c/ SPDA da cobertura",
-      "id": "IT070"
+      "id": "IT070",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -637,7 +777,9 @@
       "unidade": "m",
       "quantidade": 260,
       "obs": null,
-      "id": "IT071"
+      "id": "IT071",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -646,7 +788,9 @@
       "unidade": "m",
       "quantidade": 50,
       "obs": null,
-      "id": "IT072"
+      "id": "IT072",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -655,7 +799,9 @@
       "unidade": "un",
       "quantidade": 75,
       "obs": null,
-      "id": "IT073"
+      "id": "IT073",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -664,7 +810,9 @@
       "unidade": "un",
       "quantidade": 18,
       "obs": "interruptores smart pedem folga",
-      "id": "IT074"
+      "id": "IT074",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -673,7 +821,9 @@
       "unidade": "un",
       "quantidade": 26,
       "obs": null,
-      "id": "IT075"
+      "id": "IT075",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -682,7 +832,9 @@
       "unidade": "un",
       "quantidade": 2,
       "obs": null,
-      "id": "IT076"
+      "id": "IT076",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -691,7 +843,9 @@
       "unidade": "m",
       "quantidade": 280,
       "obs": null,
-      "id": "IT077"
+      "id": "IT077",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -700,7 +854,9 @@
       "unidade": "m",
       "quantidade": 420,
       "obs": null,
-      "id": "IT078"
+      "id": "IT078",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -709,7 +865,9 @@
       "unidade": "m",
       "quantidade": 140,
       "obs": null,
-      "id": "IT079"
+      "id": "IT079",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -718,7 +876,9 @@
       "unidade": "m",
       "quantidade": 60,
       "obs": "todos 220 V dedicados",
-      "id": "IT080"
+      "id": "IT080",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -727,7 +887,9 @@
       "unidade": "m",
       "quantidade": 30,
       "obs": null,
-      "id": "IT081"
+      "id": "IT081",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -736,7 +898,9 @@
       "unidade": "un",
       "quantidade": 42,
       "obs": null,
-      "id": "IT082"
+      "id": "IT082",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -745,7 +909,9 @@
       "unidade": "un",
       "quantidade": 16,
       "obs": "2 por cômodo em média",
-      "id": "IT083"
+      "id": "IT083",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -754,7 +920,9 @@
       "unidade": "un",
       "quantidade": 26,
       "obs": "inclui pendentes do pé-direito duplo",
-      "id": "IT084"
+      "id": "IT084",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -763,7 +931,9 @@
       "unidade": "m",
       "quantidade": 22,
       "obs": null,
-      "id": "IT085"
+      "id": "IT085",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -772,7 +942,9 @@
       "unidade": "un",
       "quantidade": 18,
       "obs": null,
-      "id": "IT086"
+      "id": "IT086",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -781,7 +953,9 @@
       "unidade": "un",
       "quantidade": 5,
       "obs": "infra pronta; aparelhos em outra sessão",
-      "id": "IT087"
+      "id": "IT087",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -790,7 +964,9 @@
       "unidade": "un",
       "quantidade": 5,
       "obs": "em circuito c/ DR",
-      "id": "IT088"
+      "id": "IT088",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -799,7 +975,9 @@
       "unidade": "m",
       "quantidade": 300,
       "obs": null,
-      "id": "IT089"
+      "id": "IT089",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -808,7 +986,9 @@
       "unidade": "un",
       "quantidade": 10,
       "obs": null,
-      "id": "IT090"
+      "id": "IT090",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -817,7 +997,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": null,
-      "id": "IT091"
+      "id": "IT091",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -826,7 +1008,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": "alimenta câmeras e APs",
-      "id": "IT092"
+      "id": "IT092",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -835,7 +1019,9 @@
       "unidade": "un",
       "quantidade": 2,
       "obs": "EPS atenua pouco, 2 bastam",
-      "id": "IT093"
+      "id": "IT093",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -844,7 +1030,9 @@
       "unidade": "un",
       "quantidade": 4,
       "obs": null,
-      "id": "IT094"
+      "id": "IT094",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -853,7 +1041,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": null,
-      "id": "IT095"
+      "id": "IT095",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -862,7 +1052,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": null,
-      "id": "IT096"
+      "id": "IT096",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -871,7 +1063,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": "controle local, sem dependência de nuvem",
-      "id": "IT097"
+      "id": "IT097",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -880,7 +1074,9 @@
       "unidade": "un",
       "quantidade": 18,
       "obs": null,
-      "id": "IT098"
+      "id": "IT098",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -889,7 +1085,9 @@
       "unidade": "un",
       "quantidade": 8,
       "obs": null,
-      "id": "IT099"
+      "id": "IT099",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -898,7 +1096,9 @@
       "unidade": "un",
       "quantidade": 8,
       "obs": "escada aberta: luz automática",
-      "id": "IT100"
+      "id": "IT100",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -907,7 +1107,9 @@
       "unidade": "un",
       "quantidade": 5,
       "obs": null,
-      "id": "IT101"
+      "id": "IT101",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -916,7 +1118,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "relés no QDC/técnica",
-      "id": "IT102"
+      "id": "IT102",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -925,7 +1129,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": null,
-      "id": "IT103"
+      "id": "IT103",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -934,7 +1140,9 @@
       "unidade": "m",
       "quantidade": 14,
       "obs": "dedicado",
-      "id": "IT104"
+      "id": "IT104",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -943,7 +1151,9 @@
       "unidade": "m",
       "quantidade": 6,
       "obs": "ponto sem retorno",
-      "id": "IT105"
+      "id": "IT105",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -952,7 +1162,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": null,
-      "id": "IT106"
+      "id": "IT106",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Elétrica + Automação",
@@ -961,7 +1173,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "inclui ponto p/ equipamentos",
-      "id": "IT107"
+      "id": "IT107",
+      "tipo": "material",
+      "etapa": 9
     },
     {
       "categoria": "Climatização",
@@ -970,7 +1184,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": "suíte + quarto + reserva mezanino · alto do poço de luz c/ defletores",
-      "id": "IT108"
+      "id": "IT108",
+      "tipo": "material",
+      "etapa": 10
     },
     {
       "categoria": "Climatização",
@@ -979,7 +1195,9 @@
       "unidade": "un",
       "quantidade": 2,
       "obs": "suíte e quarto — fluxo fora da cama",
-      "id": "IT109"
+      "id": "IT109",
+      "tipo": "material",
+      "etapa": 10
     },
     {
       "categoria": "Climatização",
@@ -988,7 +1206,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": "parede da cozinha, quente/frio",
-      "id": "IT110"
+      "id": "IT110",
+      "tipo": "material",
+      "etapa": 10
     },
     {
       "categoria": "Climatização",
@@ -997,7 +1217,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": "inverno: devolve o ar quente p/ baixo",
-      "id": "IT111"
+      "id": "IT111",
+      "tipo": "material",
+      "etapa": 10
     },
     {
       "categoria": "Climatização",
@@ -1006,7 +1228,9 @@
       "unidade": "m",
       "quantidade": 34,
       "obs": "embutir no EPS ANTES do reboco",
-      "id": "IT112"
+      "id": "IT112",
+      "tipo": "material",
+      "etapa": 10
     },
     {
       "categoria": "Climatização",
@@ -1015,7 +1239,9 @@
       "unidade": "m",
       "quantidade": 8,
       "obs": null,
-      "id": "IT113"
+      "id": "IT113",
+      "tipo": "material",
+      "etapa": 10
     },
     {
       "categoria": "Climatização",
@@ -1024,7 +1250,9 @@
       "unidade": "cj",
       "quantidade": 3,
       "obs": null,
-      "id": "IT114"
+      "id": "IT114",
+      "tipo": "material",
+      "etapa": 10
     },
     {
       "categoria": "Climatização",
@@ -1033,7 +1261,9 @@
       "unidade": "m",
       "quantidade": 20,
       "obs": "nunca pingar na fachada",
-      "id": "IT115"
+      "id": "IT115",
+      "tipo": "material",
+      "etapa": 10
     },
     {
       "categoria": "Climatização",
@@ -1042,7 +1272,9 @@
       "unidade": "vb",
       "quantidade": 1,
       "obs": "conferir limite de linha do multi (~15 m suíte)",
-      "id": "IT116"
+      "id": "IT116",
+      "tipo": "material",
+      "etapa": 10
     },
     {
       "categoria": "Geral / Estrutura",
@@ -1051,7 +1283,9 @@
       "unidade": "m²",
       "quantidade": 47,
       "obs": "SEM o mezanino (forro de madeira) · embutir iluminação e sensores antes do fechamento · alçapões de inspeção",
-      "id": "IT117"
+      "id": "IT117",
+      "tipo": "material",
+      "etapa": 11
     },
     {
       "categoria": "Geral / Estrutura",
@@ -1060,7 +1294,9 @@
       "unidade": "m²",
       "quantidade": 45,
       "obs": "item de conforto/estética premium · tratamento autoclave + verniz · recorte no lanternim · iluminação/ventilador destratificador fixados antes do fechamento",
-      "id": "IT118"
+      "id": "IT118",
+      "tipo": "material",
+      "etapa": 11
     },
     {
       "categoria": "Geral / Estrutura",
@@ -1069,7 +1305,9 @@
       "unidade": "m²",
       "quantidade": 80,
       "obs": "todas as internas do superior (mezanino, lavabo, banheiros, quarto, copa, corredor, closet, transversal da suíte) · hidráulica pesada em shaft (cava ≤ 50%) · juntas dissimilares Monolev↔Lightwall c/ tela 10 cm cada lado · içamento: painéis içados pelo vazio antes do fechamento",
-      "id": "IT119"
+      "id": "IT119",
+      "tipo": "material",
+      "etapa": 4
     },
     {
       "categoria": "Geral / Estrutura",
@@ -1078,7 +1316,9 @@
       "unidade": "un",
       "quantidade": 1,
       "obs": "ÚNICO acesso à Luz 1 (jardim de inverno) — parede cega separa da Luz 2 · manutenção da parede verde e limpeza",
-      "id": "IT120"
+      "id": "IT120",
+      "tipo": "material",
+      "etapa": 7
     },
     {
       "categoria": "Geral / Estrutura",
@@ -1087,7 +1327,9 @@
       "unidade": "m²",
       "quantidade": 12,
       "obs": "face NE = sol da manhã filtrado · exposto à chuva (faixa descoberta): prever pingadeira e caimento",
-      "id": "IT121"
+      "id": "IT121",
+      "tipo": "material",
+      "etapa": 7
     },
     {
       "categoria": "Geral / Estrutura",
@@ -1096,7 +1338,240 @@
       "unidade": "m²",
       "quantidade": 14,
       "obs": "CRÍTICO: impermeabilizar a divisa antes (umidade permanente) + barreira anti-raiz · irrigação automática c/ ponto de água e dreno próprio · manutenção pela portinha",
-      "id": "IT122"
+      "id": "IT122",
+      "tipo": "material",
+      "etapa": 12
+    },
+    {
+      "categoria": "Projetos e Serviços Técnicos",
+      "item": "Projeto arquitetônico — legal + executivo + detalhamento",
+      "especificacao": "a partir do estudo preliminar já feito (F-01 a F-09)",
+      "unidade": "m²",
+      "quantidade": 183,
+      "obs": "ref. R$ 65–150/m² · escopo reduzido porque o partido já está definido",
+      "id": "IT123",
+      "tipo": "servico",
+      "etapa": 1
+    },
+    {
+      "categoria": "Projetos e Serviços Técnicos",
+      "item": "Projeto estrutural — radier, treliças, vigas metálicas e lajes",
+      "especificacao": "inclui projeto de fabricação da estrutura metálica e verificação de vento (NBR 6123)",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "CRÍTICO: valida o conceito mezanino, o balanço 2,50 e a viga de 7,30",
+      "id": "IT124",
+      "tipo": "servico",
+      "etapa": 1
+    },
+    {
+      "categoria": "Projetos e Serviços Técnicos",
+      "item": "Projetos complementares — hidrossanitário + elétrico + automação",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "inclui circuito 40 A do Invisacook pelo radier e infra de automação",
+      "id": "IT125",
+      "tipo": "servico",
+      "etapa": 1
+    },
+    {
+      "categoria": "Projetos e Serviços Técnicos",
+      "item": "Projeto de climatização / AVAC",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "multi-split + destratificação do vão duplo",
+      "id": "IT126",
+      "tipo": "servico",
+      "etapa": 1
+    },
+    {
+      "categoria": "Projetos e Serviços Técnicos",
+      "item": "ART / RRT + taxas de registro",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "exigido pelo banco no financiamento à construção",
+      "id": "IT127",
+      "tipo": "servico",
+      "etapa": 1
+    },
+    {
+      "categoria": "Projetos e Serviços Técnicos",
+      "item": "Aprovação — prefeitura + condomínio",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "protocolar cedo: regras de fachada aberta, chaminé e recuos",
+      "id": "IT128",
+      "tipo": "servico",
+      "etapa": 1
+    },
+    {
+      "categoria": "Projetos e Serviços Técnicos",
+      "item": "Responsável técnico de execução (RT) — acompanhamento de obra",
+      "especificacao": "obrigatório na administração direta",
+      "unidade": "mês",
+      "quantidade": 10,
+      "obs": "pago mensalmente durante a obra · R$ 800–2.500/mês",
+      "id": "IT129",
+      "tipo": "servico",
+      "etapa": 1
+    },
+    {
+      "categoria": "Projetos e Serviços Técnicos",
+      "item": "Habite-se + averbação em cartório",
+      "especificacao": null,
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "fecha a obra e regulariza a matrícula",
+      "id": "IT130",
+      "tipo": "servico",
+      "etapa": 13
+    },
+    {
+      "categoria": "Mão de obra",
+      "item": "Mão de obra — Etapa 01: Projetos, sondagem e aprovações",
+      "especificacao": "gestão/administração da fase de projetos",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "cotar empreiteiro/equipe separadamente do material · preencher o Fornecedor",
+      "id": "IT131",
+      "tipo": "mao_obra",
+      "etapa": 1
+    },
+    {
+      "categoria": "Mão de obra",
+      "item": "Mão de obra — Etapa 02: Fundação — radier 103 m²",
+      "especificacao": "preparo do terreno, formas, armação e concretagem do radier",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "cotar empreiteiro/equipe separadamente do material · preencher o Fornecedor",
+      "id": "IT132",
+      "tipo": "mao_obra",
+      "etapa": 2
+    },
+    {
+      "categoria": "Mão de obra",
+      "item": "Mão de obra — Etapa 03: Estrutura metálica",
+      "especificacao": "montagem da estrutura metálica (vigas, escada, guarda-corpos)",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "cotar empreiteiro/equipe separadamente do material · preencher o Fornecedor",
+      "id": "IT133",
+      "tipo": "mao_obra",
+      "etapa": 3
+    },
+    {
+      "categoria": "Mão de obra",
+      "item": "Mão de obra — Etapa 04: Paredes: Monolev (estrutural) + divisórias Lightwall",
+      "especificacao": "montagem Monolev + projeção de argamassa (2 faces) + montagem Lightwall",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "cotar empreiteiro/equipe separadamente do material · preencher o Fornecedor",
+      "id": "IT134",
+      "tipo": "mao_obra",
+      "etapa": 4
+    },
+    {
+      "categoria": "Mão de obra",
+      "item": "Mão de obra — Etapa 05: Lajes de PISO (superior + sacada + técnica)",
+      "especificacao": "montagem de vigotas/EPS, armação e concretagem das capas",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "cotar empreiteiro/equipe separadamente do material · preencher o Fornecedor",
+      "id": "IT135",
+      "tipo": "mao_obra",
+      "etapa": 5
+    },
+    {
+      "categoria": "Mão de obra",
+      "item": "Mão de obra — Etapa 06: Cobertura + lanternim",
+      "especificacao": "içamento e montagem das treliças, terças, telhas, lanternim, rufos e calhas",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "cotar empreiteiro/equipe separadamente do material · preencher o Fornecedor",
+      "id": "IT136",
+      "tipo": "mao_obra",
+      "etapa": 6
+    },
+    {
+      "categoria": "Mão de obra",
+      "item": "Mão de obra — Etapa 07: Esquadrias e vidros",
+      "especificacao": "instalação de esquadrias, vidros e envidraçamentos",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "cotar empreiteiro/equipe separadamente do material · preencher o Fornecedor",
+      "id": "IT137",
+      "tipo": "mao_obra",
+      "etapa": 7
+    },
+    {
+      "categoria": "Mão de obra",
+      "item": "Mão de obra — Etapa 08: Hidráulica + água quente + prep. PV",
+      "especificacao": "instalação hidráulica completa + água quente + preparação PV",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "cotar empreiteiro/equipe separadamente do material · preencher o Fornecedor",
+      "id": "IT138",
+      "tipo": "mao_obra",
+      "etapa": 8
+    },
+    {
+      "categoria": "Mão de obra",
+      "item": "Mão de obra — Etapa 09: Elétrica + automação + rede",
+      "especificacao": "instalação elétrica, cabeamento, quadros e comissionamento da automação",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "cotar empreiteiro/equipe separadamente do material · preencher o Fornecedor",
+      "id": "IT139",
+      "tipo": "mao_obra",
+      "etapa": 9
+    },
+    {
+      "categoria": "Mão de obra",
+      "item": "Mão de obra — Etapa 10: Climatização",
+      "especificacao": "instalação frigorígena, vácuo, carga e start-up",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "cotar empreiteiro/equipe separadamente do material · preencher o Fornecedor",
+      "id": "IT140",
+      "tipo": "mao_obra",
+      "etapa": 10
+    },
+    {
+      "categoria": "Mão de obra",
+      "item": "Mão de obra — Etapa 11: Acabamentos resinados (sem porcelanato)",
+      "especificacao": "impermeabilizações, resinados, carpete de pedra, microcimento e forros",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "cotar empreiteiro/equipe separadamente do material · preencher o Fornecedor",
+      "id": "IT141",
+      "tipo": "mao_obra",
+      "etapa": 11
+    },
+    {
+      "categoria": "Mão de obra",
+      "item": "Mão de obra — Etapa 12: Gourmet (Invisacook, bancada, churrasqueira)",
+      "especificacao": "churrasqueira, bancadas, Invisacook, parede verde e arremates do gourmet",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "cotar empreiteiro/equipe separadamente do material · preencher o Fornecedor",
+      "id": "IT142",
+      "tipo": "mao_obra",
+      "etapa": 12
+    },
+    {
+      "categoria": "Mão de obra",
+      "item": "Mão de obra — Etapa 13: Canteiro, limpeza e imprevistos (~8%)",
+      "especificacao": "canteiro, limpeza fina e arremates gerais",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "cotar empreiteiro/equipe separadamente do material · preencher o Fornecedor",
+      "id": "IT143",
+      "tipo": "mao_obra",
+      "etapa": 13
     }
   ]
 }
