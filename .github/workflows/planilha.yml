@@ -7,6 +7,7 @@ on:
     paths:
       - 'dados/**'
       - 'scripts/build_planilha.py'
+      - 'scripts/publicar_planilha.sh'
       - '.github/workflows/planilha.yml'
   workflow_dispatch:
 
@@ -22,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -30,29 +33,8 @@ jobs:
       - name: Instalar dependências
         run: pip install --quiet openpyxl
 
-      - name: Gerar planilha a partir dos JSONs
-        run: python scripts/build_planilha.py
-
-      - name: Recalcular fórmulas (LibreOffice já vem no runner)
-        run: |
-          mkdir -p /tmp/recalc
-          if soffice --headless --calc --convert-to xlsx --outdir /tmp/recalc planilha-q22-l8.xlsx; then
-            if [ -s /tmp/recalc/planilha-q22-l8.xlsx ]; then
-              mv /tmp/recalc/planilha-q22-l8.xlsx planilha-q22-l8.xlsx
-              echo "Fórmulas recalculadas e valores em cache."
-            fi
-          else
-            echo "Recalc falhou — seguindo com o arquivo do openpyxl (Excel recalcula ao abrir)."
-          fi
-
-      - name: Commitar se mudou
+      - name: Gerar, recalcular e publicar (com retentativa)
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add planilha-q22-l8.xlsx
-          if git diff --staged --quiet; then
-            echo "Planilha sem alterações."
-          else
-            git commit -m "Planilha atualizada automaticamente [skip ci]"
-            git push
-          fi
+          bash scripts/publicar_planilha.sh
