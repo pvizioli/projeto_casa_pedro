@@ -100,7 +100,7 @@ sist = [
     ('Lajes', 'Vigotas + EPS ~86 m² — SÓ pisos (superior, extensão, técnica). Não há laje de forro.'),
     ('Forro', 'Madeira acompanhando o telhado ~45 m² (mezanino + vão duplo) · gesso+EPS nivelado ~47 m² (demais)'),
     ('Cobertura', '3 treliças galvanizadas a fogo @3,25 m (banzos paralelos h=0,40, degrau triangulado) + terças Ue 100 · ~1,0 t'),
-    ('Faixa NE', 'Área de luz descoberta até a fachada, dividida em 2 por parede cega: Luz 1 = jardim de inverno c/ parede verde e janelão 3,50; Luz 2 = varal/serve a lavanderia'),
+    ('Faixa NE (1,20)', 'Da fachada ao fundo: portinha (0,80) · Luz 1 = jardim de inverno c/ parede verde e janelão 3,50 (4,10) · PAREDE CEGA · Luz 2 = varal (4,10) · lavanderia + área técnica acima (4,00, único trecho coberto até a divisa)'),
     ('Fundação', 'Radier ~103 m²'),
     ('Térreo — faixa SO', 'Despensa + banheiro completo (1,50 × 2,20) + lavabo (1,50 × 1,50) no fundo da cozinha · janelas p/ o acesso lateral · porta do lavabo direto p/ a varanda gourmet'),
 ]
@@ -224,6 +224,8 @@ revs = [
     ('16/07/2026', 'Custo de projeto/engenheiro/arquiteto detalhado (8 itens)', 'Etapa 1: R$ 20–35k → R$ 34–78k · total R$ 502–793k'),
     ('16/07/2026', 'Mão de obra cotável por etapa (13 itens) + aba Fornecedores', 'Material e mão de obra separados por etapa e por fornecedor'),
     ('16/07/2026', 'Térreo: banheiro sai da parede da garagem → banheiro + lavabo no fundo da cozinha (faixa SO)', 'Cozinha 36 → 29 m² · +1 lavabo · janelas p/ o acesso lateral · porta do lavabo p/ a varanda'),
+    ('16/07/2026', 'Porta da lavanderia a 0,90 da parede do fundo', 'Máquina sob a janela do fundo + nicho de geladeira no canto da cozinha'),
+    ('16/07/2026', 'Lavanderia/técnica 2,50 → 4,00 m; Luz 1 e Luz 2 4,85 → 4,10 m cada', 'Faixa de luz 9,70 → 8,20 m · laje 68 → 70 m² · telha 98 → 100 m² · parede verde 14 → 12 m²'),
 ]
 for i, (d, a, imp) in enumerate(revs):
     corpo(ws, 3 + i, [d, a, imp])
