@@ -234,6 +234,7 @@ revs = [
     ('16/07/2026', 'Corredor reto, porta da suíte de frente no fim do corredor (desfeita a porta lateral); parede do closet removida (ficava dupla c/ a do corredor)', 'Closet passa de 1,20 → 1,60 m de largura; nicho natural atrás da parede do corredor'),
     ('16/07/2026', 'Cobogó em parede flutuante em frente ao janelão da fachada NO (h=3,50, afastado 1,00 m); porta de acesso à Luz 1 removida (a incluir depois); película espelhada restrita ao piso superior', 'Câmara de ar ventilada evita transferência de calor para o vidro · térreo do janelão fica com vidro transparente'),
     ('16/07/2026', 'Muro de divisa pré-moldado nos 2 lados + fundo (210 m², h=3,00) — frente sem muro (condomínio fechado)', 'Etapa 2 (fundação): R$ 45k → R$ 50,5-78,5k · total do projeto R$ 502-793k → R$ 533,5-845,5k'),
+    ('16/07/2026', 'Cobogó da fachada NO ajustado para h=3,00 (era 3,50) — mesma altura do muro de divisa', 'Uniformiza a altura dos elementos verticais externos da casa'),
 ]
 for i, (d, a, imp) in enumerate(revs):
     corpo(ws, 3 + i, [d, a, imp])
