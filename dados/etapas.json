@@ -13,10 +13,10 @@
     },
     {
       "id": 2,
-      "nome": "Fundação — radier 103 m²",
-      "estimativa_baixa": 19000,
-      "estimativa_alta": 26000,
-      "obs": "inclui eletroduto da ilha e hidráulica embutida",
+      "nome": "Fundação (radier 103 m²) + muro de divisa 210 m²",
+      "estimativa_baixa": 50500,
+      "estimativa_alta": 78500,
+      "obs": "radier inclui eletroduto da ilha e hidráulica embutida · muro pré-moldado (placa) 210 m² (2×30,00 laterais + 10,00 fundo, h=3,00) — sistema mais econômico do mercado, ~30% mais barato que alvenaria convencional",
       "status": "nao_iniciada",
       "progresso": 0,
       "custo_real": 0

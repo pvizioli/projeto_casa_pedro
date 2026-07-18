@@ -102,6 +102,7 @@ sist = [
     ('Cobertura', '3 treliças galvanizadas a fogo @3,25 m (banzos paralelos h=0,40, degrau triangulado) + terças Ue 100 · ~1,0 t'),
     ('Faixa NE (1,20)', 'Da fachada ao fundo: portinha (0,80) · Luz 1 = jardim de inverno c/ parede verde e janelão 3,50 (4,10) · PAREDE CEGA · Luz 2 = varal (4,10) · lavanderia + área técnica acima (4,00, único trecho coberto até a divisa)'),
     ('Fundação', 'Radier ~103 m²'),
+    ('Muro de divisa', 'Pré-moldado (placa de concreto) 210 m² — 2 laterais (30,00 m cada, SO/viela + NE/vizinho) + fundo (10,00 m, SE) · h=3,00 m · frente (NO) sem muro (condomínio fechado)'),
     ('Térreo — faixa SO', 'Lavabo 1,50 × 1,50 no canto da garagem c/ o corredor (janela p/ o corredor) · despensa (1,50 × 1,10) + bancada + banheiro completo (1,50 × 2,50, sem box) no fundo, porta ÚNICA p/ a área gourmet'),
 ]
 for i, (a, b) in enumerate(sist, start=20):
@@ -232,6 +233,7 @@ revs = [
     ('16/07/2026', 'Superior: copa desce 1 m; corredor avança 1 m na suíte; porta da suíte na lateral (closet recuado)', 'Quarto 3,70 → 4,70 m (10 → 11,8 m²) · suíte 4,50 → 3,50 m · closet passante 1,20 × 2,50 · suíte sem janela na viela (luz pelo vidro da extensão)'),
     ('16/07/2026', 'Corredor reto, porta da suíte de frente no fim do corredor (desfeita a porta lateral); parede do closet removida (ficava dupla c/ a do corredor)', 'Closet passa de 1,20 → 1,60 m de largura; nicho natural atrás da parede do corredor'),
     ('16/07/2026', 'Cobogó em parede flutuante em frente ao janelão da fachada NO (h=3,50, afastado 1,00 m); porta de acesso à Luz 1 removida (a incluir depois); película espelhada restrita ao piso superior', 'Câmara de ar ventilada evita transferência de calor para o vidro · térreo do janelão fica com vidro transparente'),
+    ('16/07/2026', 'Muro de divisa pré-moldado nos 2 lados + fundo (210 m², h=3,00) — frente sem muro (condomínio fechado)', 'Etapa 2 (fundação): R$ 45k → R$ 50,5-78,5k · total do projeto R$ 502-793k → R$ 533,5-845,5k'),
 ]
 for i, (d, a, imp) in enumerate(revs):
     corpo(ws, 3 + i, [d, a, imp])

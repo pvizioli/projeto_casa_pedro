@@ -1627,6 +1627,28 @@
       "id": "IT148",
       "tipo": "mao_obra",
       "etapa": 12
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Muro de divisa pré-moldado (placa de concreto) — 2 laterais + fundo",
+      "especificacao": "mourões \"H\" de concreto a cada 1,60-1,67 m + placas de concreto armado (3-3,5 cm) encaixadas, empilhadas até h=3,00 · pingadeira + chapéu de acabamento no topo",
+      "unidade": "m²",
+      "quantidade": 210,
+      "obs": "sistema MAIS ECONÔMICO do mercado (~30% mais barato que alvenaria+reboco+pintura) · 210 m² = 2×30,00 (viela SO + divisa NE) + 10,00 (fundo SE), h=3,00 · verificar carga de vento em muro isolado de 3,00 m (mourão/fundação dimensionados p/ altura, não é só empilhar) · trecho da divisa NE atrás do jardim de inverno recebe a parede verde como acabamento — não duplica estrutura",
+      "id": "IT149",
+      "tipo": "material",
+      "etapa": 2
+    },
+    {
+      "categoria": "Mão de obra",
+      "item": "Mão de obra — fundação + montagem do muro de divisa",
+      "especificacao": "fundação direta dos mourões + encaixe das placas + rejunte completo",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "obra rápida por ser pré-moldado · recomendação: executar cedo (junto com o radier ou antes) para segurança do canteiro durante o restante da obra",
+      "id": "IT150",
+      "tipo": "mao_obra",
+      "etapa": 2
     }
   ]
 }
