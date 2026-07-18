@@ -1611,7 +1611,7 @@
       "item": "Cobogó — parede flutuante em frente ao janelão (fachada NO)",
       "especificacao": "h=3,00 (mesma altura do muro de divisa) m · afastada 1,00 m do janelão · do fim do vão da garagem até ~1 m além da janela · cerâmico ou concreto",
       "unidade": "m²",
-      "quantidade": 15,
+      "quantidade": 15.3,
       "obs": "sapata corrida própria + pilaretes a cada 2,5-3 m + cinta de coroamento no topo (resiste a vento, não é só empilhado) · cria câmara de ar ventilada contra o janelão (efeito chaminé) em vez de metal colado no vidro",
       "id": "IT147",
       "tipo": "material",
