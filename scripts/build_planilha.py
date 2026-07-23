@@ -236,6 +236,7 @@ revs = [
     ('16/07/2026', 'Muro de divisa pré-moldado nos 2 lados + fundo (210 m², h=3,00) — frente sem muro (condomínio fechado)', 'Etapa 2 (fundação): R$ 45k → R$ 50,5-78,5k · total do projeto R$ 502-793k → R$ 533,5-845,5k'),
     ('16/07/2026', 'Cobogó da fachada NO ajustado para h=3,00 (era 3,50) — mesma altura do muro de divisa', 'Uniformiza a altura dos elementos verticais externos da casa'),
     ('16/07/2026', 'Cobogó estendido até encostar no muro de divisa NE (antes parava ~0,80 m antes)', 'Vira estrutura contínua com o muro — 1 ponta apoiada no mourão do muro, só a ponta livre precisa de mourão próprio'),
+    ('19/07/2026', 'Cantoneira de PVC c/ abas de tela especificada para TODOS os cantos externos e vãos (321 m)', 'Padroniza o arremate em Monolev e Lightwall · alumínio descartado em massa cimentícia (corrosão alcalina) · ~R$ 1,6-2,6 mil, dentro da etapa 4'),
 ]
 for i, (d, a, imp) in enumerate(revs):
     corpo(ws, 3 + i, [d, a, imp])

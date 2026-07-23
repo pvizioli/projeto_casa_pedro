@@ -24,11 +24,11 @@
     },
     {
       "categoria": "Geral / Estrutura",
-      "item": "Telas/acessórios de reforço (cantos, vãos)",
-      "especificacao": null,
+      "item": "Telas de reforço e acessórios de canto — verba complementar",
+      "especificacao": "telas de vão (diagonais sobre cantos de janela/porta), reforços de ancoragem e arremates não cobertos pela cantoneira",
       "unidade": "vb",
       "quantidade": 1,
-      "obs": "verba — cotar no pacote do painel",
+      "obs": "cotar no pacote do painel · a cantoneira de canto está no item próprio (ver Cantoneira PVC c/ tela)",
       "id": "IT003",
       "tipo": "material",
       "etapa": 4
@@ -1649,6 +1649,17 @@
       "id": "IT150",
       "tipo": "mao_obra",
       "etapa": 2
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Cantoneira de PVC com abas de tela — todos os cantos externos e vãos",
+      "especificacao": "perfil de PVC rígido c/ abas de fibra de vidro álcali-resistente, embutido no basecoat/argamassa projetada · aplicar em TODOS os cantos externos (vivos) e nas laterais e vergas de portas e janelas",
+      "unidade": "m",
+      "quantidade": 321,
+      "obs": "não corrói nem mancha (ao contrário de alumínio em massa cimentícia — meio alcalino ataca o Al) · integra-se ao revestimento, sem descolamento · 292 m medidos + 10% de recorte · térreo 168 m (inclui cantos de 6,00 m do vão duplo) · superior 115 m · externos 18 m · usar também na junta dissimilar Monolev↔Lightwall onde houver aresta",
+      "id": "IT151",
+      "tipo": "material",
+      "etapa": 4
     }
   ]
 }
