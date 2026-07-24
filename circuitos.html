@@ -272,7 +272,7 @@ const CIRC = [
  {id:'C02',q:'QDC',nome:'Iluminação superior',disj:'10A',cabo:'1,5mm²',dr:false,v:'127V',
   pts:[{f:'s',x:384,y:400,s:'luz',l:'mezanino (plenum)'},{f:'s',x:330,y:560,s:'luz',l:'quarto'},{f:'s',x:416,y:560,s:'luz',l:'corredor'},{f:'s',x:416,y:680,s:'luz'},{f:'s',x:356,y:780,s:'luz',l:'suíte'},{f:'s',x:476,y:800,s:'luz',l:'closet LED'},{f:'s',x:554,y:780,s:'luz',l:'banh.'},{f:'s',x:303,y:490,s:'luz'},{f:'s',x:430,y:920,s:'luz',l:'extensão'},{f:'s',x:396,y:470,s:'sw'},{f:'s',x:396,y:716,s:'sw'},{f:'s',x:460,y:740,s:'sw'},{f:'s',x:416,y:530,s:'sens',l:'corredor'}]},
  {id:'C03',q:'QDC',nome:'Iluminação externa (relés HA)',disj:'10A',cabo:'1,5mm²',dr:true,v:'127V',
-  pts:[{f:'t',x:300,y:265,s:'luz',l:'jardim/cobogó'},{f:'t',x:230,y:600,s:'luz',l:'viela'},{f:'t',x:430,y:985,s:'luz',l:'quintal'},{f:'t',x:640,y:300,s:'luz',l:'fachada'}]},
+  pts:[{f:'t',x:556,y:262,s:'luz',l:'jardim/cobogó'},{f:'t',x:230,y:600,s:'luz',l:'viela'},{f:'t',x:430,y:985,s:'luz',l:'quintal'},{f:'t',x:372,y:262,s:'luz',l:'fachada/garagem'}]},
  {id:'C04',q:'QDC',nome:'TUG sala / estar',disj:'20A',cabo:'2,5mm²',dr:false,v:'127V',
   pts:[{f:'t',x:560,y:540,s:'tug'},{f:'t',x:475,y:615,s:'tug'},{f:'t',x:530,y:635,s:'tug'}]},
  {id:'C05',q:'QDC',nome:'TUG cozinha 1 — bancada NE + b.blend',disj:'20A',cabo:'2,5mm²',dr:true,v:'127V',
@@ -372,7 +372,11 @@ function baseT(){return `
 <text x="655,5" y="810" class="room" transform="rotate(-90 654 810)">LAVAND.</text>
 <rect x="608" y="712" width="26" height="16" class="quadro"/><text x="606" y="742" class="quadrolbl">QDC</text>
 <rect x="640" y="246" width="16" height="16" class="quadro"/><text x="600" y="258" class="quadrolbl" text-anchor="end">POSTINHO</text>
-<path d="M648,262 648,714 636,716" class="rt" style="opacity:.35"/>`}
+<path d="M648,262 648,714 636,716" class="rt" style="opacity:.35"/>
+<g opacity=".55">
+  <line x1="499" y1="245" x2="660" y2="245" stroke="var(--bp-green,#7FD4A6)" stroke-width="3" stroke-dasharray="3 3"/>
+  <text x="565" y="238" class="room" text-anchor="middle">COBOGÓ h=3,00 (1,00 à frente do janelão)</text>
+</g>`}
 function baseS(){return `
 <line x1="200" y1="225" x2="200" y2="1005" class="wthin"/>
 <line x1="660" y1="225" x2="660" y2="1005" class="wall2"/>
