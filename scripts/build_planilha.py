@@ -237,6 +237,8 @@ revs = [
     ('16/07/2026', 'Cobogó da fachada NO ajustado para h=3,00 (era 3,50) — mesma altura do muro de divisa', 'Uniformiza a altura dos elementos verticais externos da casa'),
     ('16/07/2026', 'Cobogó estendido até encostar no muro de divisa NE (antes parava ~0,80 m antes)', 'Vira estrutura contínua com o muro — 1 ponta apoiada no mourão do muro, só a ponta livre precisa de mourão próprio'),
     ('19/07/2026', 'Cantoneira de PVC c/ abas de tela especificada para TODOS os cantos externos e vãos (321 m)', 'Padroniza o arremate em Monolev e Lightwall · alumínio descartado em massa cimentícia (corrosão alcalina) · ~R$ 1,6-2,6 mil, dentro da etapa 4'),
+    ('19/07/2026', 'Auditoria de orientação das folhas: planta e elevações conferidas e coerentes; marcadores NE/SO adicionados nas elevações', 'A elevação da rua é espelhada por convenção (NE à esquerda, SO à direita) — agora indicado na própria folha'),
+    ('19/07/2026', 'Janelão da escada corrigido para 3,20 x 4,70 m (havia 3 valores divergentes: 3,18 na planta, 2,40 na elevação, 2,20 no catálogo)', 'Vidro 10,5 -> 15 m² · impacto na etapa 7 (esquadrias)'),
 ]
 for i, (d, a, imp) in enumerate(revs):
     corpo(ws, 3 + i, [d, a, imp])

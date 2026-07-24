@@ -289,10 +289,10 @@
     {
       "categoria": "Geral / Estrutura",
       "item": "Janelão vertical fachada noroeste (vidro laminado) + película espelhada",
-      "especificacao": null,
+      "especificacao": "parede da escada · 3,20 × 4,70 m · peitoril 1,00 · caixilho estruturado",
       "unidade": "m²",
-      "quantidade": 10.5,
-      "obs": "parede da escada · ~2,2 × 4,70 m · peitoril 1,00 · caixilho estruturado",
+      "quantidade": 15,
+      "obs": "CORRIGIDO: largura alinhada à planta F-02 (era 2,2 m no catálogo e 2,4 m na elevação — a planta sempre mostrou 3,20 m, cobrindo todo o lance da escada) · película espelhada só no trecho do piso superior; térreo com vidro transparente",
       "id": "IT027",
       "tipo": "material",
       "etapa": 7
