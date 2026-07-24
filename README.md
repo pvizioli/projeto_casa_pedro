@@ -62,10 +62,11 @@ O site fica em `https://SEU_USUARIO.github.io/projeto_casa_pedro/`.
 
 ## Circuitos (elétrica + hidráulica)
 
-`circuitos.html` — visualizador interativo de circuitos sobre as plantas dos dois pavimentos.
-Clique num circuito da lista para isolar os pontos dele; a aba alterna entre **ELÉTRICA**
-(25 circuitos: QDC lavanderia + QDCA técnica) e **HIDRÁULICA** (13 circuitos: água fria/quente,
-esgoto e pluvial).
+`circuitos.html` — caderno de instalações em 6 folhas A4, no mesmo padrão das blueprints
+(escuro na tela, claro no PDF): **E-01/E-02** plantas de pontos da elétrica (térreo e superior),
+**E-03** quadro de circuitos, **H-01/H-02** plantas da hidráulica, **H-03** quadro hidráulico.
+Cada folha de planta tem a lista de circuitos ao lado — clicar isola os pontos daquele circuito
+na planta. O botão ⎙ gera o PDF A4 das 6 folhas em tema claro.
 
 Para editar: os dados ficam nos arrays `CIRC` (elétrica) e `CIRC_HID` (hidráulica) dentro do
 próprio arquivo. Cada ponto é `{f:'t'|'s', x, y, s:símbolo, l:rótulo}`; `rts` são os trechos

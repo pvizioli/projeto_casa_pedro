@@ -3,90 +3,269 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Q22·L8 — Circuitos · Elétrica</title>
+<title>Residência Q22-L8 — Instalações (Circuitos)</title>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#14407d;--mid:#4f6fa5;--lt:#c3cfe2;--wall:#d4dcea;--grid:#eef1f7;--paper:#fff;--bg:#dfe4ec;--hi:#0d2c58}
-*{box-sizing:border-box;margin:0}
-body{background:var(--bg);font-family:"IBM Plex Mono","Consolas","Courier New",monospace;color:var(--navy)}
-header{background:var(--paper);border-bottom:2px solid var(--navy);padding:16px 26px;display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
-header .eyebrow{font-size:10px;letter-spacing:3px;color:var(--mid)}
-header h1{font-size:19px;letter-spacing:4px}
-header .right{margin-left:auto;display:flex;gap:10px}
-.tab{border:1.5px solid var(--navy);background:var(--paper);color:var(--navy);font:inherit;font-size:11px;letter-spacing:2px;padding:7px 14px;cursor:pointer}
-.tab.on{background:var(--navy);color:#fff}
-.tab[disabled]{opacity:.45;cursor:not-allowed}
-.btn{border:1.5px solid var(--navy);background:var(--paper);color:var(--navy);font:inherit;font-size:11px;letter-spacing:1px;padding:7px 12px;cursor:pointer}
-.btn:hover{background:var(--navy);color:#fff}
-main{display:grid;grid-template-columns:290px 1fr;gap:0;min-height:calc(100vh - 70px)}
-aside{background:var(--paper);border-right:1.5px solid var(--lt);padding:14px 0;overflow-y:auto;max-height:calc(100vh - 70px)}
-aside h2{font-size:10px;letter-spacing:3px;color:var(--mid);padding:12px 18px 6px}
-.circ{display:block;width:100%;text-align:left;border:0;background:none;font:inherit;font-size:11.5px;color:var(--navy);padding:7px 18px;cursor:pointer;border-left:4px solid transparent;line-height:1.35}
-.circ small{display:block;font-size:9.5px;color:var(--mid)}
-.circ:hover{background:#f0f4fa}
-.circ.on{background:#e6edf8;border-left-color:var(--navy);font-weight:700}
-.stage{padding:20px 26px;overflow:auto}
-.plans{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1180px}
-.plan{background:var(--paper);box-shadow:0 2px 12px rgba(20,64,125,.15);padding:10px}
-.plan h3{font-size:11px;letter-spacing:3px;padding:6px 8px;color:var(--mid)}
-.info{max-width:1180px;background:var(--navy);color:#fff;margin-bottom:18px;padding:14px 20px;display:flex;gap:34px;flex-wrap:wrap;align-items:baseline}
-.info b{font-size:15px;letter-spacing:2px}
-.info span{font-size:11px;color:#c8d5ea}
-.info .tagdr{border:1px solid #c8d5ea;padding:2px 8px;font-size:10px;letter-spacing:2px}
-svg{width:100%;height:auto;display:block}
-text{font-family:inherit}
-.wall{stroke:var(--wall);stroke-width:5;fill:none}
-.wall2{stroke:var(--wall);stroke-width:2.5;fill:none}
-.wthin{stroke:#e2e8f2;stroke-width:1.2;fill:none}
-.room{font-size:9px;fill:#9fb1cd;letter-spacing:1px}
-.pt{transition:opacity .15s}
-.pt.dim{opacity:.14}
-.rt{fill:none;stroke:var(--navy);stroke-width:2.2;stroke-dasharray:3 4;stroke-linecap:round}
-.rt.dim{opacity:.12}
-.lbl{font-size:8.5px;fill:var(--navy)}
-.quadro{fill:var(--navy)}
-.quadrolbl{font-size:8.5px;fill:var(--navy);font-weight:700}
-.placeholder{max-width:760px;background:var(--paper);padding:34px;box-shadow:0 2px 12px rgba(20,64,125,.15)}
-.placeholder h3{letter-spacing:3px;margin-bottom:14px}
-.placeholder p{font-size:12px;line-height:1.7;color:var(--mid);margin-bottom:10px}
-@media print{
- header .right, aside{display:none}
- main{grid-template-columns:1fr}
- body{background:#fff}
- .plan{box-shadow:none;border:1px solid var(--lt)}
-}
-@media (max-width:980px){main{grid-template-columns:1fr}aside{max-height:none;border-right:0;border-bottom:1.5px solid var(--lt)}.plans{grid-template-columns:1fr}}
+  @page { size: A4 portrait; margin: 0; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --bp-blue:#0E3A6B; --bp-line:#DCEBFF; --bp-dim:#8FC1EE;
+    --bp-amber:#FFD166; --bp-green:#7FD4A6; --bp-cyan:#7FD4FF;
+    --sym:#DCEBFF;
+  }
+  body { background:#05192f; font-family:'IBM Plex Mono',monospace; color:var(--bp-line); }
+  .sheet {
+    width:210mm; height:296mm; margin:0 auto;
+    background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.045), transparent 60%), var(--bp-blue);
+    position:relative; overflow:hidden; page-break-after:always;
+    display:flex; flex-direction:column; border:1px solid rgba(220,235,255,0.25);
+  }
+  .sheet:last-child { page-break-after:auto; }
+  .sheet::before {
+    content:""; position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(220,235,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(220,235,255,0.05) 1px, transparent 1px),
+      linear-gradient(rgba(220,235,255,0.09) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(220,235,255,0.09) 1px, transparent 1px);
+    background-size:5mm 5mm,5mm 5mm,25mm 25mm,25mm 25mm; pointer-events:none;
+  }
+  .frame { position:absolute; inset:8mm; border:1.2px solid var(--bp-line); pointer-events:none; }
+  .frame::after { content:""; position:absolute; inset:1.4mm; border:0.4px solid rgba(220,235,255,0.4); }
+  .head { position:relative; padding:14mm 16mm 3mm; display:flex; justify-content:space-between; align-items:baseline; }
+  .head .kicker { font-size:8.5pt; letter-spacing:3px; color:var(--bp-dim); text-transform:uppercase; }
+  .head h1 { font-family:'Saira Condensed',sans-serif; font-weight:700; font-size:24pt; letter-spacing:2.5px; text-transform:uppercase; line-height:1.05; }
+  .head .folha-tag { font-family:'Saira Condensed',sans-serif; font-size:30pt; font-weight:700; color:rgba(220,235,255,0.28); letter-spacing:2px; }
+
+  /* área de desenho: planta + coluna de circuitos */
+  .body { position:relative; flex:1; min-height:0; display:grid; grid-template-columns:118mm 1fr; gap:3mm; padding:0 10mm; }
+  .planta { position:relative; min-height:0; }
+  .planta svg { width:100%; height:100%; }
+  .col { min-height:0; overflow:hidden; padding-top:1mm; }
+  .col h2 { font-family:'Saira Condensed',sans-serif; font-size:8pt; letter-spacing:2.5px; color:var(--bp-dim); text-transform:uppercase; margin:2mm 0 1mm; }
+  .circ { display:block; width:100%; text-align:left; border:0; background:none; cursor:pointer;
+    font-family:'IBM Plex Mono',monospace; font-size:5.7pt; line-height:1.35; color:var(--bp-line);
+    padding:0.9mm 1.6mm; border-left:1.6px solid transparent; }
+  .circ b { font-weight:600; letter-spacing:0.3px; }
+  .circ small { display:block; font-size:4.9pt; color:var(--bp-dim); }
+  .circ:hover { background:rgba(220,235,255,0.07); }
+  .circ.on { background:rgba(255,209,102,0.14); border-left-color:var(--bp-amber); }
+  .circ.on b, .circ.on small { color:var(--bp-amber); }
+  .circ .flag { color:var(--bp-amber); }
+  .todos { border:1px solid rgba(220,235,255,0.4); margin-bottom:1.5mm; padding:1.2mm 1.6mm; }
+
+  /* tabela (folhas de quadro) */
+  .tabela { padding:0 12mm; }
+  table { width:100%; border-collapse:collapse; font-size:6.4pt; }
+  th { font-family:'Saira Condensed',sans-serif; font-size:7pt; letter-spacing:1.5px; text-transform:uppercase;
+       text-align:left; color:var(--bp-blue); background:var(--bp-line); padding:1.4mm 1.6mm; }
+  td { padding:1.05mm 1.6mm; border-bottom:0.4px solid rgba(220,235,255,0.28); vertical-align:top; }
+  tr.grupo td { background:rgba(220,235,255,0.10); font-family:'Saira Condensed',sans-serif;
+                letter-spacing:2px; font-size:7pt; text-transform:uppercase; color:var(--bp-dim); }
+  td.n { color:var(--bp-amber); font-weight:600; }
+  td.c { text-align:center; }
+
+  .carimbo { position:relative; margin:2mm 8mm 8mm; border:1.2px solid var(--bp-line);
+    display:grid; grid-template-columns:2.2fr 1.2fr 1fr 1fr 1.1fr; font-size:6.6pt; background:rgba(9,41,71,0.6); }
+  .carimbo > div { padding:2.2mm 3mm; border-left:0.6px solid rgba(220,235,255,0.45); }
+  .carimbo > div:first-child { border-left:none; }
+  .carimbo .lbl { display:block; font-size:5.4pt; letter-spacing:1.5px; color:var(--bp-dim); text-transform:uppercase; margin-bottom:1mm; }
+  .carimbo .val { font-weight:600; font-size:7.4pt; letter-spacing:0.4px; }
+  .disclaimer { position:absolute; bottom:2.6mm; left:0; right:0; text-align:center; font-size:5.4pt; letter-spacing:1.8px; color:rgba(220,235,255,0.45); text-transform:uppercase; }
+
+  /* símbolos e plantas */
+  svg text { font-family:'IBM Plex Mono',monospace; fill:var(--bp-line); }
+  .wall  { stroke:var(--bp-line); stroke-width:4.5; fill:none; }
+  .wall2 { stroke:var(--bp-line); stroke-width:2.2; fill:none; opacity:.85; }
+  .wthin { stroke:var(--bp-dim); stroke-width:1; fill:none; opacity:.55; }
+  .room  { font-size:8.5px; fill:var(--bp-dim); letter-spacing:1px; opacity:.75; }
+  .quadro { fill:var(--bp-amber); }
+  .quadrolbl { font-size:8.5px; fill:var(--bp-amber); font-weight:700; }
+  .lbl { font-size:8px; fill:var(--bp-dim); }
+  .pt { transition:opacity .15s; }
+  .pt.dim, .rt.dim { opacity:.10; }
+  .pt.hit, .rt.hit { opacity:1; }
+  .pt.hit circle, .pt.hit rect, .pt.hit path, .pt.hit line { stroke:var(--bp-amber) !important; }
+  .pt.hit text { fill:var(--bp-amber) !important; }
+  .rt { fill:none; stroke:var(--bp-cyan); stroke-width:2; stroke-dasharray:3 4; stroke-linecap:round; }
+
+  /* botões minimalistas — mesmo padrão das blueprints */
+  .btn-home { position:fixed; left:16px; top:16px; z-index:99; text-decoration:none;
+    font-family:'Saira Condensed',sans-serif; font-size:14px; font-weight:600;
+    letter-spacing:2px; text-transform:uppercase; background:var(--bp-line); color:var(--bp-blue);
+    border:none; padding:10px 18px; cursor:pointer; box-shadow:0 2px 12px rgba(0,0,0,.45); }
+  .btn-home:hover { background:#fff; }
+  .btn-print { position:fixed; right:16px; bottom:16px; z-index:99;
+    font-family:'Saira Condensed',sans-serif; font-size:15px; font-weight:600;
+    letter-spacing:2px; text-transform:uppercase; background:#FFD166; color:#0E3A6B;
+    border:none; padding:12px 22px; cursor:pointer; box-shadow:0 2px 12px rgba(0,0,0,.45); }
+
+  @media print {
+    .btn-print, .btn-home { display:none !important; }
+    .sheet { width:190mm; height:272mm; margin:0 auto; page-break-inside:avoid; break-inside:avoid; }
+    .head { padding:9mm 11mm 2mm; } .head h1 { font-size:20pt; } .head .folha-tag { font-size:24pt; }
+    .frame { inset:5mm; } .carimbo { margin:2mm 5mm 5mm; } .disclaimer { bottom:1.6mm; }
+    :root { --bp-blue:#FFFFFF; --bp-line:#0E3A6B; --bp-dim:#2E5E96;
+            --bp-amber:#B8860B; --bp-green:#0E3A6B; --bp-cyan:#2E5E96; --sym:#0E3A6B; }
+    body { background:#fff; }
+    .sheet { background:#fff !important; border:none; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .sheet::before { background-image:
+      linear-gradient(rgba(14,58,107,0.10) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14,58,107,0.10) 1px, transparent 1px),
+      linear-gradient(rgba(14,58,107,0.20) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14,58,107,0.20) 1px, transparent 1px); }
+    .head .folha-tag { color:rgba(14,58,107,0.35); }
+    .carimbo { background:#fff; } .carimbo > div { border-left-color:rgba(14,58,107,0.6); }
+    .disclaimer { color:rgba(14,58,107,0.6); } .frame::after { border-color:rgba(14,58,107,0.5); }
+    .circ.on { background:rgba(184,134,11,0.12); }
+    .pt.dim, .rt.dim { opacity:1; }              /* PDF mostra tudo */
+    th { background:#0E3A6B; color:#fff; }
+    tr.grupo td { background:rgba(14,58,107,0.10); }
+    svg text { fill:#0E3A6B !important; }
+  }
+
+  /* modo PDF via JS */
+  body.pdfmode { background:#fff;
+    --bp-blue:#FFFFFF; --bp-line:#0E3A6B; --bp-dim:#2E5E96;
+    --bp-amber:#B8860B; --bp-green:#0E3A6B; --bp-cyan:#2E5E96; --sym:#0E3A6B; }
+  body.pdfmode .btn-home, body.pdfmode .btn-print { display:none; }
+  body.pdfmode .sheet { width:210mm; height:296mm; margin:0; border:none; background:#fff !important; }
+  body.pdfmode .sheet::before { background-image:
+    linear-gradient(rgba(14,58,107,0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14,58,107,0.10) 1px, transparent 1px),
+    linear-gradient(rgba(14,58,107,0.20) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14,58,107,0.20) 1px, transparent 1px); }
+  body.pdfmode .head .folha-tag { color:rgba(14,58,107,0.35); }
+  body.pdfmode .carimbo { background:#fff; }
+  body.pdfmode .carimbo > div { border-left-color:rgba(14,58,107,0.6); }
+  body.pdfmode .disclaimer { color:rgba(14,58,107,0.6); }
+  body.pdfmode .frame::after { border-color:rgba(14,58,107,0.5); }
+  body.pdfmode .pt.dim, body.pdfmode .rt.dim { opacity:1; }
+  body.pdfmode th { background:#0E3A6B; color:#fff; }
+  body.pdfmode tr.grupo td { background:rgba(14,58,107,0.10); }
+  body.pdfmode svg text { fill:#0E3A6B !important; }
 </style>
 </head>
 <body>
-<header>
-  <div>
-    <div class="eyebrow">RESIDÊNCIA Q22 · L8 — INSTALAÇÕES</div>
-    <h1>CIRCUITOS</h1>
+
+<section class="sheet" data-fase="ele">
+  <div class="frame"></div>
+  <header class="head">
+    <div><div class="kicker">Residência Q22 · L8 — Instalações</div><h1>Elétrica — Térreo</h1></div>
+    <div class="folha-tag">E·01</div>
+  </header>
+  <div class="body">
+    <div class="planta" id="pl-ele-t"></div>
+    <div class="col" id="cl-ele-t"></div>
   </div>
-  <div class="right">
-    <button class="tab on" id="tabEle">ELÉTRICA</button>
-    <button class="tab" id="tabHid" title="hidráulica — estrutura pronta, circuitos a preencher">HIDRÁULICA</button>
-    <a class="btn" href="index.html">← Painel de Obra</a>
-    <a class="btn" href="blueprints.html">Blueprints ↗</a>
-    <button class="btn" onclick="window.print()">⎙ Imprimir / PDF</button>
-  </div>
-</header>
-<main>
-<aside id="lista"></aside>
-<section class="stage" id="stage">
-  <div class="info" id="info"></div>
-  <div class="plans">
-    <div class="plan"><h3>TÉRREO</h3><div id="svgT"></div></div>
-    <div class="plan"><h3>SUPERIOR</h3><div id="svgS"></div></div>
-  </div>
+  <footer class="carimbo">
+    <div><span class="lbl">Projeto</span><span class="val">RESIDÊNCIA UNIFAMILIAR — QUADRA 22 · LOTE 8</span></div>
+    <div><span class="lbl">Conteúdo</span><span class="val">PLANTA DE PONTOS — TÉRREO</span></div>
+    <div><span class="lbl">Escala</span><span class="val">s/ esc.</span></div>
+    <div><span class="lbl">Data</span><span class="val">JUL/2026</span></div>
+    <div><span class="lbl">Folha</span><span class="val">E-01 / 06</span></div>
+  </footer>
+  <div class="disclaimer">Projeto indicativo de instalações — sem valor executivo · sujeito a projeto complementar (NBR 5410 / 5626 / 8160)</div>
 </section>
-</main>
+<section class="sheet" data-fase="ele">
+  <div class="frame"></div>
+  <header class="head">
+    <div><div class="kicker">Residência Q22 · L8 — Instalações</div><h1>Elétrica — Superior</h1></div>
+    <div class="folha-tag">E·02</div>
+  </header>
+  <div class="body">
+    <div class="planta" id="pl-ele-s"></div>
+    <div class="col" id="cl-ele-s"></div>
+  </div>
+  <footer class="carimbo">
+    <div><span class="lbl">Projeto</span><span class="val">RESIDÊNCIA UNIFAMILIAR — QUADRA 22 · LOTE 8</span></div>
+    <div><span class="lbl">Conteúdo</span><span class="val">PLANTA DE PONTOS — SUPERIOR</span></div>
+    <div><span class="lbl">Escala</span><span class="val">s/ esc.</span></div>
+    <div><span class="lbl">Data</span><span class="val">JUL/2026</span></div>
+    <div><span class="lbl">Folha</span><span class="val">E-02 / 06</span></div>
+  </footer>
+  <div class="disclaimer">Projeto indicativo de instalações — sem valor executivo · sujeito a projeto complementar (NBR 5410 / 5626 / 8160)</div>
+</section>
+<section class="sheet" data-fase="ele">
+  <div class="frame"></div>
+  <header class="head">
+    <div><div class="kicker">Residência Q22 · L8 — Instalações</div><h1>Quadro de Circuitos</h1></div>
+    <div class="folha-tag">E·03</div>
+  </header>
+  <div class="body" style="grid-template-columns:1fr; padding:0 12mm;">
+    <div class="tabela" id="tb-ele"></div>
+  </div>
+  <footer class="carimbo">
+    <div><span class="lbl">Projeto</span><span class="val">RESIDÊNCIA UNIFAMILIAR — QUADRA 22 · LOTE 8</span></div>
+    <div><span class="lbl">Conteúdo</span><span class="val">QUADRO DE CIRCUITOS — QDC + QDCA</span></div>
+    <div><span class="lbl">Escala</span><span class="val">s/ esc.</span></div>
+    <div><span class="lbl">Data</span><span class="val">JUL/2026</span></div>
+    <div><span class="lbl">Folha</span><span class="val">E-03 / 06</span></div>
+  </footer>
+  <div class="disclaimer">Projeto indicativo de instalações — sem valor executivo · sujeito a projeto complementar (NBR 5410 / 5626 / 8160)</div>
+</section>
+<section class="sheet" data-fase="hid">
+  <div class="frame"></div>
+  <header class="head">
+    <div><div class="kicker">Residência Q22 · L8 — Instalações</div><h1>Hidráulica — Térreo</h1></div>
+    <div class="folha-tag">H·01</div>
+  </header>
+  <div class="body">
+    <div class="planta" id="pl-hid-t"></div>
+    <div class="col" id="cl-hid-t"></div>
+  </div>
+  <footer class="carimbo">
+    <div><span class="lbl">Projeto</span><span class="val">RESIDÊNCIA UNIFAMILIAR — QUADRA 22 · LOTE 8</span></div>
+    <div><span class="lbl">Conteúdo</span><span class="val">PLANTA DE PONTOS — TÉRREO</span></div>
+    <div><span class="lbl">Escala</span><span class="val">s/ esc.</span></div>
+    <div><span class="lbl">Data</span><span class="val">JUL/2026</span></div>
+    <div><span class="lbl">Folha</span><span class="val">H-01 / 06</span></div>
+  </footer>
+  <div class="disclaimer">Projeto indicativo de instalações — sem valor executivo · sujeito a projeto complementar (NBR 5410 / 5626 / 8160)</div>
+</section>
+<section class="sheet" data-fase="hid">
+  <div class="frame"></div>
+  <header class="head">
+    <div><div class="kicker">Residência Q22 · L8 — Instalações</div><h1>Hidráulica — Superior</h1></div>
+    <div class="folha-tag">H·02</div>
+  </header>
+  <div class="body">
+    <div class="planta" id="pl-hid-s"></div>
+    <div class="col" id="cl-hid-s"></div>
+  </div>
+  <footer class="carimbo">
+    <div><span class="lbl">Projeto</span><span class="val">RESIDÊNCIA UNIFAMILIAR — QUADRA 22 · LOTE 8</span></div>
+    <div><span class="lbl">Conteúdo</span><span class="val">PLANTA DE PONTOS — SUPERIOR</span></div>
+    <div><span class="lbl">Escala</span><span class="val">s/ esc.</span></div>
+    <div><span class="lbl">Data</span><span class="val">JUL/2026</span></div>
+    <div><span class="lbl">Folha</span><span class="val">H-02 / 06</span></div>
+  </footer>
+  <div class="disclaimer">Projeto indicativo de instalações — sem valor executivo · sujeito a projeto complementar (NBR 5410 / 5626 / 8160)</div>
+</section>
+<section class="sheet" data-fase="hid">
+  <div class="frame"></div>
+  <header class="head">
+    <div><div class="kicker">Residência Q22 · L8 — Instalações</div><h1>Quadro Hidráulico</h1></div>
+    <div class="folha-tag">H·03</div>
+  </header>
+  <div class="body" style="grid-template-columns:1fr; padding:0 12mm;">
+    <div class="tabela" id="tb-hid"></div>
+  </div>
+  <footer class="carimbo">
+    <div><span class="lbl">Projeto</span><span class="val">RESIDÊNCIA UNIFAMILIAR — QUADRA 22 · LOTE 8</span></div>
+    <div><span class="lbl">Conteúdo</span><span class="val">QUADRO — ÁGUA, ESGOTO E PLUVIAL</span></div>
+    <div><span class="lbl">Escala</span><span class="val">s/ esc.</span></div>
+    <div><span class="lbl">Data</span><span class="val">JUL/2026</span></div>
+    <div><span class="lbl">Folha</span><span class="val">H-03 / 06</span></div>
+  </footer>
+  <div class="disclaimer">Projeto indicativo de instalações — sem valor executivo · sujeito a projeto complementar (NBR 5410 / 5626 / 8160)</div>
+</section>
+<a class="btn-home" href="index.html">← Painel de Obra</a>
+<a class="btn-home" href="blueprints.html" style="top:56px">Blueprints</a>
+<button class="btn-print" id="btn-pdf" title="Gera um PDF A4 (1 página por folha)">⎙ Baixar PDF (A4)</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
-/* ============ DADOS DOS CIRCUITOS ============
-   sym: luz | tug | t220 | sw | sens | ip55 | eq (equipamento)
-   f: 't' (térreo) | 's' (superior)
-   Para a fase HIDRÁULICA: replicar a mesma estrutura em CIRC_HID
-   (circuitos = saídas dos manifolds F/Q, prumadas de esgoto, pluvial). */
 const CIRC = [
  {id:'C01',q:'QDC',nome:'Iluminação térreo',disj:'10A',cabo:'1,5mm²',dr:false,v:'127V',
   pts:[{f:'t',x:384,y:440,s:'luz',l:'garagem'},{f:'t',x:540,y:470,s:'luz',l:'pendente vão duplo'},{f:'t',x:555,y:500,s:'luz'},{f:'t',x:455,y:680,s:'luz',l:'cozinha'},{f:'t',x:372,y:575,s:'luz',l:'lavabo'},{f:'t',x:303,y:750,s:'luz',l:'banheiro'},{f:'t',x:632,y:740,s:'luz',l:'lavand.'},{f:'t',x:512,y:562,s:'sw',l:'entrada'},{f:'t',x:470,y:672,s:'sw'},{f:'t',x:352,y:640,s:'sw'},{f:'t',x:520,y:330,s:'sens',l:'escada'}]},
@@ -141,13 +320,6 @@ const CIRC = [
   pts:[{f:'s',x:552,y:426,s:'eq',l:'motores (plenum)'},{f:'s',x:500,y:340,s:'eq',l:'meteo'}]},
  {id:'A6',q:'QDCA',nome:'Reserva',disj:'—',cabo:'—',dr:false,v:'—',pts:[]}
 ];
-/* ============ HIDRÁULICA ============
-   Mesma estrutura da elétrica, com campos adaptados:
-     q    : 'AF' água fria | 'AQ' água quente | 'ESG' esgoto | 'PLU' pluvial
-     disj -> bitola ·  cabo -> material ·  dr -> flag "ponto sem retorno (radier)"
-   sym: af | aq | esg | ralo | pru (prumada) | mnf (manifold) | eqh (equipamento)
-   SEMENTES abaixo = decisões já fechadas do projeto. Completar as saídas
-   ponto a ponto conforme o projeto hidráulico executivo. */
 const CIRC_HID = [
  {id:'H01',q:'AF',nome:'Barrilete — caixa 1.000 L → pressurizador → manifolds',disj:'PPR 32mm',cabo:'PPR PN25',dr:false,v:'fria',
   pts:[{f:'s',x:622,y:792,s:'eqh',l:'pressurizador'},{f:'s',x:621,y:745,s:'mnf',l:'manifold F (12 saídas)'}]},
@@ -179,8 +351,6 @@ const CIRC_HID = [
  {id:'H13',q:'ESG',nome:'Caixa de gordura + caixas de inspeção → rede do condomínio',disj:'—',cabo:'—',dr:false,v:'esgoto',
   pts:[{f:'t',x:250,y:900,s:'esg',l:'c. gordura'},{f:'t',x:250,y:960,s:'esg',l:'c. inspeção'}]}
 ];
-
-/* ============ PLANTAS DE FUNDO ============ */
 function baseT(){return `
 <line x1="200" y1="225" x2="200" y2="1005" class="wthin"/>
 <line x1="660" y1="225" x2="660" y2="1005" class="wall2"/>
@@ -223,98 +393,116 @@ function baseS(){return `
 <text x="612" y="540" class="room" transform="rotate(-90 612 540)">FAIXA DE LUZ</text>
 <text x="655" y="810" class="room" transform="rotate(-90 654 810)">TÉCNICA</text>
 <rect x="608" y="712" width="26" height="16" class="quadro"/><text x="606" y="742" class="quadrolbl">QDCA</text>`}
-
-/* ============ SÍMBOLOS ============ */
 function sym(p){
- const c='#14407d';
+ const c='var(--sym)';
  switch(p.s){
-  case 'luz': return `<circle cx="${p.x}" cy="${p.y}" r="5.5" fill="#fff" stroke="${c}" stroke-width="1.6"/><line x1="${p.x-3.6}" y1="${p.y-3.6}" x2="${p.x+3.6}" y2="${p.y+3.6}" stroke="${c}" stroke-width="1.3"/><line x1="${p.x-3.6}" y1="${p.y+3.6}" x2="${p.x+3.6}" y2="${p.y-3.6}" stroke="${c}" stroke-width="1.3"/>`;
-  case 'tug': return `<circle cx="${p.x}" cy="${p.y}" r="5.5" fill="#fff" stroke="${c}" stroke-width="1.7"/><line x1="${p.x-5.5}" y1="${p.y}" x2="${p.x+5.5}" y2="${p.y}" stroke="${c}" stroke-width="1.4"/>`;
-  case 't220': return `<circle cx="${p.x}" cy="${p.y}" r="6" fill="${c}"/><circle cx="${p.x}" cy="${p.y}" r="2.1" fill="#fff"/>`;
-  case 'sw': return `<rect x="${p.x-5.5}" y="${p.y-5.5}" width="11" height="11" fill="#fff" stroke="${c}" stroke-width="1.5"/><text x="${p.x}" y="${p.y+3.2}" font-size="7.5" text-anchor="middle" font-weight="700" fill="${c}">S</text>`;
-  case 'sens': return `<path d="M${p.x},${p.y-6.5} ${p.x+6.5},${p.y} ${p.x},${p.y+6.5} ${p.x-6.5},${p.y}Z" fill="#fff" stroke="${c}" stroke-width="1.4"/><text x="${p.x}" y="${p.y+2.8}" font-size="6.8" text-anchor="middle" font-weight="700" fill="${c}">P</text>`;
-  case 'ip55': return `<rect x="${p.x-6}" y="${p.y-6}" width="12" height="12" fill="#fff" stroke="${c}" stroke-width="1.5"/><circle cx="${p.x}" cy="${p.y}" r="3" fill="none" stroke="${c}" stroke-width="1.2"/>`;
-  case 'eq': return `<rect x="${p.x-9}" y="${p.y-6}" width="18" height="12" fill="#fff" stroke="${c}" stroke-width="1.7"/><line x1="${p.x-9}" y1="${p.y-6}" x2="${p.x+9}" y2="${p.y+6}" stroke="${c}" stroke-width="1.1"/>`;
+  case 'luz': return `<circle cx="${p.x}" cy="${p.y}" r="5.5" fill="var(--bp-blue)" stroke="${c}" stroke-width="1.6"/><line x1="${p.x-3.6}" y1="${p.y-3.6}" x2="${p.x+3.6}" y2="${p.y+3.6}" stroke="${c}" stroke-width="1.3"/><line x1="${p.x-3.6}" y1="${p.y+3.6}" x2="${p.x+3.6}" y2="${p.y-3.6}" stroke="${c}" stroke-width="1.3"/>`;
+  case 'tug': return `<circle cx="${p.x}" cy="${p.y}" r="5.5" fill="var(--bp-blue)" stroke="${c}" stroke-width="1.7"/><line x1="${p.x-5.5}" y1="${p.y}" x2="${p.x+5.5}" y2="${p.y}" stroke="${c}" stroke-width="1.4"/>`;
+  case 't220': return `<circle cx="${p.x}" cy="${p.y}" r="6" fill="${c}"/><circle cx="${p.x}" cy="${p.y}" r="2.1" fill="var(--bp-blue)"/>`;
+  case 'sw': return `<rect x="${p.x-5.5}" y="${p.y-5.5}" width="11" height="11" fill="var(--bp-blue)" stroke="${c}" stroke-width="1.5"/><text x="${p.x}" y="${p.y+3.2}" font-size="7.5" text-anchor="middle" font-weight="700" fill="${c}">S</text>`;
+  case 'sens': return `<path d="M${p.x},${p.y-6.5} ${p.x+6.5},${p.y} ${p.x},${p.y+6.5} ${p.x-6.5},${p.y}Z" fill="var(--bp-blue)" stroke="${c}" stroke-width="1.4"/><text x="${p.x}" y="${p.y+2.8}" font-size="6.8" text-anchor="middle" font-weight="700" fill="${c}">P</text>`;
+  case 'ip55': return `<rect x="${p.x-6}" y="${p.y-6}" width="12" height="12" fill="var(--bp-blue)" stroke="${c}" stroke-width="1.5"/><circle cx="${p.x}" cy="${p.y}" r="3" fill="none" stroke="${c}" stroke-width="1.2"/>`;
+  case 'eq': return `<rect x="${p.x-9}" y="${p.y-6}" width="18" height="12" fill="var(--bp-blue)" stroke="${c}" stroke-width="1.7"/><line x1="${p.x-9}" y1="${p.y-6}" x2="${p.x+9}" y2="${p.y+6}" stroke="${c}" stroke-width="1.1"/>`;
   /* --- hidráulica --- */
-  case 'af':  return `<circle cx="${p.x}" cy="${p.y}" r="5.5" fill="#fff" stroke="${c}" stroke-width="1.7"/><text x="${p.x}" y="${p.y+3}" font-size="7" text-anchor="middle" font-weight="700" fill="${c}">F</text>`;
-  case 'aq':  return `<circle cx="${p.x}" cy="${p.y}" r="5.5" fill="${c}"/><text x="${p.x}" y="${p.y+3}" font-size="7" text-anchor="middle" font-weight="700" fill="#fff">Q</text>`;
-  case 'esg': return `<circle cx="${p.x}" cy="${p.y}" r="6" fill="#fff" stroke="${c}" stroke-width="1.6" stroke-dasharray="2.6 2"/><circle cx="${p.x}" cy="${p.y}" r="2" fill="${c}"/>`;
-  case 'ralo':return `<rect x="${p.x-9}" y="${p.y-3.5}" width="18" height="7" fill="#fff" stroke="${c}" stroke-width="1.5"/><line x1="${p.x-5}" y1="${p.y-3.5}" x2="${p.x-5}" y2="${p.y+3.5}" stroke="${c}" stroke-width="1"/><line x1="${p.x}" y1="${p.y-3.5}" x2="${p.x}" y2="${p.y+3.5}" stroke="${c}" stroke-width="1"/><line x1="${p.x+5}" y1="${p.y-3.5}" x2="${p.x+5}" y2="${p.y+3.5}" stroke="${c}" stroke-width="1"/>`;
-  case 'pru': return `<circle cx="${p.x}" cy="${p.y}" r="7" fill="#fff" stroke="${c}" stroke-width="1.7"/><line x1="${p.x-4.6}" y1="${p.y-4.6}" x2="${p.x+4.6}" y2="${p.y+4.6}" stroke="${c}" stroke-width="1.4"/><line x1="${p.x-4.6}" y1="${p.y+4.6}" x2="${p.x+4.6}" y2="${p.y-4.6}" stroke="${c}" stroke-width="1.4"/>`;
-  case 'mnf': return `<rect x="${p.x-11}" y="${p.y-5}" width="22" height="10" fill="#fff" stroke="${c}" stroke-width="1.8"/><line x1="${p.x-6}" y1="${p.y+5}" x2="${p.x-6}" y2="${p.y+9}" stroke="${c}" stroke-width="1.2"/><line x1="${p.x}" y1="${p.y+5}" x2="${p.x}" y2="${p.y+9}" stroke="${c}" stroke-width="1.2"/><line x1="${p.x+6}" y1="${p.y+5}" x2="${p.x+6}" y2="${p.y+9}" stroke="${c}" stroke-width="1.2"/>`;
-  case 'eqh': return `<rect x="${p.x-10}" y="${p.y-7}" width="20" height="14" rx="2" fill="#fff" stroke="${c}" stroke-width="1.7"/><circle cx="${p.x}" cy="${p.y}" r="3.4" fill="none" stroke="${c}" stroke-width="1.2"/>`;
+  case 'af':  return `<circle cx="${p.x}" cy="${p.y}" r="5.5" fill="var(--bp-blue)" stroke="${c}" stroke-width="1.7"/><text x="${p.x}" y="${p.y+3}" font-size="7" text-anchor="middle" font-weight="700" fill="${c}">F</text>`;
+  case 'aq':  return `<circle cx="${p.x}" cy="${p.y}" r="5.5" fill="${c}"/><text x="${p.x}" y="${p.y+3}" font-size="7" text-anchor="middle" font-weight="700" fill="var(--bp-blue)">Q</text>`;
+  case 'esg': return `<circle cx="${p.x}" cy="${p.y}" r="6" fill="var(--bp-blue)" stroke="${c}" stroke-width="1.6" stroke-dasharray="2.6 2"/><circle cx="${p.x}" cy="${p.y}" r="2" fill="${c}"/>`;
+  case 'ralo':return `<rect x="${p.x-9}" y="${p.y-3.5}" width="18" height="7" fill="var(--bp-blue)" stroke="${c}" stroke-width="1.5"/><line x1="${p.x-5}" y1="${p.y-3.5}" x2="${p.x-5}" y2="${p.y+3.5}" stroke="${c}" stroke-width="1"/><line x1="${p.x}" y1="${p.y-3.5}" x2="${p.x}" y2="${p.y+3.5}" stroke="${c}" stroke-width="1"/><line x1="${p.x+5}" y1="${p.y-3.5}" x2="${p.x+5}" y2="${p.y+3.5}" stroke="${c}" stroke-width="1"/>`;
+  case 'pru': return `<circle cx="${p.x}" cy="${p.y}" r="7" fill="var(--bp-blue)" stroke="${c}" stroke-width="1.7"/><line x1="${p.x-4.6}" y1="${p.y-4.6}" x2="${p.x+4.6}" y2="${p.y+4.6}" stroke="${c}" stroke-width="1.4"/><line x1="${p.x-4.6}" y1="${p.y+4.6}" x2="${p.x+4.6}" y2="${p.y-4.6}" stroke="${c}" stroke-width="1.4"/>`;
+  case 'mnf': return `<rect x="${p.x-11}" y="${p.y-5}" width="22" height="10" fill="var(--bp-blue)" stroke="${c}" stroke-width="1.8"/><line x1="${p.x-6}" y1="${p.y+5}" x2="${p.x-6}" y2="${p.y+9}" stroke="${c}" stroke-width="1.2"/><line x1="${p.x}" y1="${p.y+5}" x2="${p.x}" y2="${p.y+9}" stroke="${c}" stroke-width="1.2"/><line x1="${p.x+6}" y1="${p.y+5}" x2="${p.x+6}" y2="${p.y+9}" stroke="${c}" stroke-width="1.2"/>`;
+  case 'eqh': return `<rect x="${p.x-10}" y="${p.y-7}" width="20" height="14" rx="2" fill="var(--bp-blue)" stroke="${c}" stroke-width="1.7"/><circle cx="${p.x}" cy="${p.y}" r="3.4" fill="none" stroke="${c}" stroke-width="1.2"/>`;
  }
  return '';
 }
-function ptG(c,p){
- const lbl = p.l?`<text x="${p.x}" y="${p.y-10}" class="lbl" text-anchor="middle">${p.l}</text>`:'';
- return `<g class="pt" data-c="${c.id}">${sym(p)}${lbl}</g>`;
-}
 
-/* ============ RENDER ============ */
-const VB='170 215 520 800';
-let FASE='ele';                                  // 'ele' | 'hid'
-const dados = () => FASE==='ele' ? CIRC : CIRC_HID;
 const GRUPOS = {
-  ele:[['QDC','QDC — LAVANDERIA'],['QDCA','QDCA — TÉCNICA']],
-  hid:[['AF','ÁGUA FRIA'],['AQ','ÁGUA QUENTE'],['ESG','ESGOTO'],['PLU','PLUVIAL']]
+  ele:[['QDC','QDC — Lavanderia'],['QDCA','QDCA — Técnica']],
+  hid:[['AF','Água fria'],['AQ','Água quente'],['ESG','Esgoto'],['PLU','Pluvial']]
 };
-function render(){
- let t=baseT(), s=baseS();
- for(const c of dados()){
-  for(const r of (c.rts||[])) (r.f==='t'?t+= `<path d="${r.d}" class="rt" data-c="${c.id}"/>`:s+=`<path d="${r.d}" class="rt" data-c="${c.id}"/>`);
-  for(const p of c.pts) (p.f==='t'? t+=ptG(c,p) : s+=ptG(c,p));
- }
- document.getElementById('svgT').innerHTML=`<svg viewBox="${VB}" xmlns="http://www.w3.org/2000/svg">${t}</svg>`;
- document.getElementById('svgS').innerHTML=`<svg viewBox="${VB}" xmlns="http://www.w3.org/2000/svg">${s}</svg>`;
+const SET = { ele:CIRC, hid:CIRC_HID };
+const VB  = '170 215 520 800';
+const sel = { ele:'ALL', hid:'ALL' };
+
+function ptG(c,p){
+  const lbl = p.l ? `<text x="${p.x}" y="${p.y-10}" class="lbl" text-anchor="middle">${p.l}</text>` : '';
+  return `<g class="pt" data-c="${c.id}">${sym(p)}${lbl}</g>`;
 }
-function lista(){
- const a=document.getElementById('lista');
- const nome = FASE==='ele' ? 'elétrica' : 'hidráulica';
- let h=`<button class="circ on" data-id="ALL"><b>VER TODOS OS CIRCUITOS</b><small>${nome} completa · térreo + superior</small></button>`;
- for(const [chave,titulo] of GRUPOS[FASE]){
-   const g = dados().filter(c=>c.q===chave);
-   if(!g.length) continue;
-   h+=`<h2>${titulo}</h2>`;
-   for(const c of g) h+=item(c);
- }
- a.innerHTML=h;
- a.querySelectorAll('.circ').forEach(b=>b.addEventListener('click',()=>select(b.dataset.id)));
+function desenha(fase, pav){
+  let g = pav==='t' ? baseT() : baseS();
+  for(const c of SET[fase]){
+    for(const r of (c.rts||[])) if(r.f===pav) g += `<path d="${r.d}" class="rt" data-c="${c.id}"/>`;
+    for(const p of c.pts)       if(p.f===pav) g += ptG(c,p);
+  }
+  document.getElementById(`pl-${fase}-${pav}`).innerHTML =
+    `<svg viewBox="${VB}" xmlns="http://www.w3.org/2000/svg">${g}</svg>`;
 }
-function item(c){
- const flag = c.dr ? (FASE==='ele' ? ' · DR 30mA' : ' · ⚠ RADIER — sem retorno') : '';
- return `<button class="circ" data-id="${c.id}">${c.id} · ${c.nome}<small>${c.v} · ${c.disj} · ${c.cabo}${flag}</small></button>`;
+function coluna(fase, pav){
+  const flag = c => c.dr ? (fase==='ele' ? ' · <span class="flag">DR</span>' : ' · <span class="flag">RADIER</span>') : '';
+  let h = `<button class="circ todos on" data-f="${fase}" data-id="ALL"><b>TODOS OS CIRCUITOS</b>`+
+          `<small>clique para isolar um circuito</small></button>`;
+  for(const [k,t] of GRUPOS[fase]){
+    const g = SET[fase].filter(c=>c.q===k);
+    if(!g.length) continue;
+    h += `<h2>${t}</h2>`;
+    for(const c of g){
+      const n = c.pts.filter(p=>p.f===pav).length;
+      h += `<button class="circ" data-f="${fase}" data-id="${c.id}"><b>${c.id} · ${c.nome}</b>`+
+           `<small>${c.disj} · ${c.cabo}${flag(c)}${n?` · ${n} pt`:' · —'}</small></button>`;
+    }
+  }
+  const el = document.getElementById(`cl-${fase}-${pav}`);
+  el.innerHTML = h;
+  el.querySelectorAll('.circ').forEach(b => b.addEventListener('click', () => isolar(fase, b.dataset.id)));
 }
-function select(id){
- document.querySelectorAll('.circ').forEach(b=>b.classList.toggle('on',b.dataset.id===id));
- document.querySelectorAll('[data-c]').forEach(el=>{
-   el.classList.toggle('dim', id!=='ALL' && el.dataset.c!==id);
- });
- const i=document.getElementById('info');
- if(id==='ALL'){
-  const resumo = FASE==='ele'
-    ? `${CIRC.length} circuitos · QDC lavanderia + QDCA técnica`
-    : `${CIRC_HID.length} circuitos · água fria/quente, esgoto e pluvial`;
-  i.innerHTML=`<b>${FASE==='ele'?'ELÉTRICA':'HIDRÁULICA'} — TODOS OS CIRCUITOS</b><span>${resumo}</span><span>selecione um circuito à esquerda para isolar os pontos dele nas plantas</span>`;
- }else{
-  const c=dados().find(c=>c.id===id);
-  const tag = c.dr ? (FASE==='ele' ? '<span class="tagdr">DR 30mA</span>' : '<span class="tagdr">PONTO SEM RETORNO — RADIER</span>') : '';
-  i.innerHTML=`<b>${c.id} — ${c.nome}</b><span>${c.q}</span><span>${c.v} · ${c.disj} · ${c.cabo}</span>${tag}<span>${c.pts.length} ponto(s)</span>`;
- }
+function tabela(fase){
+  const cab = fase==='ele'
+    ? ['#','Circuito','Tensão','Disj.','Cabo','DR','Pts']
+    : ['#','Circuito','Sistema','Bitola','Material','Radier','Pts'];
+  let h = `<table><thead><tr>${cab.map(x=>`<th>${x}</th>`).join('')}</tr></thead><tbody>`;
+  for(const [k,t] of GRUPOS[fase]){
+    const g = SET[fase].filter(c=>c.q===k);
+    if(!g.length) continue;
+    h += `<tr class="grupo"><td colspan="7">${t}</td></tr>`;
+    for(const c of g)
+      h += `<tr><td class="n">${c.id}</td><td>${c.nome}</td><td>${c.v}</td><td>${c.disj}</td>`+
+           `<td>${c.cabo}</td><td class="c">${c.dr?'●':'—'}</td><td class="c">${c.pts.length}</td></tr>`;
+  }
+  document.getElementById(`tb-${fase}`).innerHTML = h + '</tbody></table>';
+}
+function isolar(fase, id){
+  sel[fase] = id;
+  document.querySelectorAll(`.circ[data-f="${fase}"]`)
+          .forEach(b => b.classList.toggle('on', b.dataset.id===id));
+  document.querySelectorAll(`[data-fase="${fase}"] [data-c]`).forEach(el => {
+    const meu = el.dataset.c === id;
+    el.classList.toggle('dim', id!=='ALL' && !meu);
+    el.classList.toggle('hit', id!=='ALL' && meu);
+  });
+}
+for(const fase of ['ele','hid']){
+  for(const pav of ['t','s']){ desenha(fase,pav); coluna(fase,pav); }
+  tabela(fase);
 }
 
-/* ============ TROCA DE FASE ============ */
-function fase(f){
- FASE=f;
- document.getElementById('tabEle').classList.toggle('on', f==='ele');
- document.getElementById('tabHid').classList.toggle('on', f==='hid');
- document.querySelector('header h1').textContent = f==='ele' ? 'CIRCUITOS' : 'HIDRÁULICA';
- render(); lista(); select('ALL');
-}
-document.getElementById('tabEle').addEventListener('click',()=>fase('ele'));
-document.getElementById('tabHid').addEventListener('click',()=>fase('hid'));
+document.getElementById('btn-pdf').addEventListener('click', async function(){
+  const btn = this; btn.disabled = true; btn.textContent = 'Gerando…';
+  document.body.classList.add('pdfmode');
+  await new Promise(r => setTimeout(r, 300));
+  try {
+    const pdf = new jspdf.jsPDF({ unit:'mm', format:'a4', orientation:'portrait' });
+    const folhas = document.querySelectorAll('.sheet');
+    for (let i=0; i<folhas.length; i++){
+      const canvas = await html2canvas(folhas[i], { scale:2, backgroundColor:'#ffffff', logging:false });
+      if (i>0) pdf.addPage();
+      pdf.addImage(canvas.toDataURL('image/jpeg',0.92), 'JPEG', 0, 0, 210, 297);
+      btn.textContent = 'Gerando… ' + (i+1) + '/' + folhas.length;
+    }
+    pdf.save('residencia-q22-l8-instalacoes.pdf');
+  } catch(e){ alert('Falha ao gerar o PDF: ' + e.message); }
+  document.body.classList.remove('pdfmode');
+  btn.disabled = false; btn.textContent = '⎙ Baixar PDF (A4)';
+});
 
-render();lista();select('ALL');
 </script>
 </body>
 </html>
