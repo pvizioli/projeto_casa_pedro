@@ -60,6 +60,18 @@ O site fica em `https://SEU_USUARIO.github.io/projeto_casa_pedro/`.
   item, a mais barata fica verde.
 - **Comparativo**: faixa estimada por etapa vs. custo real/cotado.
 
+## Circuitos (elétrica + hidráulica)
+
+`circuitos.html` — visualizador interativo de circuitos sobre as plantas dos dois pavimentos.
+Clique num circuito da lista para isolar os pontos dele; a aba alterna entre **ELÉTRICA**
+(25 circuitos: QDC lavanderia + QDCA técnica) e **HIDRÁULICA** (13 circuitos: água fria/quente,
+esgoto e pluvial).
+
+Para editar: os dados ficam nos arrays `CIRC` (elétrica) e `CIRC_HID` (hidráulica) dentro do
+próprio arquivo. Cada ponto é `{f:'t'|'s', x, y, s:símbolo, l:rótulo}`; `rts` são os trechos
+de eletroduto/tubulação desenhados. Circuitos com `dr:true` aparecem marcados — na elétrica
+como **DR 30 mA**, na hidráulica como **ponto sem retorno (radier)**.
+
 ## Planilha automática
 
 `planilha-q22-l8.xlsx` é **gerada pelo GitHub Actions**, nunca à mão.
