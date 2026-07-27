@@ -102,6 +102,8 @@ sist = [
     ('Cobertura', '3 treliças galvanizadas a fogo @3,25 m (banzos paralelos h=0,40, degrau triangulado) + terças Ue 100 · ~1,0 t'),
     ('Faixa NE (1,20)', 'Da fachada ao fundo: portinha (0,80) · Luz 1 = jardim de inverno c/ parede verde e janelão 3,50 (4,10) · PAREDE CEGA · Luz 2 = varal (4,10) · lavanderia + área técnica acima (4,00, único trecho coberto até a divisa)'),
     ('Fundação', 'Radier ~103 m²'),
+    ('Exaustão da ilha', 'Plenum no forro c/ 2 frestas lineares de 30 mm + luz integrada · 1.100 m³/h · duto Ø250 · motor inline REMOTO na área técnica (32-38 dB(A) na cozinha) · liga sozinho pelo consumo do circuito do Invisacook'),
+    ('Área técnica', 'ABERTA (sem porta, só portão-gradil) — garante ar para a bomba de calor · acesso por escada marinheiro na parede da Luz 2 · equipamentos em IP65'),
     ('Muro de divisa', 'Pré-moldado (placa de concreto) 210 m² — 2 laterais (30,00 m cada, SO/viela + NE/vizinho) + fundo (10,00 m, SE) · h=3,00 m · frente (NO) sem muro (condomínio fechado)'),
     ('Térreo — faixa SO', 'Lavabo 1,50 × 1,50 no canto da garagem c/ o corredor (janela p/ o corredor) · despensa (1,50 × 1,10) + bancada + banheiro completo (1,50 × 2,50, sem box) no fundo, porta ÚNICA p/ a área gourmet'),
 ]
@@ -239,6 +241,8 @@ revs = [
     ('19/07/2026', 'Cantoneira de PVC c/ abas de tela especificada para TODOS os cantos externos e vãos (321 m)', 'Padroniza o arremate em Monolev e Lightwall · alumínio descartado em massa cimentícia (corrosão alcalina) · ~R$ 1,6-2,6 mil, dentro da etapa 4'),
     ('19/07/2026', 'Auditoria de orientação das folhas: planta e elevações conferidas e coerentes; marcadores NE/SO adicionados nas elevações', 'A elevação da rua é espelhada por convenção (NE à esquerda, SO à direita) — agora indicado na própria folha'),
     ('19/07/2026', 'Janelão da escada corrigido para 3,20 x 4,70 m (havia 3 valores divergentes: 3,18 na planta, 2,40 na elevação, 2,20 no catálogo)', 'Vidro 10,5 -> 15 m² · impacto na etapa 7 (esquadrias)'),
+    ('24/07/2026', 'Exaustão da ilha: plenum embutido no forro c/ 2 frestas de 30 mm + luz linear integrada; motor inline remoto na área técnica; automação pelo consumo do circuito do Invisacook', '1.100 m³/h @ 200 Pa · duto Ø250 (v=6,2 m/s) · 32-38 dB(A) na cozinha · NOVO PONTO SEM RETORNO: furo Ø250 na laje da técnica (etapa 5)'),
+    ('24/07/2026', 'Área técnica passa a ser ABERTA (sem porta, portão-gradil) c/ escada marinheiro na parede da Luz 2', 'Garante ar para a bomba de calor (11,5 m³ fechados seriam insuficientes; fabricantes exigem 15-20 m³ ou ventilação permanente) · exige equipamentos IP65'),
 ]
 for i, (d, a, imp) in enumerate(revs):
     corpo(ws, 3 + i, [d, a, imp])

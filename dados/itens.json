@@ -1660,6 +1660,83 @@
       "id": "IT151",
       "tipo": "material",
       "etapa": 4
+    },
+    {
+      "categoria": "Climatização",
+      "item": "Exaustão da ilha — plenum embutido no forro c/ 2 frestas lineares",
+      "especificacao": "plenum 1,40×0,90 no forro rebaixado sobre a ilha · 2 frestas de 30 mm × 2,60 m (uma de cada lado do painel de luz) · v=2,0 m/s · painel central removível p/ acesso aos filtros",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "iluminação linear da ilha integrada entre as frestas — um só elemento faz luz e exaustão · desligada, lê-se como junta negativa no forro",
+      "id": "IT152",
+      "tipo": "material",
+      "etapa": 12
+    },
+    {
+      "categoria": "Climatização",
+      "item": "Motor inline remoto Ø250 + duto e filtros da exaustão",
+      "especificacao": "1.100 m³/h @ 200 Pa (~155 W de eixo) · duto liso Ø250 galv./inox ~10 m · 4 curvas · filtro de gordura metálico lavável · damper antirretorno · descarga em veneziana",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "motor instalado na ÁREA TÉCNICA (~8 m da ilha, 2 lajes de permeio): 32-38 dB(A) na cozinha vs 55-65 de coifa convencional · v no duto 6,2 m/s (silencioso) · descarga afastada ≥3 m do vidro da suíte e da janela do quarto",
+      "id": "IT153",
+      "tipo": "material",
+      "etapa": 12
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Automação da exaustão — medidor no circuito do Invisacook + sensor de VOC/umidade",
+      "especificacao": "medidor de energia c/ TC no circuito C13 (40 A) + sensor VOC/umidade no forro da cozinha + atuador de velocidade do inline · integração Home Assistant",
+      "unidade": "cj",
+      "quantidade": 1,
+      "obs": "o Invisacook não tem botão nem presença — ninguém lembra de ligar a coifa · lógica: potência>200 W no C13 → exaustão em baixa; VOC/umidade escalona; desliga 10 min após o fim · >50% abre a janela da Luz 2 (ar de reposição)",
+      "id": "IT154",
+      "tipo": "material",
+      "etapa": 9
+    },
+    {
+      "categoria": "Mão de obra",
+      "item": "Mão de obra — exaustão da ilha (plenum, dutos, motor e comissionamento)",
+      "especificacao": "montagem do plenum no forro, dutos, motor inline, balanceamento e medição de vazão",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": null,
+      "id": "IT155",
+      "tipo": "mao_obra",
+      "etapa": 12
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Portão-gradil da área técnica (sem porta — vão aberto p/ ventilação)",
+      "especificacao": "gradil metálico galvanizado c/ fechadura · vão ~1,20 × 2,00 · área técnica permanece ABERTA (sem folha cega)",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "CRÍTICO p/ a bomba de calor: BC AQS consome 250-400 m³/h e devolve o ar 4-6 °C mais frio · recinto de 11,5 m³ fechado faria o COP despencar (fabricantes exigem 15-20 m³ ou ventilação permanente) · aberta = ar infinito, COP nominal preservado · bônus: vazamento drena p/ fora, calor do rack dissipa",
+      "id": "IT156",
+      "tipo": "material",
+      "etapa": 12
+    },
+    {
+      "categoria": "Geral / Estrutura",
+      "item": "Escada marinheiro de acesso à área técnica",
+      "especificacao": "metálica galvanizada · h=3,00 m · 10 degraus @0,30 · largura 0,40 · afastamento ≥0,15 da parede · prolongamento de 1,00 m acima do piso da técnica",
+      "unidade": "un",
+      "quantidade": 1,
+      "obs": "fixada na parede da Luz 2 (varal) — acesso pelo pátio descoberto, sem entrar na casa · residencial não obriga gaiola (NR-35 é p/ ambiente de trabalho), mas o prolongamento + corrimão de apoio é o mínimo sensato",
+      "id": "IT157",
+      "tipo": "material",
+      "etapa": 12
+    },
+    {
+      "categoria": "Elétrica + Automação",
+      "item": "Proteção IP dos equipamentos da área técnica aberta",
+      "especificacao": "QDCA em quadro IP65 · rack de rede fechado c/ ventilação filtrada · tomadas IP54 · terminais protegidos",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "consequência de manter a técnica aberta: chuva de vento e maresia urbana atingem os equipamentos · custo pequeno perto do ganho de COP da bomba de calor",
+      "id": "IT158",
+      "tipo": "material",
+      "etapa": 9
     }
   ]
 }
