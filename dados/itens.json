@@ -101,11 +101,11 @@
     },
     {
       "categoria": "Geral / Estrutura",
-      "item": "Rufos, calhas e arremates do lanternim",
-      "especificacao": null,
+      "item": "Rufos e arremates — oitões, chaminé e lanternim",
+      "especificacao": "chapa galvanizada #24 (0,65 mm) ou alumínio · dobra ≥150 mm na parede e ≥200 mm sobre a telha, com pingadeira",
       "unidade": "vb",
       "quantidade": 1,
-      "obs": "ponto crítico de estanqueidade",
+      "obs": "ponto crítico de estanqueidade · lanternim tem rufo de topo E de base (ver F-09) · calhas em item próprio",
       "id": "IT010",
       "tipo": "material",
       "etapa": 6
@@ -1737,6 +1737,72 @@
       "id": "IT158",
       "tipo": "material",
       "etapa": 9
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Calhas retangulares 150 × 100 mm — 2 bordas longas",
+      "especificacao": "chapa galvanizada #24 (0,65 mm) ou alumínio · declividade 0,5% para o fundo (SE) · suportes a cada 0,80 m · grelha folha-guarda",
+      "unidade": "m",
+      "quantidade": 26,
+      "obs": "capacidade 443 L/min vs 169 L/min da calha mais carregada (folga 2,6×) · I=172 mm/h São Paulo T=5 anos · ver F-13",
+      "id": "IT159",
+      "tipo": "material",
+      "etapa": 6
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Condutores verticais Ø100 + coletor pluvial até a cisterna",
+      "especificacao": "2 descidas Ø100 (capacidade ~430 L/min cada) no fundo SE + coletor Ø100 i=1% ao longo da parede do fundo",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "as duas calhas caem para o fundo → descidas chegam juntas na cisterna, sem coletor atravessando o quintal",
+      "id": "IT160",
+      "tipo": "material",
+      "etapa": 6
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Cisterna de água de chuva 5.000 L + filtro + descarte de primeira chuva",
+      "especificacao": "reservatório 5.000 L · filtro de malha 1 mm · dispositivo de first flush 216 L (2 mm × 108 m²) c/ dreno lento · extravasor com sifão e tela",
+      "unidade": "cj",
+      "quantidade": 1,
+      "obs": "NBR 15527 · potencial de captação 121 m³/ano (108 m² × 1.470 mm × 0,85 × 0,90) · autonomia 28 dias (irrigação+lavagem) ou 16 dias se alimentar vasos · POSIÇÃO A CONFIRMAR: parede do fundo SE, junto ao canto com o corredor SO",
+      "id": "IT161",
+      "tipo": "material",
+      "etapa": 8
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Rede de água não potável + bomba da cisterna",
+      "especificacao": "bomba/pressurizador dedicado · tubulação em cor distinta (roxa) · placas \"ÁGUA NÃO POTÁVEL\" em todos os pontos de uso · pontos: parede verde, jardim frontal, quintal, torneiras de lavagem",
+      "unidade": "vb",
+      "quantidade": 1,
+      "obs": "SEPARAÇÃO ABSOLUTA da rede potável — sem interligação nem registro de emergência (NBR 15527) · mesma bomba alimenta a irrigação da parede verde, que já tinha ponto de água previsto",
+      "id": "IT162",
+      "tipo": "material",
+      "etapa": 8
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Caixa de gordura DUPLA (120 L, Ø600) + 3 caixas de inspeção 60×60",
+      "especificacao": "CG dupla recebendo cozinha + área gourmet · caixas de inspeção em mudanças de direção e a cada ≤25 m",
+      "unidade": "cj",
+      "quantidade": 1,
+      "obs": "a caixa simples (31 L) atende só 1 cozinha — a casa tem cozinha + pia do gourmet · CG recebe SÓ pias, nunca vaso · posicionar em local de acesso fácil (limpeza trimestral)",
+      "id": "IT163",
+      "tipo": "material",
+      "etapa": 8
+    },
+    {
+      "categoria": "Hidráulica",
+      "item": "Reserva potável 3.000 L NO SOLO + pressurizador com inversor",
+      "especificacao": "reservatório 3.000 L no solo (enterrado ou aparente) · pressurizador com inversor (pressão constante) · alimenta manifolds da área técnica",
+      "unidade": "cj",
+      "quantidade": 1,
+      "obs": "SUBSTITUI a caixa elevada: 1.000 L na laje da técnica = 1.630 kg em 4,8 m² = 340 kgf/m², contra 150 da NBR 6120 · no solo, a laje fica com 630 kg (131 kgf/m²) e a autonomia vai de 33 h para 100 h · contrapartida: sem energia não há água — avaliar caixa de 500 L de emergência (sobe p/ 235 kgf/m², exige reforço local) ou nobreak para o pressurizador",
+      "id": "IT164",
+      "tipo": "material",
+      "etapa": 8
     }
   ]
 }

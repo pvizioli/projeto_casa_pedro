@@ -104,6 +104,9 @@ sist = [
     ('Fundação', 'Radier ~103 m²'),
     ('Exaustão da ilha', 'Plenum no forro c/ 2 frestas lineares de 30 mm + luz integrada · 1.100 m³/h · duto Ø250 · motor inline REMOTO na área técnica (32-38 dB(A) na cozinha) · liga sozinho pelo consumo do circuito do Invisacook'),
     ('Área técnica', 'ABERTA (sem porta, só portão-gradil) — garante ar para a bomba de calor · acesso por escada marinheiro na parede da Luz 2 · equipamentos em IP65'),
+    ('Pluviais', 'Calhas retangulares 150×100 nas 2 bordas longas (i=0,5% p/ o fundo) + 2 condutores Ø100 · I=172 mm/h · 108 m² de captação · rufos em chapa galv. #24'),
+    ('Cisterna', 'Água de chuva 5.000 L na parede do fundo (SE) c/ first flush de 216 L e filtro · 121 m³/ano de potencial · rede não potável separada, em tubo roxo'),
+    ('Reservação potável', 'NO SOLO (3.000 L) + pressurizador com inversor — a caixa elevada na área técnica daria 340 kgf/m² contra 150 da NBR 6120'),
     ('Muro de divisa', 'Pré-moldado (placa de concreto) 210 m² — 2 laterais (30,00 m cada, SO/viela + NE/vizinho) + fundo (10,00 m, SE) · h=3,00 m · frente (NO) sem muro (condomínio fechado)'),
     ('Térreo — faixa SO', 'Lavabo 1,50 × 1,50 no canto da garagem c/ o corredor (janela p/ o corredor) · despensa (1,50 × 1,10) + bancada + banheiro completo (1,50 × 2,50, sem box) no fundo, porta ÚNICA p/ a área gourmet'),
 ]
@@ -242,6 +245,8 @@ revs = [
     ('19/07/2026', 'Auditoria de orientação das folhas: planta e elevações conferidas e coerentes; marcadores NE/SO adicionados nas elevações', 'A elevação da rua é espelhada por convenção (NE à esquerda, SO à direita) — agora indicado na própria folha'),
     ('19/07/2026', 'Janelão da escada corrigido para 3,20 x 4,70 m (havia 3 valores divergentes: 3,18 na planta, 2,40 na elevação, 2,20 no catálogo)', 'Vidro 10,5 -> 15 m² · impacto na etapa 7 (esquadrias)'),
     ('24/07/2026', 'Exaustão da ilha: plenum embutido no forro c/ 2 frestas de 30 mm + luz linear integrada; motor inline remoto na área técnica; automação pelo consumo do circuito do Invisacook', '1.100 m³/h @ 200 Pa · duto Ø250 (v=6,2 m/s) · 32-38 dB(A) na cozinha · NOVO PONTO SEM RETORNO: furo Ø250 na laje da técnica (etapa 5)'),
+    ('27/07/2026', 'Hidrossanitário dimensionado e desenhado (F-11 água, F-12 esgoto, F-13 pluvial/cisterna)', 'Esgoto 50 UHC (Ø100 c/ folga de 4×) · caixa de gordura DUPLA · calhas 150×100 · cisterna 5.000 L · 3 folhas novas no caderno (13 no total)'),
+    ('27/07/2026', 'Reservação potável migra da laje da área técnica para o SOLO, com pressurizador', 'Caixa de 1.000 L na técnica = 340 kgf/m² (NBR 6120: 150) · no solo a laje fica em 131 kgf/m² e a autonomia sobe de 33 h para 100 h'),
     ('24/07/2026', 'Área técnica passa a ser ABERTA (sem porta, portão-gradil) c/ escada marinheiro na parede da Luz 2', 'Garante ar para a bomba de calor (11,5 m³ fechados seriam insuficientes; fabricantes exigem 15-20 m³ ou ventilação permanente) · exige equipamentos IP65'),
 ]
 for i, (d, a, imp) in enumerate(revs):
