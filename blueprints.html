@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Residência Q22-L8 — Estudo Preliminar (Blueprint)</title>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   @page { size: A4 portrait; margin: 0; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -33,13 +33,13 @@
   .frame::after { content:""; position:absolute; inset:1.4mm; border:0.4px solid rgba(220,235,255,0.4); }
   .head { position:relative; padding:14mm 16mm 4mm; display:flex; justify-content:space-between; align-items:baseline; }
   .head .kicker { font-size:8.5pt; letter-spacing:3px; color:var(--bp-dim); text-transform:uppercase; }
-  .head h1 { font-family:'Saira Condensed',sans-serif; font-weight:700; font-size:24pt; letter-spacing:2.5px; text-transform:uppercase; line-height:1.05; }
-  .head .folha-tag { font-family:'Saira Condensed',sans-serif; font-size:30pt; font-weight:700; color:rgba(220,235,255,0.28); letter-spacing:2px; }
+  .head h1 { font-family:'Archivo',sans-serif; font-weight:700; font-size:24pt; letter-spacing:2.5px; text-transform:uppercase; line-height:1.05; }
+  .head .folha-tag { font-family:'Archivo',sans-serif; font-size:30pt; font-weight:700; color:rgba(220,235,255,0.28); letter-spacing:2px; }
   .drawing { position:relative; flex:1; min-height:0; }
   .drawing > svg { position:absolute; top:2mm; left:10mm;
     width:calc(100% - 20mm); height:calc(100% - 4mm); }
   svg text { font-family:'IBM Plex Mono',monospace; fill:var(--bp-line); }
-  svg .ttl { font-family:'Saira Condensed',sans-serif; letter-spacing:1.5px; }
+  svg .ttl { font-family:'Archivo',sans-serif; letter-spacing:1.5px; }
   .carimbo { position:relative; margin:0 8mm 8mm; border:1.2px solid var(--bp-line);
     display:grid; grid-template-columns:2.2fr 1.2fr 1fr 1fr 1.1fr; font-size:6.6pt; background:rgba(9,41,71,0.6); }
   .carimbo > div { padding:2.2mm 3mm; border-left:0.6px solid rgba(220,235,255,0.45); }
@@ -49,17 +49,38 @@
   .disclaimer { position:absolute; bottom:2.6mm; left:0; right:0; text-align:center; font-size:5.4pt; letter-spacing:1.8px; color:rgba(220,235,255,0.45); text-transform:uppercase; }
 
   /* ===== IMPRESSÃO EM PDF — A4, fundo branco, linhas azul-escuro ===== */
+
+  /* ---------- navegador de folhas (só na tela) ---------- */
+  .indice{
+    position:fixed; left:16px; top:50%; transform:translateY(-50%); z-index:98;
+    display:flex; flex-direction:column; gap:3px;
+    background:rgba(9,41,71,.92); border:1px solid rgba(220,235,255,.45);
+    padding:8px 7px; box-shadow:0 4px 20px rgba(0,0,0,.45);
+  }
+  .indice a{
+    display:block; font-family:'IBM Plex Mono',monospace; font-size:9.5px; font-weight:500;
+    letter-spacing:.06em; color:rgba(220,235,255,.62); text-decoration:none;
+    padding:3px 6px; border-left:2px solid transparent; transition:color .15s, border-color .15s, background .15s;
+  }
+  .indice a:hover{color:#fff; background:rgba(220,235,255,.10)}
+  .indice a.aqui{color:#FFD166; border-left-color:#FFD166; background:rgba(255,209,102,.10)}
+  .indice .grupo{
+    font-family:'IBM Plex Mono',monospace; font-size:7.5px; letter-spacing:.18em;
+    color:rgba(143,193,238,.75); text-transform:uppercase; padding:5px 6px 2px; white-space:nowrap;
+  }
+  .indice .grupo:first-child{padding-top:0}
+  @media (max-width:900px){ .indice{display:none} }
   .btn-home { position:fixed; left:16px; top:16px; z-index:99; text-decoration:none;
-    font-family:'Saira Condensed',sans-serif; font-size:14px; font-weight:600;
+    font-family:'Archivo',sans-serif; font-size:14px; font-weight:600;
     letter-spacing:2px; text-transform:uppercase; background:var(--bp-line); color:var(--bp-blue);
     border:none; padding:10px 18px; cursor:pointer; box-shadow:0 2px 12px rgba(0,0,0,.45); }
   .btn-home:hover { background:#fff; }
   .btn-print { position:fixed; right:16px; bottom:16px; z-index:99;
-    font-family:'Saira Condensed',sans-serif; font-size:15px; font-weight:600;
+    font-family:'Archivo',sans-serif; font-size:15px; font-weight:600;
     letter-spacing:2px; text-transform:uppercase; background:#FFD166; color:#0E3A6B;
     border:none; padding:12px 22px; cursor:pointer; box-shadow:0 2px 12px rgba(0,0,0,.45); }
   @media print {
-    .btn-print, .btn-home { display:none !important; }
+    .btn-print, .btn-home, .indice { display:none !important; }
     .sheet { width:190mm; height:272mm; margin:0 auto;
              page-break-inside:avoid; break-inside:avoid; }
     .head { padding:9mm 11mm 3mm; }
@@ -95,7 +116,7 @@
 
   /* ===== MODO PDF (aplicado via JS durante a geração) ===== */
   body.pdfmode { background:#fff; }
-  body.pdfmode .btn-home { display:none; }
+  body.pdfmode .btn-home, body.pdfmode .indice { display:none; }
   body.pdfmode .sheet { width:210mm; height:296mm; margin:0; border:none;
     background:#fff !important; }
   body.pdfmode .sheet::before { background-image:
@@ -1793,6 +1814,49 @@
   </footer>
   <div class="disclaimer">Pré-dimensionamento indicativo — sem valor executivo · sujeito a projeto hidrossanitário (NBR 5626 / 8160 / 10844 / 15527)</div>
 </section>
+<nav class="indice" aria-label="Índice de folhas">
+    <span class="grupo">arquitetura</span>
+    <a href="#f01" data-f="01" title="F-01 · Implantação">F·01</a>
+    <a href="#f02" data-f="02" title="F-02 · Térreo">F·02</a>
+    <a href="#f03" data-f="03" title="F-03 · Superior">F·03</a>
+    <a href="#f04" data-f="04" title="F-04 · Corte AA">F·04</a>
+    <a href="#f05" data-f="05" title="F-05 · Elev. NO">F·05</a>
+    <a href="#f06" data-f="06" title="F-06 · Elev. SE">F·06</a>
+    <span class="grupo">estrutura</span>
+    <a href="#f07" data-f="07" title="F-07 · Telhado">F·07</a>
+    <a href="#f08" data-f="08" title="F-08 · Terças">F·08</a>
+    <a href="#f09" data-f="09" title="F-09 · Treliças">F·09</a>
+    <span class="grupo">instalações</span>
+    <a href="#f11" data-f="11" title="F-11 · Água">F·11</a>
+    <a href="#f12" data-f="12" title="F-12 · Esgoto">F·12</a>
+    <a href="#f13" data-f="13" title="F-13 · Pluvial">F·13</a>
+    <span class="grupo">anexo</span>
+    <a href="#f10" data-f="10" title="F-10 · Notas">F·10</a>
+</nav>
+<script>
+(function(){
+  // dá um id a cada folha, na ordem em que aparecem
+  var folhas = document.querySelectorAll('.sheet');
+  folhas.forEach(function(s){
+    var tag = s.querySelector('.folha-tag');
+    if(!tag) return;
+    var n = tag.textContent.replace(/\D/g,'');
+    s.id = 'f' + n;
+  });
+  var links = {};
+  document.querySelectorAll('.indice a').forEach(function(a){ links[a.dataset.f] = a; });
+  if(!('IntersectionObserver' in window)) return;
+  var obs = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var n = e.target.id.replace('f','');
+      Object.values(links).forEach(function(a){ a.classList.remove('aqui'); });
+      if(links[n]) links[n].classList.add('aqui');
+    });
+  }, { rootMargin:'-45% 0px -45% 0px' });
+  folhas.forEach(function(s){ obs.observe(s); });
+})();
+</script>
 <a class="btn-home" href="index.html">← Painel de Obra</a>
 
 

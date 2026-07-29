@@ -58,9 +58,49 @@ function renderResumo() {
       <div class="celula"><span class="lbl">Cotado / contratado</span><span class="val amber">${R$(real)}</span></div>
       <div class="celula"><span class="lbl">Etapas concluídas</span><span class="val green">${concluidas} / ${et.length}</span></div>
       <div class="celula"><span class="lbl">Cotações registradas</span><span class="val cyan">${COTS.cotacoes.length}</span></div>
-    </div>
-    <div class="barra"><div class="preenchido" style="width:${prog.toFixed(1)}%"></div>
-      <div class="rotulo">AVANÇO GERAL ${prog.toFixed(1)}% (ponderado por custo)</div></div>`;
+    </div>`;
+  renderRegua(prog);
+}
+
+/* ---------- RÉGUA DE OBRA ----------
+   Uma faixa só, dividida nas 13 etapas: a largura de cada segmento é o peso
+   da etapa no orçamento; o preenchimento é o avanço dela. Clicar abre a etapa. */
+function renderRegua(prog) {
+  const alvo = el('regua');
+  if (!alvo) return;
+  const et = ETAPAS.etapas;
+  const STATUS = { nao_iniciada:'não iniciada', em_andamento:'em andamento', concluida:'concluída' };
+  alvo.innerHTML = et.map(e => {
+    const peso = (e.estimativa_baixa + e.estimativa_alta) / 2;
+    const dica = `${String(e.id).padStart(2,'0')} · ${e.nome}\n${R$(e.estimativa_baixa)} – ${R$(e.estimativa_alta)}\n${STATUS[e.status]} · ${e.progresso}%`;
+    return `<button class="regua-seg" role="listitem" style="flex-grow:${peso}"
+              data-id="${e.id}" data-status="${e.status}" data-prog="${e.progresso}"
+              title="${dica}" aria-label="${dica.replace(/\n/g,' — ')}">
+              <span class="regua-fill"></span>
+              <span class="regua-num">${String(e.id).padStart(2,'0')}</span>
+            </button>`;
+  }).join('');
+  const pct = el('regua-pct');
+  if (pct) pct.textContent = prog.toFixed(1).replace('.', ',') + '%';
+
+  // preenchimento entra em cascata, na ordem da obra
+  requestAnimationFrame(() => {
+    alvo.querySelectorAll('.regua-seg').forEach((s, i) => {
+      const f = s.querySelector('.regua-fill');
+      setTimeout(() => { f.style.width = s.dataset.prog + '%'; }, i * 45);
+    });
+  });
+
+  alvo.querySelectorAll('.regua-seg').forEach(s => s.addEventListener('click', () => {
+    trocarAba('etapas');
+    const card = document.querySelector(`.etapa[data-id="${s.dataset.id}"]`);
+    if (card) {
+      card.scrollIntoView({ behavior:'smooth', block:'center' });
+      card.style.transition = 'border-color .2s';
+      card.style.borderColor = 'var(--ambar)';
+      setTimeout(() => { card.style.borderColor = ''; }, 1400);
+    }
+  }));
 }
 
 /* ---------- etapas ---------- */

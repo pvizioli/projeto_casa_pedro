@@ -4,43 +4,69 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Q22·L8 — Painel de Obra</title>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#1A1F24">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
 <div class="wrap">
 
-  <header class="carimbo">
+  <header class="topo-pag">
     <div>
-      <div class="kicker">Residência Unifamiliar — Quadra 22 · Lote 8</div>
-      <h1>Painel de Obra</h1>
+      <div class="eyebrow">Residência unifamiliar · Quadra 22 · Lote 8 · São Paulo</div>
+      <h1>Painel de <em>obra</em></h1>
     </div>
-    <div class="tag">Q22·L8</div>
+    <div class="selo">
+      <b>7,30 × 13,00 m</b>
+      183 m² · 13 etapas<br>
+      administração direta
+    </div>
   </header>
 
   <div id="token-aviso" class="token-aviso">
-    ⚠ Sem token configurado: o painel abre em modo leitura. Para salvar avanço e cotações
-    direto no repositório, clique em <strong>Token</strong> e cole seu Personal Access Token.
+    Modo leitura. Para gravar avanço e cotações direto no repositório, clique em
+    <strong>Token</strong> e cole seu Personal Access Token do GitHub.
   </div>
+
+  <!-- RÉGUA DE OBRA — largura de cada etapa = peso no orçamento · preenchimento = avanço -->
+  <section class="regua-bloco">
+    <div class="regua-cab">
+      <span class="titulo">Régua de obra — 13 etapas, largura proporcional ao custo</span>
+      <span class="pct" id="regua-pct">—</span>
+    </div>
+    <div class="regua" id="regua" role="list"></div>
+    <div class="regua-legenda">
+      <span><i></i>não iniciada</span>
+      <span class="a"><i></i>em andamento</span>
+      <span class="c"><i></i>concluída</span>
+      <span class="regua-dica">clique numa etapa para abri-la</span>
+    </div>
+  </section>
+
+  <div id="resumo"></div>
 
   <nav>
     <button data-aba="etapas" class="ativo">Etapas</button>
     <button data-aba="cotacoes">Cotações</button>
     <button data-aba="comparativo">Comparativo</button>
-    <a class="btn-blueprints" href="blueprints.html">Blueprints F-01–10 ↗</a>
-    <a class="btn-blueprints" href="circuitos.html">⚡ Circuitos ↗</a>
-    <a class="btn-blueprints" id="link-planilha" href="planilha-q22-l8.xlsx" download title="Planilha de custos (.xlsx)">⤓ Planilha</a>
-    <button id="btn-token" style="margin-left:auto">Token</button>
+    <span class="externos">
+      <a class="btn-blueprints" href="blueprints.html">Pranchas F-01–13</a>
+      <a class="btn-blueprints" href="circuitos.html">Instalações</a>
+      <a class="btn-blueprints" id="link-planilha" href="planilha-q22-l8.xlsx" download title="Planilha de custos (.xlsx)">Planilha</a>
+      <button id="btn-token">Token</button>
+    </span>
   </nav>
-
-  <div class="painel" id="resumo">Carregando…</div>
 
   <main>
     <section id="aba-etapas">
       <div class="painel">
-        <h2>Etapas da obra — 13 fases</h2>
+        <h2>Etapas da obra</h2>
+        <p class="painel-nota">Mova o avanço ou lance o custo real de cada etapa. Toda alteração
+          salva vira um commit em <code>dados/etapas.json</code> e regera a planilha.</p>
         <div id="lista-etapas"></div>
-        <button id="salvar-etapas" class="btn oculto">Salvar avanço no repositório</button>
+        <button id="salvar-etapas" class="btn oculto">Salvar avanço</button>
       </div>
     </section>
 
@@ -54,21 +80,23 @@
             <div class="campo"><label class="lbl" for="cot-etapa">Etapa vinculada</label>
               <select id="cot-etapa"></select></div>
           </div>
-          <div class="campo"><label class="lbl" for="cot-item">Item — 143 no catálogo (inclui projetos e mão de obra por etapa) <span id="cot-tipo" class="badge nao_iniciada">material</span></label>
-            <select id="cot-item"></select></div>
+          <div class="campo">
+            <label class="lbl" for="cot-item">Item do catálogo <span id="cot-tipo" class="badge">material</span></label>
+            <select id="cot-item"></select>
+          </div>
           <div class="linha-2">
-            <div class="campo"><label class="lbl" for="cot-fornecedor">Fornecedor / empreiteiro</label>
+            <div class="campo"><label class="lbl" for="cot-fornecedor">Fornecedor ou empreiteiro</label>
               <input id="cot-fornecedor" required placeholder="ex.: ISOCIL"></div>
             <div class="campo"><label class="lbl" for="cot-qtde">Quantidade</label>
               <input id="cot-qtde" type="number" step="0.01" min="0" required></div>
           </div>
           <div class="linha-2">
             <div class="campo"><label class="lbl" for="cot-preco">Preço unitário (R$)</label>
-              <input id="cot-preco" type="number" step="0.01" min="0" required placeholder="ex.: 220,00 → 220.00"></div>
+              <input id="cot-preco" type="number" step="0.01" min="0" required placeholder="220.00"></div>
             <div class="campo"><label class="lbl" for="cot-obs">Observação</label>
               <input id="cot-obs" placeholder="espessura, prazo, condição de pagamento…"></div>
           </div>
-          <button type="submit" id="btn-cotacao" class="btn">Salvar cotação (commit)</button>
+          <button type="submit" id="btn-cotacao" class="btn">Salvar cotação</button>
         </form>
       </div>
       <div class="painel">
@@ -79,10 +107,10 @@
 
     <section id="aba-comparativo" class="oculto">
       <div class="painel">
-        <h2>Cotado × Estimado por etapa</h2>
-        <p style="font-size:11.5px;color:var(--bp-dim);margin-bottom:12px">
-          Faixa azul = estimativa baixa–alta da planilha. Marcador âmbar = custo real da etapa
-          (o que você digitou na aba Etapas; se vazio, usa a soma das cotações vinculadas).</p>
+        <h2>Cotado × estimado</h2>
+        <p class="painel-nota">A faixa azul é a estimativa baixa–alta da planilha. O marcador âmbar
+          é o custo real da etapa — o que você digitou em Etapas ou, se estiver vazio, a soma das
+          cotações vinculadas.</p>
         <div id="comparativo"></div>
       </div>
     </section>
@@ -90,7 +118,7 @@
 
   <div class="rodape">Estudo preliminar · dados em dados/*.json · cada gravação = 1 commit</div>
 </div>
-<div id="msg" role="status"></div>
+<div id="msg" role="status" aria-live="polite"></div>
 <script src="js/github.js"></script>
 <script src="js/app.js"></script>
 </body>

@@ -1,118 +1,254 @@
-/* Residência Q22·L8 — painel de obra · estética blueprint (mesma família das folhas F-01–F-06) */
-:root {
-  --bp-blue:#0E3A6B; --bp-deep:#05192f; --bp-line:#DCEBFF; --bp-dim:#8FC1EE;
-  --bp-amber:#FFD166; --bp-green:#7FD4A6; --bp-cyan:#7FD4FF; --bp-panel:rgba(9,41,71,0.72);
+/* ============================================================
+   Q22·L8 — Painel de Obra
+   Paleta derivada dos materiais da casa: grafite (aço galvanizado),
+   cimento (Monolev), EPS (off-white), âmbar (o acento do caderno).
+   As pranchas (blueprints.html) mantêm o azul-cópia próprio.
+   ============================================================ */
+:root{
+  --grafite:#1A1F24;  --cimento:#232A31;  --cimento-alto:#2A323A;
+  --junta:#333C45;    --eps:#E7EAEC;      --zinco:#8496A3;
+  --ambar:#E5A23C;    --verde:#61A183;    --aco:#79A8C4;
+  --r:2px;
+  --s1:6px; --s2:10px; --s3:16px; --s4:24px; --s5:36px; --s6:56px;
 }
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--grafite); color:var(--eps);
+  font-family:'Archivo',system-ui,sans-serif; font-size:14px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+/* textura de concreto: ruído sutilíssimo + vinheta */
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.5;
   background:
-    linear-gradient(rgba(220,235,255,0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(220,235,255,0.045) 1px, transparent 1px),
-    linear-gradient(rgba(220,235,255,0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(220,235,255,0.08) 1px, transparent 1px),
-    radial-gradient(ellipse at 30% 0%, rgba(255,255,255,0.05), transparent 55%),
-    var(--bp-blue);
-  background-size:20px 20px,20px 20px,100px 100px,100px 100px,auto,auto;
-  color:var(--bp-line);
-  font-family:'IBM Plex Mono',monospace;
-  font-size:14px; line-height:1.5;
-  min-height:100vh;
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(133,150,163,.10), transparent 70%),
+    radial-gradient(ellipse 90% 60% at 100% 100%, rgba(229,162,60,.045), transparent 70%);
 }
-h1,h2,h3,.ttl { font-family:'Saira Condensed',sans-serif; text-transform:uppercase; letter-spacing:2px; }
-a { color:var(--bp-cyan); }
+.wrap{position:relative; z-index:1; max-width:1120px; margin:0 auto; padding:var(--s5) var(--s4) var(--s6)}
+a{color:inherit}
 
-.wrap { max-width:1100px; margin:0 auto; padding:20px 16px 80px; }
-
-/* carimbo de topo */
-header.carimbo {
-  border:1.5px solid var(--bp-line); background:var(--bp-panel);
-  display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline;
-  padding:14px 18px; margin-bottom:20px; gap:8px;
+/* ---------- tipografia ---------- */
+h1,h2,h3{font-family:'Archivo',sans-serif; font-weight:700; letter-spacing:-.02em; line-height:1.1}
+h1{font-size:clamp(30px,5vw,44px); font-weight:800; letter-spacing:-.035em}
+h2{font-size:15px; font-weight:700; letter-spacing:.01em}
+h3{font-size:14.5px; font-weight:600}
+.mono,.lbl,.num,.val,.faixa,.badge,td,th,.prog-val,.regua-num,.chip{font-family:'IBM Plex Mono',monospace}
+.lbl{
+  display:block; font-size:9.5px; font-weight:500; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--zinco); margin-bottom:var(--s1);
 }
-header .kicker { font-size:11px; letter-spacing:3px; color:var(--bp-dim); text-transform:uppercase; }
-header h1 { font-size:28px; font-weight:700; line-height:1.05; }
-header .tag { font-size:26px; font-weight:700; color:rgba(220,235,255,0.28); font-family:'Saira Condensed',sans-serif; letter-spacing:2px; }
-nav { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:20px; }
-nav button {
-  font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:1px; text-transform:uppercase;
-  background:transparent; color:var(--bp-dim); border:1px solid rgba(220,235,255,0.35);
-  padding:8px 14px; cursor:pointer;
+
+/* ---------- cabeçalho ---------- */
+.topo-pag{
+  display:flex; justify-content:space-between; align-items:flex-end;
+  gap:var(--s4); padding-bottom:var(--s3); margin-bottom:var(--s4);
+  border-bottom:1px solid var(--junta);
 }
-nav button.ativo { color:var(--bp-blue); background:var(--bp-line); border-color:var(--bp-line); font-weight:600; }
-nav a.btn-blueprints { font-size:12px; letter-spacing:1px; text-transform:uppercase; border:1px dashed var(--bp-cyan); padding:8px 14px; text-decoration:none; }
-nav a#link-planilha { border-style:solid; border-color:var(--bp-green); color:var(--bp-green); }
-
-/* painéis */
-.painel { border:1.2px solid var(--bp-line); background:var(--bp-panel); padding:16px 18px; margin-bottom:18px; }
-.painel h2 { font-size:17px; margin-bottom:10px; color:var(--bp-line); border-bottom:1px solid rgba(220,235,255,0.25); padding-bottom:6px; }
-.lbl { display:block; font-size:10px; letter-spacing:2px; color:var(--bp-dim); text-transform:uppercase; margin-bottom:3px; }
-.val { font-weight:600; }
-.grid-resumo { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
-.grid-resumo .celula { border-left:2px solid var(--bp-cyan); padding-left:10px; }
-.amber { color:var(--bp-amber); } .green { color:var(--bp-green); } .cyan { color:var(--bp-cyan); }
-
-/* barra de progresso geral */
-.barra { height:22px; border:1px solid var(--bp-line); background:rgba(5,25,47,0.6); position:relative; margin:8px 0 4px; }
-.barra .preenchido { height:100%; background:repeating-linear-gradient(45deg, var(--bp-green), var(--bp-green) 6px, rgba(127,212,166,0.55) 6px, rgba(127,212,166,0.55) 12px); transition:width .4s; }
-.barra .rotulo { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:11px; letter-spacing:1px; color:var(--bp-line); text-shadow:0 0 4px rgba(5,25,47,0.9); }
-
-/* etapas */
-.etapa { border:1px solid rgba(220,235,255,0.35); background:rgba(5,25,47,0.35); padding:12px 14px; margin-bottom:10px; }
-.etapa .topo { display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:baseline; }
-.etapa .num { font-family:'Saira Condensed',sans-serif; font-size:22px; font-weight:700; color:rgba(220,235,255,0.35); min-width:34px; }
-.etapa h3 { font-size:15px; letter-spacing:1.2px; }
-.etapa .faixa { font-size:12px; color:var(--bp-dim); }
-.etapa .obs { font-size:11.5px; color:var(--bp-dim); margin-top:4px; }
-.etapa .controles { display:flex; gap:8px; align-items:center; margin-top:8px; flex-wrap:wrap; }
-.etapa select, .etapa input[type=number] {
-  background:rgba(5,25,47,0.8); color:var(--bp-line); border:1px solid rgba(220,235,255,0.4);
-  font-family:'IBM Plex Mono',monospace; font-size:12px; padding:5px 8px;
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--zinco); margin-bottom:var(--s2);
 }
-.etapa input[type=range] { accent-color:var(--bp-green); width:130px; }
-.etapa .mini-barra { height:8px; background:rgba(5,25,47,0.7); border:1px solid rgba(220,235,255,0.3); margin-top:8px; }
-.etapa .mini-barra div { height:100%; background:var(--bp-green); }
-.etapa.concluida { border-color:var(--bp-green); }
-.etapa.concluida .num { color:var(--bp-green); }
-.etapa.em_andamento { border-color:var(--bp-amber); }
-.etapa.em_andamento .num { color:var(--bp-amber); }
-.badge { font-size:10px; letter-spacing:1.5px; text-transform:uppercase; border:1px solid; padding:2px 8px; }
-.badge.nao_iniciada { color:var(--bp-dim); border-color:var(--bp-dim); }
-.badge.em_andamento { color:var(--bp-amber); border-color:var(--bp-amber); }
-.badge.concluida { color:var(--bp-green); border-color:var(--bp-green); }
-
-/* formulários */
-form .campo { margin-bottom:12px; }
-input, select, textarea {
-  width:100%; background:rgba(5,25,47,0.8); color:var(--bp-line);
-  border:1px solid rgba(220,235,255,0.4); font-family:'IBM Plex Mono',monospace;
-  font-size:13px; padding:9px 10px;
+.topo-pag h1 em{font-style:normal; color:var(--ambar)}
+.selo{
+  font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em;
+  color:var(--zinco); text-align:right; white-space:nowrap; padding-bottom:6px;
 }
-input:focus, select:focus, textarea:focus, button:focus-visible { outline:2px solid var(--bp-cyan); outline-offset:1px; }
-.linha-2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-.btn {
-  font-family:'Saira Condensed',sans-serif; font-size:15px; font-weight:600; letter-spacing:2px; text-transform:uppercase;
-  background:var(--bp-amber); color:var(--bp-blue); border:none; padding:11px 22px; cursor:pointer; width:auto;
+.selo b{display:block; color:var(--eps); font-size:13px; letter-spacing:.04em}
+
+/* ---------- RÉGUA DE OBRA (assinatura) ---------- */
+.regua-bloco{margin-bottom:var(--s5)}
+.regua-cab{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:var(--s2); gap:var(--s3)}
+.regua-cab .titulo{font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--zinco); font-family:'IBM Plex Mono',monospace}
+.regua-cab .pct{font-family:'IBM Plex Mono',monospace; font-size:22px; font-weight:600; color:var(--ambar); letter-spacing:-.02em}
+.regua{display:flex; gap:2px; height:56px; align-items:stretch}
+.regua-seg{
+  position:relative; min-width:8px; background:var(--cimento);
+  border-top:2px solid var(--junta); cursor:pointer; overflow:hidden;
+  transition:border-color .18s, background .18s;
 }
-.btn.secundario { background:transparent; color:var(--bp-line); border:1px solid var(--bp-line); }
-.btn:disabled { opacity:.5; cursor:wait; }
+.regua-seg:hover,.regua-seg:focus-visible{background:var(--cimento-alto); border-top-color:var(--zinco); outline:none}
+.regua-seg[data-status="em_andamento"]{border-top-color:var(--ambar)}
+.regua-seg[data-status="concluida"]{border-top-color:var(--verde)}
+.regua-fill{
+  position:absolute; left:0; bottom:0; top:0; width:0;
+  background:linear-gradient(180deg, rgba(229,162,60,.30), rgba(229,162,60,.13));
+  transition:width .9s cubic-bezier(.22,.8,.3,1);
+}
+.regua-seg[data-status="concluida"] .regua-fill{background:linear-gradient(180deg, rgba(97,161,131,.32), rgba(97,161,131,.14))}
+.regua-num{
+  position:absolute; top:6px; left:0; right:0; text-align:center;
+  font-size:9.5px; font-weight:600; color:var(--zinco); letter-spacing:.02em;
+}
+.regua-seg[data-status="em_andamento"] .regua-num{color:var(--ambar)}
+.regua-seg[data-status="concluida"] .regua-num{color:var(--verde)}
+.regua-legenda{
+  display:flex; flex-wrap:wrap; gap:var(--s3); margin-top:var(--s2);
+  font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--zinco); letter-spacing:.04em;
+}
+.regua-legenda i{display:inline-block; width:16px; height:2px; margin-right:6px; vertical-align:middle; background:var(--junta)}
+.regua-legenda .a i{background:var(--ambar)} .regua-legenda .c i{background:var(--verde)}
+.regua-dica{margin-left:auto; opacity:.75}
 
-/* tabela de cotações */
-table { width:100%; border-collapse:collapse; font-size:12px; }
-th { font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--bp-dim); text-align:left; padding:6px 8px; border-bottom:1px solid rgba(220,235,255,0.4); }
-td { padding:7px 8px; border-bottom:1px solid rgba(220,235,255,0.15); vertical-align:top; }
-td.num, th.num { text-align:right; white-space:nowrap; }
-tr.melhor td { color:var(--bp-green); }
+/* ---------- indicadores ---------- */
+.grid-resumo{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  border:1px solid var(--junta); border-radius:var(--r); overflow:hidden; margin-bottom:var(--s3);
+}
+.celula{padding:var(--s3) var(--s4); border-left:1px solid var(--junta); background:var(--cimento)}
+.celula:first-child{border-left:none}
+.celula .val{display:block; font-size:19px; font-weight:600; letter-spacing:-.02em; color:var(--eps); margin-top:2px}
+.celula .val.amber{color:var(--ambar)} .celula .val.green{color:var(--verde)} .celula .val.cyan{color:var(--aco)}
 
-/* comparativo */
-.comp-linha { display:grid; grid-template-columns:26px 1fr 220px; gap:10px; align-items:center; margin-bottom:8px; font-size:12px; }
-.comp-track { position:relative; height:14px; background:rgba(5,25,47,0.7); border:1px solid rgba(220,235,255,0.3); }
-.comp-faixa { position:absolute; top:0; bottom:0; background:rgba(143,193,238,0.28); }
-.comp-real { position:absolute; top:2px; bottom:2px; width:3px; background:var(--bp-amber); }
+/* barra de avanço (fallback do resumo antigo) */
+.barra{position:relative; height:28px; background:var(--cimento); border:1px solid var(--junta); border-radius:var(--r); overflow:hidden}
+.barra .preenchido{position:absolute; inset:0 auto 0 0; background:rgba(229,162,60,.22); transition:width .9s cubic-bezier(.22,.8,.3,1)}
+.barra .rotulo{
+  position:absolute; inset:0; display:flex; align-items:center; padding:0 var(--s3);
+  font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.14em; color:var(--eps);
+}
 
-/* status / token */
-#msg { position:fixed; bottom:14px; left:50%; transform:translateX(-50%); background:var(--bp-deep); border:1px solid var(--bp-cyan); color:var(--bp-line); padding:10px 18px; font-size:12.5px; max-width:92vw; display:none; z-index:9; }
-.token-aviso { border:1px dashed var(--bp-amber); padding:12px 14px; font-size:12.5px; color:var(--bp-amber); margin-bottom:16px; }
-.rodape { text-align:center; font-size:10px; letter-spacing:2px; color:rgba(220,235,255,0.4); text-transform:uppercase; margin-top:30px; }
-.oculto { display:none; }
-@media (max-width:640px){ .linha-2{grid-template-columns:1fr;} .comp-linha{grid-template-columns:22px 1fr;} .comp-linha .comp-wrap{grid-column:1/-1;} }
-@media (prefers-reduced-motion:reduce){ *{transition:none!important;} }
+/* ---------- navegação ---------- */
+nav{
+  display:flex; flex-wrap:wrap; align-items:center; gap:var(--s1);
+  border-bottom:1px solid var(--junta); margin-bottom:var(--s4);
+}
+nav button{
+  font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--zinco);
+  background:none; border:none; border-bottom:2px solid transparent;
+  padding:12px var(--s3); cursor:pointer; transition:color .15s, border-color .15s;
+}
+nav button:hover{color:var(--eps)}
+nav button.ativo{color:var(--eps); border-bottom-color:var(--ambar)}
+nav button:focus-visible,a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{
+  outline:2px solid var(--ambar); outline-offset:2px;
+}
+nav .externos{display:flex; flex-wrap:wrap; gap:var(--s1); margin-left:auto; padding:var(--s1) 0}
+.btn-blueprints{
+  font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.09em;
+  text-transform:uppercase; color:var(--zinco); text-decoration:none;
+  border:1px solid var(--junta); border-radius:var(--r); padding:7px 12px;
+  transition:border-color .15s, color .15s, background .15s;
+}
+.btn-blueprints:hover{color:var(--eps); border-color:var(--zinco); background:var(--cimento)}
+#link-planilha{color:var(--verde); border-color:rgba(97,161,131,.45)}
+#link-planilha:hover{color:var(--verde); border-color:var(--verde); background:rgba(97,161,131,.10)}
+#btn-token{border:1px solid var(--junta); border-radius:var(--r); padding:7px 12px; font-size:10.5px}
+
+/* ---------- painéis ---------- */
+.painel{
+  background:var(--cimento); border:1px solid var(--junta); border-radius:var(--r);
+  padding:var(--s4); margin-bottom:var(--s3);
+}
+.painel > h2{
+  display:flex; align-items:baseline; gap:var(--s2);
+  padding-bottom:var(--s2); margin-bottom:var(--s3); border-bottom:1px solid var(--junta);
+}
+.painel > h2::before{
+  content:""; width:14px; height:2px; background:var(--ambar); flex:none; transform:translateY(-4px);
+}
+.painel-nota{font-size:12px; color:var(--zinco); margin-bottom:var(--s3); max-width:62ch}
+
+/* ---------- etapas ---------- */
+.etapa{
+  border:1px solid var(--junta); border-left:2px solid var(--junta); border-radius:var(--r);
+  padding:var(--s3); margin-bottom:var(--s2); background:rgba(0,0,0,.10);
+  transition:border-color .15s;
+}
+.etapa:hover{border-color:var(--zinco)}
+.etapa.em_andamento{border-left-color:var(--ambar)}
+.etapa.concluida{border-left-color:var(--verde)}
+.etapa .topo{display:flex; justify-content:space-between; align-items:flex-start; gap:var(--s3); margin-bottom:var(--s2)}
+.etapa .num{font-size:11px; font-weight:600; color:var(--zinco); letter-spacing:.05em}
+.etapa.em_andamento .num{color:var(--ambar)} .etapa.concluida .num{color:var(--verde)}
+.etapa .faixa{font-size:11px; color:var(--zinco); margin-top:2px; letter-spacing:.02em}
+.etapa .obs{font-size:12.5px; color:var(--zinco); line-height:1.5; margin-bottom:var(--s3); max-width:78ch}
+.badge{
+  font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; white-space:nowrap;
+  padding:3px 8px; border-radius:var(--r); border:1px solid var(--junta); color:var(--zinco);
+}
+.badge.em_andamento{color:var(--ambar); border-color:rgba(229,162,60,.45); background:rgba(229,162,60,.08)}
+.badge.concluida{color:var(--verde); border-color:rgba(97,161,131,.45); background:rgba(97,161,131,.08)}
+.controles{display:flex; flex-wrap:wrap; align-items:center; gap:var(--s2); margin-bottom:var(--s2)}
+.controles .lbl{margin:0}
+.prog-val{font-size:11px; color:var(--ambar); min-width:38px; font-weight:600}
+.mini-barra{height:3px; background:var(--junta); border-radius:2px; overflow:hidden}
+.mini-barra > div{height:100%; background:var(--ambar); transition:width .5s cubic-bezier(.22,.8,.3,1)}
+.etapa.concluida .mini-barra > div{background:var(--verde)}
+
+/* ---------- formulários ---------- */
+select,input{
+  font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--eps);
+  background:var(--grafite); border:1px solid var(--junta); border-radius:var(--r);
+  padding:9px 11px; width:100%;
+}
+select:hover,input:hover{border-color:var(--zinco)}
+input::placeholder{color:rgba(132,150,163,.6)}
+input[type=range]{padding:0; border:none; background:none; width:130px; accent-color:var(--ambar)}
+input[type=number]{width:120px}
+.linha-2{display:grid; grid-template-columns:1fr 1fr; gap:var(--s3); margin-bottom:var(--s3)}
+.campo{margin-bottom:var(--s3)}
+.btn{
+  font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600;
+  letter-spacing:.12em; text-transform:uppercase;
+  background:var(--ambar); color:#1A1F24; border:none; border-radius:var(--r);
+  padding:12px 20px; cursor:pointer; transition:filter .15s;
+}
+.btn:hover{filter:brightness(1.1)}
+.btn:disabled{opacity:.45; cursor:default}
+
+/* ---------- tabelas ---------- */
+table{width:100%; border-collapse:collapse; font-size:12px}
+th{
+  text-align:left; font-size:9.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--zinco); padding:0 var(--s2) var(--s1); border-bottom:1px solid var(--junta);
+}
+td{padding:9px var(--s2); border-bottom:1px solid rgba(51,60,69,.55); vertical-align:top}
+tbody tr:hover{background:rgba(0,0,0,.16)}
+
+/* ---------- comparativo ---------- */
+.comp-wrap{display:flex; flex-direction:column; gap:var(--s2)}
+.comp-linha{display:grid; grid-template-columns:200px 1fr; gap:var(--s3); align-items:center; font-size:11.5px}
+.comp-track{position:relative; height:22px; background:var(--grafite); border:1px solid var(--junta); border-radius:var(--r)}
+.comp-faixa{position:absolute; top:0; bottom:0; background:rgba(121,168,196,.22); border-left:1px solid var(--aco); border-right:1px solid var(--aco)}
+.comp-real{position:absolute; top:-3px; bottom:-3px; width:2px; background:var(--ambar)}
+
+/* ---------- avisos e mensagens ---------- */
+.token-aviso{
+  border:1px solid rgba(229,162,60,.4); border-left:2px solid var(--ambar); border-radius:var(--r);
+  background:rgba(229,162,60,.07); padding:var(--s3) var(--s4); margin-bottom:var(--s4);
+  font-size:12.5px; color:var(--eps);
+}
+#msg{
+  position:fixed; left:50%; bottom:24px; transform:translate(-50%,140%);
+  background:var(--eps); color:var(--grafite); font-family:'IBM Plex Mono',monospace;
+  font-size:11.5px; letter-spacing:.04em; padding:12px 20px; border-radius:var(--r);
+  box-shadow:0 8px 28px rgba(0,0,0,.5); transition:transform .3s cubic-bezier(.22,.8,.3,1); z-index:99;
+}
+#msg.on{transform:translate(-50%,0)}
+.rodape{
+  margin-top:var(--s5); padding-top:var(--s3); border-top:1px solid var(--junta);
+  font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--zinco);
+}
+.oculto{display:none}
+
+/* ---------- responsivo ---------- */
+@media (max-width:720px){
+  .wrap{padding:var(--s4) var(--s3) var(--s5)}
+  .topo-pag{flex-direction:column; align-items:flex-start; gap:var(--s2)}
+  .selo{text-align:left}
+  .linha-2{grid-template-columns:1fr}
+  .comp-linha{grid-template-columns:1fr; gap:var(--s1)}
+  .celula{border-left:none; border-top:1px solid var(--junta)}
+  .celula:first-child{border-top:none}
+  .regua{height:46px}
+  .regua-num{font-size:8px}
+  nav .externos{margin-left:0; width:100%}
+  .controles{gap:var(--s1)}
+  input[type=number]{width:96px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms !important; animation-duration:.01ms !important}
+}
